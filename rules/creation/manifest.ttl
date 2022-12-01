@@ -1,0 +1,260 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+
+<> a mf:Manifest ;
+    mf:include (
+        <contributor/manifest.ttl>
+    ) ;
+    mf:entries (
+        <creation_date.ttl>
+        <creation_location.ttl>
+        <creation_source.ttl>
+        <creation_methodology.ttl>
+    ) .
+
+
+<creation_date.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                PREFIX earl: <http://www.w3.org/ns/earl#>
+                PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+                INSERT {
+                    # Add information about the test
+                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/creation_date.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        rdfs:label "Creation date measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf </path_to/rules/creation/creation_date.ttl> ;
+                        dqv:value "true"^^xsd:boolean ;
+                        prov:generatedAtTime $dateLiteral .
+                    </path_to/rules/creation/creation_date.ttl> a dqv:Metric ;
+                        rdfs:comment "What is/are the creation date(s) of the dataset?" ;
+                        rdfs:label "Creation date" .
+                    </path_to/rules/creation/creation_date.ttl#activity> prov:used </path_to/rules/creation/creation_date.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/creation_date.ttl")), "Measure")) AS ?qualityMeasurement)
+                }
+            """
+        ]
+     ) ;
+    kgi:onFailure (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    # Add information about the test
+                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/creation_date.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        rdfs:label "Creation date measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf </path_to/rules/creation/creation_date.ttl> ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime $dateLiteral .
+                    </path_to/rules/creation/creation_date.ttl> a dqv:Metric ;
+                        rdfs:comment "What is/are the creation date(s) of the dataset?" ;
+                        rdfs:label "Creation date" .
+                    </path_to/rules/creation/creation_date.ttl#activity> prov:used </path_to/rules/creation/creation_date.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/creation_date.ttl")), "Measure")) AS ?qualityMeasurement)
+                }
+            """
+        ]
+     ) .
+
+<creation_location.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/creation_location.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        rdfs:label "Creation location measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf </path_to/rules/creation/creation_location.ttl> ;
+                        dqv:value "true"^^xsd:boolean ;
+                        prov:generatedAtTime $dateLiteral .
+                    </path_to/rules/creation/creation_location.ttl> a dqv:Metric ;
+                        rdfs:comment "From what physical location (state, country, continent, ...) was the dataset created?" ;
+                        rdfs:label "Creation location" .
+                    </path_to/rules/creation/creation_location.ttl#activity> prov:used </path_to/rules/creation/creation_location.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/creation_location.ttl")), "Measure")) AS ?qualityMeasurement)
+                }
+            """
+        ]
+     ) ;
+    kgi:onFailure (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/creation_location.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        rdfs:label "Creation location measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf </path_to/rules/creation/creation_location.ttl> ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime $dateLiteral .
+                    </path_to/rules/creation/creation_location.ttl> a dqv:Metric ;
+                        rdfs:comment "From what physical location (state, country, continent, ...) was the dataset created?" ;
+                        rdfs:label "Creation location" .
+                    </path_to/rules/creation/creation_location.ttl#activity> prov:used </path_to/rules/creation/creation_location.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/creation_location.ttl")), "Measure")) AS ?qualityMeasurement)
+                }
+            """
+        ]
+     ) .
+
+<creation_source.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/creation_source.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        rdfs:label "Creation source measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf </path_to/rules/creation/creation_source.ttl> ;
+                        dqv:value "true"^^xsd:boolean ;
+                        prov:generatedAtTime $dateLiteral .
+                    </path_to/rules/creation/creation_source.ttl> a dqv:Metric ;
+                        rdfs:comment "From what original source(s) were the data collected or derived?" ;
+                        rdfs:label "Creation source" .
+                    </path_to/rules/creation/creation_source.ttl#activity> prov:used </path_to/rules/creation/creation_source.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/creation_source.ttl")), "Measure")) AS ?qualityMeasurement)
+                }
+            """
+        ]
+     ) ;
+    kgi:onFailure (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/creation_source.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        rdfs:label "Creation source measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf </path_to/rules/creation/creation_source.ttl> ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime $dateLiteral .
+                    </path_to/rules/creation/creation_source.ttl> a dqv:Metric ;
+                        rdfs:comment "From what original source(s) were the data collected or derived?" ;
+                        rdfs:label "Creation source" .
+                    </path_to/rules/creation/creation_source.ttl#activity> prov:used </path_to/rules/creation/creation_source.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/creation_source.ttl")), "Measure")) AS ?qualityMeasurement)
+                }
+            """
+        ]
+     ) .
+
+<creation_methodology.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/creation_methodology.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        rdfs:label "Creation methodology measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf </path_to/rules/creation/creation_methodology.ttl> ;
+                        dqv:value "true"^^xsd:boolean ;
+                        prov:generatedAtTime $dateLiteral .
+                    </path_to/rules/creation/creation_methodology.ttl> a dqv:Metric ;
+                        rdfs:comment "Which methods or tools were used for data creation?" ;
+                        rdfs:label "Creation methodology" .
+                    </path_to/rules/creation/creation_methodology.ttl#activity> prov:used </path_to/rules/creation/creation_methodology.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/creation_methodology.ttl")), "Measure")) AS ?qualityMeasurement)
+                }
+            """
+        ]
+     ) ;
+    kgi:onFailure (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/creation_methodology.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        rdfs:label "Creation methodology measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf </path_to/rules/creation/creation_methodology.ttl> ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime $dateLiteral .
+                    </path_to/rules/creation/creation_methodology.ttl> a dqv:Metric ;
+                        rdfs:comment "Which methods or tools were used for data creation?" ;
+                        rdfs:label "Creation methodology" .
+                    </path_to/rules/creation/creation_methodology.ttl#activity> prov:used </path_to/rules/creation/creation_methodology.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/creation_methodology.ttl")), "Measure")) AS ?qualityMeasurement)
+                }
+            """
+        ]
+     ) .

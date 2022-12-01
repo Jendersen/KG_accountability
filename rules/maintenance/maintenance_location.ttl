@@ -1,0 +1,24 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Maintenance location" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "From what physical location (state, country, continent, ...) is or will the dataset be maintained?" ;
+    kgi:query """
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION {?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+
+            ?kg prov:wasGeneratedBy ?act .
+            {?act a prov:Contribute . }
+            UNION {?act a prov:Modify . }
+            UNION {?act a prov:Replace . }
+            ?act prov:atLocation ?location .
+        }
+""" .

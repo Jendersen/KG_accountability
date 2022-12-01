@@ -1,0 +1,31 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Usage Dataset publisher" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "Who publishes this dataset?" ;
+    kgi:query """
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+        PREFIX pav: <http://purl.org/pav/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX schema: <http://schema.org/>
+        PREFIX dce: <http://purl.org/dc/elements/1.1/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION { ?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+        
+            {?kg dcterms:publisher ?publisher .}
+            UNION {?kg dce:publisher ?publisher .}
+            UNION {?kg schema:publisher ?publisher .}
+            UNION {?kg schema:sdPublisher ?publisher .}
+            UNION {?kg prov:wasGeneratedBy ?act .
+                  ?act a prov:Publish .
+                  ?act prov:wasAssociatedWith ?publisher .}
+        }
+""" .

@@ -1,0 +1,49 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Creation contributor qualification" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "What are the qualifications of the contributor (of the data creation process)?" ;
+    kgi:query """
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+        PREFIX pav: <http://purl.org/pav/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX schema: <http://schema.org/>
+        PREFIX dce: <http://purl.org/dc/elements/1.1/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        ASK {
+          # Find the KG
+          { ?kg a dcat:Dataset }
+          UNION { ?kg a void:Dataset }
+          ?kg ?endpointLink $rawEndpointUrl .
+          # Find a contributor
+          { ?kg ?contribProp ?contributor .
+            VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
+          }
+          UNION {
+            ?kg prov:wasGeneratedBy ?act .
+            {?act a prov:Create . } UNION {?act a prov:Contribute . }
+            ?act prov:wasAssociatedWith ?contributor .
+          }
+        
+           # Work
+           {?contributor foaf:workInfoHomepage ?work .}
+           UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
+           UNION {?contributor schema:jobTitle ?work .}
+           # Skills
+           UNION {?contributor schema:award ?award .}
+           UNION {?contributor schema:hasCredential ?credential .
+                  ?credential schema:competencyRequired ?skills .}
+           UNION {?contributor schema:knowsAbout ?topic .}
+           # Optional
+           # Publication
+           UNION {?contributor foaf:publiations ?publi . }
+           # School
+           UNION {?contributor foaf:schoolHomepage ?school . }
+           UNION {?contributor schema:alumniOf ?school .}
+        }
+""" .

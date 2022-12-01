@@ -1,0 +1,20 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Maintenance frequency" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "With which frequency is the dataset maintained?" ;
+    kgi:query """
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION {?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+        
+            ?kg dcterms:accrualPeriodicity ?frequency .
+        }
+""" .

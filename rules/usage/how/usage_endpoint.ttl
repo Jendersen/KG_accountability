@@ -1,0 +1,32 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Usage endpoints characteristics" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "If an endpoint is provided, what are its characteristics?" ;
+    kgi:query """
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX schema: <http://schema.org/>
+        PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION { ?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+        
+            { ?kg void:sparqlEndpoint ?endpoint . }
+            UNION { ?service dcat:servesDataset ?kg .
+                    ?service dcat:endpointURL ?endpoint . }
+            UNION { ?kg dcat:accessService ?service .
+                    ?service dcat:endpointURL ?endpoint .  }
+            UNION { ?kg dcat:accessService ?service .
+                    ?service sd:endpoint ?endpoint . }
+            UNION { ?service dcat:servesDataset ?kg .
+                    ?service sd:endpoint ?endpoint . }
+        
+            ?endpoint sd:supportedLanguage ?language .
+            ?endpoint sd:resultFormat ?format .
+        }
+""" .

@@ -1,0 +1,30 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Usage concepts covered" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "What concepts, topics or subjects does the dataset cover?" ;
+    kgi:query """
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX dce: <http://purl.org/dc/elements/1.1/>
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX schema: <http://schema.org/>
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION { ?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+        
+            {?kg dcterms:subject ?subject .}
+            UNION {?kg dce:subject ?subject .}
+            UNION {?kg foaf:topic ?subject .}
+            UNION {?kg foaf:primaryTopic ?subject .}
+            UNION {?kg schema:about ?subject .}
+            UNION {?kg schema:keywords ?subject .}
+            UNION {?kg dcat:theme ?subject .}
+            UNION {?kg dcat:keyword ?subject .}
+        }
+""" .

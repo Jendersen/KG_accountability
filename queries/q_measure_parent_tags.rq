@@ -1,0 +1,37 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dqv: <http://www.w3.org/ns/dqv#>
+PREFIX sin: <http://www.exemple.com/sin#> .
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Here we assume there is only one need defined. Else, each Tag, Question and Labeling should be linked with the InformationNeed.
+
+CONSTRUCT {
+	?kg prov:wasGeneratedBy <file:///path_to/queries/q_measure_parent_tags.rq#activity> ;
+		dqv:hasQualityMeasurement [
+			a dqv:QualityMeasurement ;
+			rdfs:label ?label ;
+			dqv:isMeasurementOf ?parent_tag ;
+			dqv:value ?agg_parent_tag
+		] .
+	<file:///path_to/queries/q_measure_parent_tags.rq#activity> prov:used <file:///path_to/queries/q_measure_parent_tags.rq#activity> ;
+		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+} WHERE {
+	{ SELECT ?kg ?parent_tag ?taglab (SUM(?agg_leaf_tag * ?w_tag)  / SUM(?w_tag)  AS ?agg_parent_tag) WHERE  {
+		?leaf_tag sin:isChildOf ?parent_tag ;
+			sin:weight ?w_tag .
+		?parent_tag rdfs:label ?taglab .
+		{ SELECT  ?leaf_tag ?kg (SUM(?val * ?w_question) / SUM(?w_question) AS ?agg_leaf_tag) WHERE {
+			{ SELECT DISTINCT ?leaf_tag ?kg ?metric ?w_question (xsd:decimal(?value) AS ?val) WHERE {
+				?kg prov:wasDerivedFrom ?kge ;
+					dqv:hasQualityMeasurement ?measurement .
+				?measurement dqv:isMeasurementOf ?metric ;
+					dqv:value ?value .
+				?question sin:isImplementedBy ?metric .
+				?tagging sin:questionTagged ?question ;
+					sin:tagWith ?leaf_tag ;
+					sin:weight ?w_question .
+			}  }
+		} GROUP BY ?kg ?leaf_tag }
+	} GROUP BY ?kg ?parent_tag }
+	BIND ( CONCAT(?taglab, " measurement" )  AS ?label )
+}

@@ -1,0 +1,33 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Creation date" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "What is/are the creation date(s) of the dataset?" ;
+    kgi:query """
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+        PREFIX pav: <http://purl.org/pav/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX schema: <http://schema.org/>
+        PREFIX dce: <http://purl.org/dc/elements/1.1/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION { ?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+        
+            # Find a date
+            {?kg dcterms:created ?date .}
+            UNION {?kg prov:wasGeneratedAtTime ?date .}
+            UNION {?kg schema:dateCreated ?date .}
+            UNION {?kg pav:createdOn ?date .}
+            UNION {?kg pav:curatedOn ?date .}
+            UNION {?kg prov:wasGeneratedBy ?act .
+                   ?act a prov:Create .
+                   {?act prov:startedAtTime ?date .} UNION {?act prov:endedAtTime ?date .}}
+            }
+""" .

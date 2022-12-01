@@ -1,0 +1,43 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Maintenance contributor type" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "Is the maintainer a person or an organization ?" ;
+    kgi:query """
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX dce: <http://purl.org/dc/elements/1.1/>
+        PREFIX pav: <http://purl.org/pav/>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+        PREFIX schema: <http://schema.org/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION {?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+
+            {?kg dcterms:contributor ?maintainer . }
+            UNION {?kg dce:contributor ?maintainer . }
+            UNION {?kg schema:contributor ?maintainer .}
+            UNION {?kg schema:maintainer ?maintainer . }
+            UNION {?kg pav:contributedBy ?maintainer .}
+            UNION {?kg prov:wasGeneratedBy ?act .
+                {?act a prov:Contribute . }
+                UNION {?act a prov:Modify . }
+                UNION {?act a prov:Replace . }
+                ?act prov:wasAssociatedWith ?maintainer .}
+
+            # Is it a person ?
+            {?maintainer a foaf:Person .}
+            UNION {?maintainer a schema:Person .}
+            UNION {?maintainer a prov:Person .}
+            # Or, is it an organization ?
+            UNION {?maintainer a foaf:Organization .}
+            UNION {?maintainer a schema:Organization .}
+            UNION {?maintainer a prov:Organization .}
+        }
+""" .

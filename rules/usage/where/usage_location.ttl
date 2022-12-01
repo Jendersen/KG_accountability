@@ -1,0 +1,26 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Usage location" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "In what physical location can the dataset be used?" ;
+    kgi:query """
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX schema: <http://schema.org/>
+        PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION { ?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+        
+            {?kg dcterms:accessRights ?rights .}
+            UNION {?kg dataid:openness ?openness .}
+            UNION {?kg dcterms:license ?license .}
+            UNION {?kg schema:license ?license .}
+            UNION {?kg schema:sdLicense ?license .}
+        }
+""" .

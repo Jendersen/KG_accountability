@@ -1,0 +1,23 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Usage license" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "What is the license of the dataset?" ;
+    kgi:query """
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX schema: <http://schema.org/>
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION { ?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+        
+            {?kg dcterms:license ?license .}
+            UNION {?kg schema:license ?license .}
+            UNION {?kg schema:sdLicense ?license .}
+        }
+""" .

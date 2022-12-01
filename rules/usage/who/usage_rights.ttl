@@ -1,0 +1,30 @@
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a kgi:TestQuery ;
+    dcterms:title "Usage rights" ;
+    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:description "Who has the right to use the published dataset?" ;
+    kgi:query """
+        PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+        PREFIX pav: <http://purl.org/pav/>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX schema: <http://schema.org/>
+        PREFIX dce: <http://purl.org/dc/elements/1.1/>
+        PREFIX dcterms: <http://purl.org/dc/terms/>
+        PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
+        ASK {
+            # Find the KG
+            { ?kg a dcat:Dataset }
+            UNION { ?kg a void:Dataset }
+            ?kg ?endpointLink $rawEndpointUrl .
+        
+            {?kg dcterms:accessRights ?rights .}
+            UNION {?kg dataid:openness ?openness .}
+            UNION {?kg dcterms:license ?license .}
+            UNION {?kg schema:license ?license .}
+            UNION {?kg schema:sdLicense ?license .}
+        }
+""" .
