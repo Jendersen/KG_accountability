@@ -18,23 +18,23 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/usage/when/usage_dateStartAvailability.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Usage start availability measurement" ;
                         dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf </path_to/rules/usage/when/usage_dateStartAvailability.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
                         rdfs:comment "Since when was the dataset available?" ;
                         rdfs:label "Usage start availability" .
-                    </path_to/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used </path_to/rules/usage/when/usage_dateStartAvailability.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -47,23 +47,23 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/usage/when/usage_dateStartAvailability.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Usage start availability measurement" ;
                         dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf </path_to/rules/usage/when/usage_dateStartAvailability.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
                         rdfs:comment "Since when was the dataset available?" ;
                         rdfs:label "Usage start availability" .
-                    </path_to/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used </path_to/rules/usage/when/usage_dateStartAvailability.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -78,23 +78,23 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/usage/when/usage_dateEndAvailability.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Usage End availability measurement" ;
                         dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf </path_to/rules/usage/when/usage_dateEndAvailability.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
                         rdfs:comment "Until when is the dataset available?" ;
                         rdfs:label "Usage End availability" .
-                    </path_to/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used </path_to/rules/usage/when/usage_dateEndAvailability.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -107,23 +107,23 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/usage/when/usage_dateEndAvailability.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Usage End availability measurement" ;
                         dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf </path_to/rules/usage/when/usage_dateEndAvailability.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
                         rdfs:comment "Until when is the dataset available?" ;
                         rdfs:label "Usage End availability" .
-                    </path_to/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used </path_to/rules/usage/when/usage_dateEndAvailability.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -138,23 +138,23 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/usage/when/usage_dateEndValidity.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Usage End validity measurement" ;
                         dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf </path_to/rules/usage/when/usage_dateEndValidity.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
                         rdfs:comment "Until when is the dataset valid?" ;
                         rdfs:label "Usage End validity" .
-                    </path_to/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used </path_to/rules/usage/when/usage_dateEndValidity.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -167,23 +167,23 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/usage/when/usage_dateEndValidity.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Usage End validity measurement" ;
                         dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf </path_to/rules/usage/when/usage_dateEndValidity.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
                         rdfs:comment "Until when is the dataset valid?" ;
                         rdfs:label "Usage End validity" .
-                    </path_to/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used </path_to/rules/usage/when/usage_dateEndValidity.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]

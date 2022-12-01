@@ -16,23 +16,23 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributor.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor measurement" ;
                         dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributor.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
                         rdfs:comment "Who are the creators and contributors of the dataset? What is her/his/its role in the data creation process?" ;
                         rdfs:label "Creation contributor" .
-                    </path_to/rules/creation/contributor/creation_contributor.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributor.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -49,23 +49,23 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributor.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor measurement" ;
                         dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributor.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
                         rdfs:comment "Who are the creators and contributors of the dataset? What is her/his/its role in the data creation process?" ;
                         rdfs:label "Creation contributor" .
-                    </path_to/rules/creation/contributor/creation_contributor.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributor.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -88,18 +88,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorID.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor identification measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorID.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
                         rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
                         rdfs:label "Creation contributor identification" .
-                    </path_to/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorID.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -131,7 +131,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -150,18 +150,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorID.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor identification measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorID.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
                         rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
                         rdfs:label "Creation contributor identification" .
-                    </path_to/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorID.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -194,7 +194,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -215,18 +215,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorID.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor identification measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorID.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
                         rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
                         rdfs:label "Creation contributor identification" .
-                    </path_to/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorID.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -246,7 +246,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -269,18 +269,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorType.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor type measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorType.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
                         rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
                         rdfs:label "Creation contributor type" .
-                    </path_to/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorType.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -309,7 +309,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -328,19 +328,19 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorType.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor type measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorType.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
                         rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
                         rdfs:label "Creation contributor type" .
-                    </path_to/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorType.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -370,7 +370,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -391,18 +391,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorType.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor type measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorType.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
                         rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
                         rdfs:label "Creation contributor type" .
-                    </path_to/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorType.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -422,7 +422,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -445,18 +445,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor qualification measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
                         rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
                         rdfs:label "Creation contributor qualification" .
-                    </path_to/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -491,7 +491,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -510,18 +510,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor qualification measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
                         rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
                         rdfs:label "Creation contributor qualification" .
-                    </path_to/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -558,7 +558,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -579,18 +579,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor qualification measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
                         rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
                         rdfs:label "Creation contributor qualification" .
-                    </path_to/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -610,7 +610,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -633,18 +633,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor influences measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
                         rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
                         rdfs:label "Creation contributor influences" .
-                    </path_to/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -668,7 +668,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -687,18 +687,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor influences measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
                         rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
                         rdfs:label "Creation contributor influences" .
-                    </path_to/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -723,7 +723,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -744,18 +744,18 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy </path_to/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
                         dqv:hasQualityMeasurement ?qualityMeasurement .
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor influences measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
                         prov:generatedAtTime $dateLiteral .
-                    </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
                         rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
                         rdfs:label "Creation contributor influences" .
-                    </path_to/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used </path_to/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     {SELECT DISTINCT ?contributor WHERE {
@@ -775,7 +775,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "/path_to/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]

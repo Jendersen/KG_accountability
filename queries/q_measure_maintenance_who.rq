@@ -3,25 +3,25 @@ PREFIX dqv: <http://www.w3.org/ns/dqv#>
 PREFIX sin: <http://www.exemple.com/sin#> .
 
 CONSTRUCT {
-	?kg prov:wasGeneratedBy <file:///path_to/queries/q_measure_maintenance_who.rq#activity> ;
+	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_maintenance_who.rq#activity> ;
 		dqv:hasQualityMeasurement [
 			a dqv:QualityMeasurement ;
 			rdfs:label "Maintenance contributor measurement" ;
 			dqv:computedOn ?endpointDescription ;
-			dqv:isMeasurementOf <file:///path_to/queries/q_measure_maintenance_who.rq>;
+			dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_maintenance_who.rq>;
 			dqv:value ?val_contr ;
 			prov:generatedAtTime $dateLiteral
 		] .
-	<file:///path_to/queries/q_measure_maintenance_who.rq> a dqv:Metric ;
+	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_maintenance_who.rq> a dqv:Metric ;
 		rdfs:comment "Who are the maintainers of the KG and their role in this process? For all maintainers, indicates whether they are a person or an organization, provide information to identify them (name and point of contact such as email, or phone number, or address, or homepage), provide their qualifications, provide all characteristics which could have an influence on the KG." ;
     rdfs:label "Maintenance contributor" .
-	<file:///path_to/queries/q_measure_maintenance_who.rq#activity> prov:used <file:///path_to/queries/q_measure_maintenance_who.rq#activity> ;
+	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_maintenance_who.rq#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_maintenance_who.rq#activity> ;
 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 } WHERE {
 	# Main
 	?kg prov:wasDerivedFrom ?kge ;
 		dqv:hasQualityMeasurement ?measurement .
-	?measurement dqv:isMeasurementOf <file:///path_to/rules/maintenance/contributor/maintenance_contributor.ttl> ;
+	?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
 		dqv:computedOn  ?endpointDescription ;
 		dqv:value ?v .
 	OPTIONAL {
@@ -29,28 +29,28 @@ CONSTRUCT {
 		{ SELECT DISTINCT ?kg (AVG(xsd:decimal(?v)) AS ?valid ) WHERE {
 			?kg prov:wasDerivedFrom ?kge ;
 				dqv:hasQualityMeasurement ?measurement .
-			?measurement dqv:isMeasurementOf <file:///path_to/rules/maintenance/contributor/maintenance_contributorID.ttl> ;
+			?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> ;
 				dqv:value ?v .
 		} GROUP BY ?kg }
 		# Type
 		{ SELECT DISTINCT ?kg (AVG(xsd:decimal(?v)) AS ?valtype ) WHERE {
 			?kg prov:wasDerivedFrom ?kge ;
 				dqv:hasQualityMeasurement ?measurement .
-			?measurement dqv:isMeasurementOf <file:///path_to/rules/maintenance/contributor/maintenance_contributorType.ttl> ;
+			?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> ;
 				dqv:value ?v .
 		} GROUP BY ?kg }
 		# Qualification
 		{ SELECT DISTINCT ?kg (AVG(xsd:decimal(?v)) AS ?valqual ) WHERE {
 			?kg prov:wasDerivedFrom ?kge ;
 				dqv:hasQualityMeasurement ?measurement .
-			?measurement dqv:isMeasurementOf <file:///path_to/rules/maintenance/contributor/maintenance_contributorQualification.ttl> ;
+			?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> ;
 				dqv:value ?v .
 		} GROUP BY ?kg }
 		# Influences
 		{ SELECT DISTINCT ?kg (AVG(xsd:decimal(?v)) AS ?valinf ) WHERE {
 			?kg prov:wasDerivedFrom ?kge ;
 				dqv:hasQualityMeasurement ?measurement .
-			?measurement dqv:isMeasurementOf <file:///path_to/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> ;
+			?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> ;
 				dqv:value ?v .
 		} GROUP BY ?kg }
 	}

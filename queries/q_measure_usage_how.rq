@@ -3,25 +3,25 @@ PREFIX dqv: <http://www.w3.org/ns/dqv#>
 PREFIX sin: <http://www.exemple.com/sin#> .
 
 CONSTRUCT {
-	?kg prov:wasGeneratedBy <file:///path_to/queries/q_measure_usage_how.rq#activity> ;
+	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq#activity> ;
 		dqv:hasQualityMeasurement [
 			a dqv:QualityMeasurement ;
 			rdfs:label "Usage access measurement" ;
 			dqv:computedOn ?endpointDescription ;
-			dqv:isMeasurementOf <file:///path_to/queries/q_measure_usage_how.rq>;
+			dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq>;
 			dqv:value ?val_access ;
 			prov:generatedAtTime $dateLiteral
 		] .
-	<file:///path_to/queries/q_measure_usage_how.rq> a dqv:Metric ;
+	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq> a dqv:Metric ;
 		rdfs:comment "How to access the KG? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access, and the characteristics of the endpoint if provided." ;
 	rdfs:label "Usage access" .
-	<file:///path_to/queries/q_measure_usage_how.rq#activity> prov:used <file:///path_to/queries/q_measure_usage_how.rq#activity> ;
+	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq#activity> ;
 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 } WHERE {
 	# Main
 	?kg prov:wasDerivedFrom ?kge ;
 		dqv:hasQualityMeasurement ?measurement .
-	?measurement dqv:isMeasurementOf <file:///path_to/rules/usage/how/usage_access.ttl> ;
+	?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_access.ttl> ;
 		dqv:computedOn  ?endpointDescription ;
 		dqv:value ?v .
 	OPTIONAL {
@@ -29,7 +29,7 @@ CONSTRUCT {
 		{ SELECT DISTINCT ?kg (AVG(xsd:decimal(?v)) AS ?valend ) WHERE {
 			?kg prov:wasDerivedFrom ?kge ;
 				dqv:hasQualityMeasurement ?measurement .
-			?measurement dqv:isMeasurementOf <file:///path_to/rules/usage/how/usage_endpoint.ttl> ;
+			?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_endpoint.ttl> ;
 				dqv:value ?v .
 		} GROUP BY ?kg }
 	}

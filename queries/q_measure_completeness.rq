@@ -6,14 +6,14 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 # Here we assume there is only one need defined. Else, each Tag, Question and Labeling should be linked with the InformationNeed.
 
 CONSTRUCT {
-	?kg prov:wasGeneratedBy <file:///path_to/queries/q_measure_completeness.rq#activity> ;
+	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> ;
 		dqv:hasQualityMeasurement [
 			a dqv:QualityMeasurement ;
 			rdfs:label "Completeness measurement"@en ;
 			dqv:isMeasurementOf "Completeness"@en ;
 			dqv:value ?completeness
 		] .
-	<file:///path_to/queries/q_measure_completeness.rq#activity> prov:used <file:///path_to/queries/q_measure_completeness.rq#activity> ;
+	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> ;
 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 } WHERE {
 	{ SELECT ?kg (SUM(?agg_parent_tag * ?w_parent_tag) / SUM(?w_parent_tag) AS ?completeness)
