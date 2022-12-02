@@ -1,0 +1,3164 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns2: <http://www.w3.org/ns/prov#> .
+@prefix ns1: <http://www.w3.org/ns/dqv#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+############################################################
+# Values on Leaf Tag                       #################
+############################################################
+
+<http://ns.inria.fr/kg/index#fa2584d188c6281ac56af9490425fab0Metadata> ns1:hasQualityMeasurement _:b37962 ;
+ns1:hasQualityMeasurement _:b37963 ;
+ns1:hasQualityMeasurement _:b37964 ;
+ns1:hasQualityMeasurement _:b37965 ;
+ns1:hasQualityMeasurement _:b37966 ;
+ns1:hasQualityMeasurement _:b37967 ;
+ns1:hasQualityMeasurement _:b37968 ;
+ns1:hasQualityMeasurement _:b37969 ;
+ns1:hasQualityMeasurement _:b37970 ;
+ns1:hasQualityMeasurement _:b37971 ;
+ns1:hasQualityMeasurement _:b37972 ;
+ns1:hasQualityMeasurement _:b37973 ;
+ns1:hasQualityMeasurement _:b37974 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#a853e557f4b8ccd61e3f33b3abd8298bMetadata> ns1:hasQualityMeasurement _:b37845 ;
+ns1:hasQualityMeasurement _:b37846 ;
+ns1:hasQualityMeasurement _:b37847 ;
+ns1:hasQualityMeasurement _:b37848 ;
+ns1:hasQualityMeasurement _:b37849 ;
+ns1:hasQualityMeasurement _:b37850 ;
+ns1:hasQualityMeasurement _:b37851 ;
+ns1:hasQualityMeasurement _:b37852 ;
+ns1:hasQualityMeasurement _:b37853 ;
+ns1:hasQualityMeasurement _:b37854 ;
+ns1:hasQualityMeasurement _:b37855 ;
+ns1:hasQualityMeasurement _:b37856 ;
+ns1:hasQualityMeasurement _:b37857 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#2543a5ffd4172433a52675a5d98f1589Metadata> ns1:hasQualityMeasurement _:b37650 ;
+ns1:hasQualityMeasurement _:b37651 ;
+ns1:hasQualityMeasurement _:b37652 ;
+ns1:hasQualityMeasurement _:b37653 ;
+ns1:hasQualityMeasurement _:b37654 ;
+ns1:hasQualityMeasurement _:b37655 ;
+ns1:hasQualityMeasurement _:b37656 ;
+ns1:hasQualityMeasurement _:b37657 ;
+ns1:hasQualityMeasurement _:b37658 ;
+ns1:hasQualityMeasurement _:b37659 ;
+ns1:hasQualityMeasurement _:b37660 ;
+ns1:hasQualityMeasurement _:b37661 ;
+ns1:hasQualityMeasurement _:b37662 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#7a321314530e8de0b8072703793cb3c4Metadata> ns1:hasQualityMeasurement _:b37793 ;
+ns1:hasQualityMeasurement _:b37794 ;
+ns1:hasQualityMeasurement _:b37795 ;
+ns1:hasQualityMeasurement _:b37796 ;
+ns1:hasQualityMeasurement _:b37797 ;
+ns1:hasQualityMeasurement _:b37798 ;
+ns1:hasQualityMeasurement _:b37799 ;
+ns1:hasQualityMeasurement _:b37800 ;
+ns1:hasQualityMeasurement _:b37801 ;
+ns1:hasQualityMeasurement _:b37802 ;
+ns1:hasQualityMeasurement _:b37803 ;
+ns1:hasQualityMeasurement _:b37804 ;
+ns1:hasQualityMeasurement _:b37805 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#591d4770cf9d1ca2a4104e41143c9c7eMetadata> ns1:hasQualityMeasurement _:b37728 ;
+ns1:hasQualityMeasurement _:b37729 ;
+ns1:hasQualityMeasurement _:b37730 ;
+ns1:hasQualityMeasurement _:b37731 ;
+ns1:hasQualityMeasurement _:b37732 ;
+ns1:hasQualityMeasurement _:b37733 ;
+ns1:hasQualityMeasurement _:b37734 ;
+ns1:hasQualityMeasurement _:b37735 ;
+ns1:hasQualityMeasurement _:b37736 ;
+ns1:hasQualityMeasurement _:b37737 ;
+ns1:hasQualityMeasurement _:b37738 ;
+ns1:hasQualityMeasurement _:b37739 ;
+ns1:hasQualityMeasurement _:b37740 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#ab4ab9da1468c1a2339ff12bb41add61Metadata> ns1:hasQualityMeasurement _:b37858 ;
+ns1:hasQualityMeasurement _:b37859 ;
+ns1:hasQualityMeasurement _:b37860 ;
+ns1:hasQualityMeasurement _:b37861 ;
+ns1:hasQualityMeasurement _:b37862 ;
+ns1:hasQualityMeasurement _:b37863 ;
+ns1:hasQualityMeasurement _:b37864 ;
+ns1:hasQualityMeasurement _:b37865 ;
+ns1:hasQualityMeasurement _:b37866 ;
+ns1:hasQualityMeasurement _:b37867 ;
+ns1:hasQualityMeasurement _:b37868 ;
+ns1:hasQualityMeasurement _:b37869 ;
+ns1:hasQualityMeasurement _:b37870 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#68cb2be9d65dd56a9cc354b86c819d81Metadata> ns1:hasQualityMeasurement _:b37767 ;
+ns1:hasQualityMeasurement _:b37768 ;
+ns1:hasQualityMeasurement _:b37769 ;
+ns1:hasQualityMeasurement _:b37770 ;
+ns1:hasQualityMeasurement _:b37771 ;
+ns1:hasQualityMeasurement _:b37772 ;
+ns1:hasQualityMeasurement _:b37773 ;
+ns1:hasQualityMeasurement _:b37774 ;
+ns1:hasQualityMeasurement _:b37775 ;
+ns1:hasQualityMeasurement _:b37776 ;
+ns1:hasQualityMeasurement _:b37777 ;
+ns1:hasQualityMeasurement _:b37778 ;
+ns1:hasQualityMeasurement _:b37779 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#182495ec3e4bbeb39d4bb3978c8fbb2cMetadata> ns1:hasQualityMeasurement _:b37611 ;
+ns1:hasQualityMeasurement _:b37612 ;
+ns1:hasQualityMeasurement _:b37613 ;
+ns1:hasQualityMeasurement _:b37614 ;
+ns1:hasQualityMeasurement _:b37615 ;
+ns1:hasQualityMeasurement _:b37616 ;
+ns1:hasQualityMeasurement _:b37617 ;
+ns1:hasQualityMeasurement _:b37618 ;
+ns1:hasQualityMeasurement _:b37619 ;
+ns1:hasQualityMeasurement _:b37620 ;
+ns1:hasQualityMeasurement _:b37621 ;
+ns1:hasQualityMeasurement _:b37622 ;
+ns1:hasQualityMeasurement _:b37623 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> ;
+ns2:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+
+_:b37818 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37939 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37819 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37814 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37935 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#356d3827ec2d6a630c4ce2a5cd5b0f28Metadata> ns1:hasQualityMeasurement _:b37689 ;
+ns1:hasQualityMeasurement _:b37690 ;
+ns1:hasQualityMeasurement _:b37691 ;
+ns1:hasQualityMeasurement _:b37692 ;
+ns1:hasQualityMeasurement _:b37693 ;
+ns1:hasQualityMeasurement _:b37694 ;
+ns1:hasQualityMeasurement _:b37695 ;
+ns1:hasQualityMeasurement _:b37696 ;
+ns1:hasQualityMeasurement _:b37697 ;
+ns1:hasQualityMeasurement _:b37698 ;
+ns1:hasQualityMeasurement _:b37699 ;
+ns1:hasQualityMeasurement _:b37700 ;
+ns1:hasQualityMeasurement _:b37701 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37815 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.7333333466666694"^^xsd:decimal .
+
+_:b37936 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37816 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37937 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37817 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37938 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37810 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37931 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37811 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37932 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.4666666933333387"^^xsd:decimal .
+
+_:b37812 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37933 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37813 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37934 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#8b892c6e5537af4aba47ec66bea03deaMetadata> ns1:hasQualityMeasurement _:b37819 ;
+ns1:hasQualityMeasurement _:b37820 ;
+ns1:hasQualityMeasurement _:b37821 ;
+ns1:hasQualityMeasurement _:b37822 ;
+ns1:hasQualityMeasurement _:b37823 ;
+ns1:hasQualityMeasurement _:b37824 ;
+ns1:hasQualityMeasurement _:b37825 ;
+ns1:hasQualityMeasurement _:b37826 ;
+ns1:hasQualityMeasurement _:b37827 ;
+ns1:hasQualityMeasurement _:b37828 ;
+ns1:hasQualityMeasurement _:b37829 ;
+ns1:hasQualityMeasurement _:b37830 ;
+ns1:hasQualityMeasurement _:b37831 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37930 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37708 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37829 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.6666666666666666"^^xsd:decimal .
+
+_:b37709 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37704 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37825 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37946 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37705 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.4"^^xsd:decimal .
+
+_:b37826 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.24"^^xsd:decimal .
+
+_:b37947 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37706 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37827 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.24999987499993748"^^xsd:decimal .
+
+_:b37948 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37707 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37828 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.799999959999992"^^xsd:decimal .
+
+_:b37949 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37700 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37821 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37942 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37701 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37822 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37943 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37702 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37823 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37944 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.08333329166664583"^^xsd:decimal .
+
+_:b37703 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37824 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37945 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.13333322666664532"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#b2d6b65e58fa68df467b6a39159694b3Metadata> ns1:hasQualityMeasurement _:b37897 ;
+ns1:hasQualityMeasurement _:b37898 ;
+ns1:hasQualityMeasurement _:b37899 ;
+ns1:hasQualityMeasurement _:b37900 ;
+ns1:hasQualityMeasurement _:b37901 ;
+ns1:hasQualityMeasurement _:b37902 ;
+ns1:hasQualityMeasurement _:b37903 ;
+ns1:hasQualityMeasurement _:b37904 ;
+ns1:hasQualityMeasurement _:b37905 ;
+ns1:hasQualityMeasurement _:b37906 ;
+ns1:hasQualityMeasurement _:b37907 ;
+ns1:hasQualityMeasurement _:b37908 ;
+ns1:hasQualityMeasurement _:b37909 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37940 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37820 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37941 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37917 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.6"^^xsd:decimal .
+
+_:b37918 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37919 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.400000080000016"^^xsd:decimal .
+
+_:b37913 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.5333333333333333"^^xsd:decimal .
+
+_:b37914 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37915 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37916 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37910 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37911 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37912 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37807 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37928 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37808 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37929 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37809 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37803 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37924 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37804 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37925 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37805 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37926 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.4"^^xsd:decimal .
+
+_:b37806 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37927 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37920 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37800 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37921 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37801 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.24999987499993748"^^xsd:decimal .
+
+_:b37922 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37802 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.6666667333333467"^^xsd:decimal .
+
+_:b37923 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#de1105695ce05eef6d2822dbcfb07a2aMetadata> ns1:hasQualityMeasurement _:b37949 ;
+ns1:hasQualityMeasurement _:b37950 ;
+ns1:hasQualityMeasurement _:b37951 ;
+ns1:hasQualityMeasurement _:b37952 ;
+ns1:hasQualityMeasurement _:b37953 ;
+ns1:hasQualityMeasurement _:b37954 ;
+ns1:hasQualityMeasurement _:b37955 ;
+ns1:hasQualityMeasurement _:b37956 ;
+ns1:hasQualityMeasurement _:b37957 ;
+ns1:hasQualityMeasurement _:b37958 ;
+ns1:hasQualityMeasurement _:b37959 ;
+ns1:hasQualityMeasurement _:b37960 ;
+ns1:hasQualityMeasurement _:b37961 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#134b159533ba77990dd69522f1f5bd4aMetadata> ns1:hasQualityMeasurement _:b37598 ;
+ns1:hasQualityMeasurement _:b37599 ;
+ns1:hasQualityMeasurement _:b37600 ;
+ns1:hasQualityMeasurement _:b37601 ;
+ns1:hasQualityMeasurement _:b37602 ;
+ns1:hasQualityMeasurement _:b37603 ;
+ns1:hasQualityMeasurement _:b37604 ;
+ns1:hasQualityMeasurement _:b37605 ;
+ns1:hasQualityMeasurement _:b37606 ;
+ns1:hasQualityMeasurement _:b37607 ;
+ns1:hasQualityMeasurement _:b37608 ;
+ns1:hasQualityMeasurement _:b37609 ;
+ns1:hasQualityMeasurement _:b37610 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#8650fe5de40f0a0db122e238b3fd1a6cMetadata> ns1:hasQualityMeasurement _:b37806 ;
+ns1:hasQualityMeasurement _:b37807 ;
+ns1:hasQualityMeasurement _:b37808 ;
+ns1:hasQualityMeasurement _:b37809 ;
+ns1:hasQualityMeasurement _:b37810 ;
+ns1:hasQualityMeasurement _:b37811 ;
+ns1:hasQualityMeasurement _:b37812 ;
+ns1:hasQualityMeasurement _:b37813 ;
+ns1:hasQualityMeasurement _:b37814 ;
+ns1:hasQualityMeasurement _:b37815 ;
+ns1:hasQualityMeasurement _:b37816 ;
+ns1:hasQualityMeasurement _:b37817 ;
+ns1:hasQualityMeasurement _:b37818 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37906 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.400000080000016"^^xsd:decimal .
+
+_:b37907 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37908 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37909 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37902 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37903 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37904 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.4"^^xsd:decimal .
+
+_:b37905 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.16666658333329165"^^xsd:decimal .
+
+_:b37900 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.4"^^xsd:decimal .
+
+_:b37901 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#5654e4fe5d4333f45ef9589c254300beMetadata> ns1:hasQualityMeasurement _:b37702 ;
+ns1:hasQualityMeasurement _:b37703 ;
+ns1:hasQualityMeasurement _:b37704 ;
+ns1:hasQualityMeasurement _:b37705 ;
+ns1:hasQualityMeasurement _:b37706 ;
+ns1:hasQualityMeasurement _:b37707 ;
+ns1:hasQualityMeasurement _:b37708 ;
+ns1:hasQualityMeasurement _:b37709 ;
+ns1:hasQualityMeasurement _:b37710 ;
+ns1:hasQualityMeasurement _:b37711 ;
+ns1:hasQualityMeasurement _:b37712 ;
+ns1:hasQualityMeasurement _:b37713 ;
+ns1:hasQualityMeasurement _:b37714 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#afe8fa085051a1d9122371efce96654bMetadata> ns1:hasQualityMeasurement _:b37884 ;
+ns1:hasQualityMeasurement _:b37885 ;
+ns1:hasQualityMeasurement _:b37886 ;
+ns1:hasQualityMeasurement _:b37887 ;
+ns1:hasQualityMeasurement _:b37888 ;
+ns1:hasQualityMeasurement _:b37889 ;
+ns1:hasQualityMeasurement _:b37890 ;
+ns1:hasQualityMeasurement _:b37891 ;
+ns1:hasQualityMeasurement _:b37892 ;
+ns1:hasQualityMeasurement _:b37893 ;
+ns1:hasQualityMeasurement _:b37894 ;
+ns1:hasQualityMeasurement _:b37895 ;
+ns1:hasQualityMeasurement _:b37896 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#5cdd41b02ee1d1ee00c6f8e7f1f5560cMetadata> ns1:hasQualityMeasurement _:b37741 ;
+ns1:hasQualityMeasurement _:b37742 ;
+ns1:hasQualityMeasurement _:b37743 ;
+ns1:hasQualityMeasurement _:b37744 ;
+ns1:hasQualityMeasurement _:b37745 ;
+ns1:hasQualityMeasurement _:b37746 ;
+ns1:hasQualityMeasurement _:b37747 ;
+ns1:hasQualityMeasurement _:b37748 ;
+ns1:hasQualityMeasurement _:b37749 ;
+ns1:hasQualityMeasurement _:b37750 ;
+ns1:hasQualityMeasurement _:b37751 ;
+ns1:hasQualityMeasurement _:b37752 ;
+ns1:hasQualityMeasurement _:b37753 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#c79b222d130b8904ba628a125aefc453Metadata> ns1:hasQualityMeasurement _:b37936 ;
+ns1:hasQualityMeasurement _:b37937 ;
+ns1:hasQualityMeasurement _:b37938 ;
+ns1:hasQualityMeasurement _:b37939 ;
+ns1:hasQualityMeasurement _:b37940 ;
+ns1:hasQualityMeasurement _:b37941 ;
+ns1:hasQualityMeasurement _:b37942 ;
+ns1:hasQualityMeasurement _:b37943 ;
+ns1:hasQualityMeasurement _:b37944 ;
+ns1:hasQualityMeasurement _:b37945 ;
+ns1:hasQualityMeasurement _:b37946 ;
+ns1:hasQualityMeasurement _:b37947 ;
+ns1:hasQualityMeasurement _:b37948 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37656 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37777 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37898 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37657 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37778 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37899 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37658 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37779 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37659 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.13333322666664532"^^xsd:decimal .
+
+_:b37652 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37773 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37894 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37653 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37774 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37895 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37654 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37775 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.08333329166664583"^^xsd:decimal .
+
+_:b37896 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37655 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37776 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.4666666933333387"^^xsd:decimal .
+
+_:b37897 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37890 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37770 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37891 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37650 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37771 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37892 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37651 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37772 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37893 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.400000080000016"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#c652ed13fded9cf1d49011b361aa88e1Metadata> ns1:hasQualityMeasurement _:b37923 ;
+ns1:hasQualityMeasurement _:b37924 ;
+ns1:hasQualityMeasurement _:b37925 ;
+ns1:hasQualityMeasurement _:b37926 ;
+ns1:hasQualityMeasurement _:b37927 ;
+ns1:hasQualityMeasurement _:b37928 ;
+ns1:hasQualityMeasurement _:b37929 ;
+ns1:hasQualityMeasurement _:b37930 ;
+ns1:hasQualityMeasurement _:b37931 ;
+ns1:hasQualityMeasurement _:b37932 ;
+ns1:hasQualityMeasurement _:b37933 ;
+ns1:hasQualityMeasurement _:b37934 ;
+ns1:hasQualityMeasurement _:b37935 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37667 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37788 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.08333329166664583"^^xsd:decimal .
+
+_:b37668 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37789 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.4666666933333387"^^xsd:decimal .
+
+_:b37669 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37663 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37784 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37664 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37785 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37665 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37786 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37666 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37787 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37780 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37660 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37781 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37661 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37782 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37662 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37783 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.3"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#320369d0dc9424ee9757157e076da94dMetadata> ns1:hasQualityMeasurement _:b37676 ;
+ns1:hasQualityMeasurement _:b37677 ;
+ns1:hasQualityMeasurement _:b37678 ;
+ns1:hasQualityMeasurement _:b37679 ;
+ns1:hasQualityMeasurement _:b37680 ;
+ns1:hasQualityMeasurement _:b37681 ;
+ns1:hasQualityMeasurement _:b37682 ;
+ns1:hasQualityMeasurement _:b37683 ;
+ns1:hasQualityMeasurement _:b37684 ;
+ns1:hasQualityMeasurement _:b37685 ;
+ns1:hasQualityMeasurement _:b37686 ;
+ns1:hasQualityMeasurement _:b37687 ;
+ns1:hasQualityMeasurement _:b37688 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37638 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37759 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37639 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37634 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37755 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37876 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37635 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37756 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37877 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37636 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37757 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37878 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37637 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37758 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37879 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.24999987499993748"^^xsd:decimal .
+
+_:b37630 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37751 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37872 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37631 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.3"^^xsd:decimal .
+
+_:b37752 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37873 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37632 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.08333329166664583"^^xsd:decimal .
+
+_:b37753 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37874 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37633 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.6666667333333467"^^xsd:decimal .
+
+_:b37754 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37875 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37870 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37750 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.6666667333333467"^^xsd:decimal .
+
+_:b37871 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37649 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37645 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.08333329166664583"^^xsd:decimal .
+
+_:b37766 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37887 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.4"^^xsd:decimal .
+
+_:b37646 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37767 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37888 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37647 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37768 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37889 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37648 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37769 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37641 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37762 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.16666658333329165"^^xsd:decimal .
+
+_:b37883 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37642 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37763 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.13333322666664532"^^xsd:decimal .
+
+_:b37884 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37643 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37764 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37885 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37644 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37765 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37886 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37880 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.26666665333333067"^^xsd:decimal .
+
+_:b37760 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37881 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37640 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37761 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37882 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#5e8bdc47244839a10b50a3b623001061Metadata> ns1:hasQualityMeasurement _:b37754 ;
+ns1:hasQualityMeasurement _:b37755 ;
+ns1:hasQualityMeasurement _:b37756 ;
+ns1:hasQualityMeasurement _:b37757 ;
+ns1:hasQualityMeasurement _:b37758 ;
+ns1:hasQualityMeasurement _:b37759 ;
+ns1:hasQualityMeasurement _:b37760 ;
+ns1:hasQualityMeasurement _:b37761 ;
+ns1:hasQualityMeasurement _:b37762 ;
+ns1:hasQualityMeasurement _:b37763 ;
+ns1:hasQualityMeasurement _:b37764 ;
+ns1:hasQualityMeasurement _:b37765 ;
+ns1:hasQualityMeasurement _:b37766 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37616 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37737 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.4666666933333387"^^xsd:decimal .
+
+_:b37858 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37617 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37738 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37859 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37618 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37739 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37619 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37612 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37733 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37854 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.39999987999997605"^^xsd:decimal .
+
+_:b37613 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37734 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37855 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37614 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37735 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37856 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37615 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37736 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.16666658333329165"^^xsd:decimal .
+
+_:b37857 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37850 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37971 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.6666667333333467"^^xsd:decimal .
+
+_:b37730 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37851 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37972 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37610 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37731 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37852 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37973 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37611 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37732 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37853 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.24999987499993748"^^xsd:decimal .
+
+_:b37974 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37970 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.08333329166664583"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#5660352be64d0fa2263887a63d2f2f75Metadata> ns1:hasQualityMeasurement _:b37715 ;
+ns1:hasQualityMeasurement _:b37716 ;
+ns1:hasQualityMeasurement _:b37717 ;
+ns1:hasQualityMeasurement _:b37718 ;
+ns1:hasQualityMeasurement _:b37719 ;
+ns1:hasQualityMeasurement _:b37720 ;
+ns1:hasQualityMeasurement _:b37721 ;
+ns1:hasQualityMeasurement _:b37722 ;
+ns1:hasQualityMeasurement _:b37723 ;
+ns1:hasQualityMeasurement _:b37724 ;
+ns1:hasQualityMeasurement _:b37725 ;
+ns1:hasQualityMeasurement _:b37726 ;
+ns1:hasQualityMeasurement _:b37727 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37627 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.4333333333333333"^^xsd:decimal .
+
+_:b37748 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37869 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37628 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37749 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37629 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37623 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37744 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37865 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37624 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37745 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37866 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37625 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37746 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37867 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37626 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37747 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37868 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37740 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37861 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37620 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.200000040000008"^^xsd:decimal .
+
+_:b37741 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37862 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37621 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37742 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37863 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37622 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37743 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37864 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37860 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#ab7390bcbd3607c42e1bca15d21b1a35Metadata> ns1:hasQualityMeasurement _:b37871 ;
+ns1:hasQualityMeasurement _:b37872 ;
+ns1:hasQualityMeasurement _:b37873 ;
+ns1:hasQualityMeasurement _:b37874 ;
+ns1:hasQualityMeasurement _:b37875 ;
+ns1:hasQualityMeasurement _:b37876 ;
+ns1:hasQualityMeasurement _:b37877 ;
+ns1:hasQualityMeasurement _:b37878 ;
+ns1:hasQualityMeasurement _:b37879 ;
+ns1:hasQualityMeasurement _:b37880 ;
+ns1:hasQualityMeasurement _:b37881 ;
+ns1:hasQualityMeasurement _:b37882 ;
+ns1:hasQualityMeasurement _:b37883 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37719 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37715 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37836 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37957 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37716 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37837 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37958 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.6666667333333467"^^xsd:decimal .
+
+_:b37717 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37838 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37959 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37718 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37839 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37711 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.4666666933333387"^^xsd:decimal .
+
+_:b37832 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37953 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37712 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37833 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37954 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37713 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37834 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37955 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37714 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37835 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37956 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.4"^^xsd:decimal .
+
+_:b37950 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37830 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37951 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37710 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.08333329166664583"^^xsd:decimal .
+
+_:b37831 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37952 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.4"^^xsd:decimal .
+
+_:b37609 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37605 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37726 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37847 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37968 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37606 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.24999987499993748"^^xsd:decimal .
+
+_:b37727 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37848 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37969 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37607 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.6666667333333467"^^xsd:decimal .
+
+_:b37728 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37849 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37608 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37729 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37601 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.6"^^xsd:decimal .
+
+_:b37722 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37843 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37964 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37602 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37723 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.08333329166664583"^^xsd:decimal .
+
+_:b37844 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37965 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37603 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37724 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.26666665333333067"^^xsd:decimal .
+
+_:b37845 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37966 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37604 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37725 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37846 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37967 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37960 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37840 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37961 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+_:b37720 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37841 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.200000040000008"^^xsd:decimal .
+
+_:b37962 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37600 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37721 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37842 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37963 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#2a57470847c2baf4fa370d26058797c5Metadata> ns1:hasQualityMeasurement _:b37663 ;
+ns1:hasQualityMeasurement _:b37664 ;
+ns1:hasQualityMeasurement _:b37665 ;
+ns1:hasQualityMeasurement _:b37666 ;
+ns1:hasQualityMeasurement _:b37667 ;
+ns1:hasQualityMeasurement _:b37668 ;
+ns1:hasQualityMeasurement _:b37669 ;
+ns1:hasQualityMeasurement _:b37670 ;
+ns1:hasQualityMeasurement _:b37671 ;
+ns1:hasQualityMeasurement _:b37672 ;
+ns1:hasQualityMeasurement _:b37673 ;
+ns1:hasQualityMeasurement _:b37674 ;
+ns1:hasQualityMeasurement _:b37675 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#a22bd8278fa7908b505e7e047412519eMetadata> ns1:hasQualityMeasurement _:b37832 ;
+ns1:hasQualityMeasurement _:b37833 ;
+ns1:hasQualityMeasurement _:b37834 ;
+ns1:hasQualityMeasurement _:b37835 ;
+ns1:hasQualityMeasurement _:b37836 ;
+ns1:hasQualityMeasurement _:b37837 ;
+ns1:hasQualityMeasurement _:b37838 ;
+ns1:hasQualityMeasurement _:b37839 ;
+ns1:hasQualityMeasurement _:b37840 ;
+ns1:hasQualityMeasurement _:b37841 ;
+ns1:hasQualityMeasurement _:b37842 ;
+ns1:hasQualityMeasurement _:b37843 ;
+ns1:hasQualityMeasurement _:b37844 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37598 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37599 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#799d08e6fa1fe5f6fd0168f6927150bbMetadata> ns1:hasQualityMeasurement _:b37780 ;
+ns1:hasQualityMeasurement _:b37781 ;
+ns1:hasQualityMeasurement _:b37782 ;
+ns1:hasQualityMeasurement _:b37783 ;
+ns1:hasQualityMeasurement _:b37784 ;
+ns1:hasQualityMeasurement _:b37785 ;
+ns1:hasQualityMeasurement _:b37786 ;
+ns1:hasQualityMeasurement _:b37787 ;
+ns1:hasQualityMeasurement _:b37788 ;
+ns1:hasQualityMeasurement _:b37789 ;
+ns1:hasQualityMeasurement _:b37790 ;
+ns1:hasQualityMeasurement _:b37791 ;
+ns1:hasQualityMeasurement _:b37792 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#19c02e31bf2de918d1aa54378ca0f234Metadata> ns1:hasQualityMeasurement _:b37624 ;
+ns1:hasQualityMeasurement _:b37625 ;
+ns1:hasQualityMeasurement _:b37626 ;
+ns1:hasQualityMeasurement _:b37627 ;
+ns1:hasQualityMeasurement _:b37628 ;
+ns1:hasQualityMeasurement _:b37629 ;
+ns1:hasQualityMeasurement _:b37630 ;
+ns1:hasQualityMeasurement _:b37631 ;
+ns1:hasQualityMeasurement _:b37632 ;
+ns1:hasQualityMeasurement _:b37633 ;
+ns1:hasQualityMeasurement _:b37634 ;
+ns1:hasQualityMeasurement _:b37635 ;
+ns1:hasQualityMeasurement _:b37636 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37696 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37697 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.24999987499993748"^^xsd:decimal .
+
+_:b37698 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.33333326666665336"^^xsd:decimal .
+
+_:b37699 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37692 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37693 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37694 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37695 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37690 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37691 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37678 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37799 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37679 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b37674 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37795 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37675 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37796 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:value "0.6"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#c42e6547d48c55733c93fa9b70c9b8e0Metadata> ns1:hasQualityMeasurement _:b37910 ;
+ns1:hasQualityMeasurement _:b37911 ;
+ns1:hasQualityMeasurement _:b37912 ;
+ns1:hasQualityMeasurement _:b37913 ;
+ns1:hasQualityMeasurement _:b37914 ;
+ns1:hasQualityMeasurement _:b37915 ;
+ns1:hasQualityMeasurement _:b37916 ;
+ns1:hasQualityMeasurement _:b37917 ;
+ns1:hasQualityMeasurement _:b37918 ;
+ns1:hasQualityMeasurement _:b37919 ;
+ns1:hasQualityMeasurement _:b37920 ;
+ns1:hasQualityMeasurement _:b37921 ;
+ns1:hasQualityMeasurement _:b37922 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37676 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37797 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37677 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37798 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37670 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37791 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b37671 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.24999987499993748"^^xsd:decimal .
+
+_:b37792 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.5"^^xsd:decimal .
+
+_:b37672 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.599999919999984"^^xsd:decimal .
+
+_:b37793 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37673 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37794 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37790 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.3333333333333333"^^xsd:decimal .
+
+_:b37689 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37685 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - What measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:value "0.6666667333333467"^^xsd:decimal .
+
+_:b37686 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37687 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:value "1.0"^^xsd:decimal .
+
+_:b37688 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:value "0.75"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#244de12c82b368f1bf7dc74e9b90be6dMetadata> ns1:hasQualityMeasurement _:b37637 ;
+ns1:hasQualityMeasurement _:b37638 ;
+ns1:hasQualityMeasurement _:b37639 ;
+ns1:hasQualityMeasurement _:b37640 ;
+ns1:hasQualityMeasurement _:b37641 ;
+ns1:hasQualityMeasurement _:b37642 ;
+ns1:hasQualityMeasurement _:b37643 ;
+ns1:hasQualityMeasurement _:b37644 ;
+ns1:hasQualityMeasurement _:b37645 ;
+ns1:hasQualityMeasurement _:b37646 ;
+ns1:hasQualityMeasurement _:b37647 ;
+ns1:hasQualityMeasurement _:b37648 ;
+ns1:hasQualityMeasurement _:b37649 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+
+_:b37681 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - When measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37682 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Where measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37683 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - Who measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37684 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:value "0.3333331666665833"^^xsd:decimal .
+
+_:b37680 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance - How measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:value "0.0"^^xsd:decimal .
+
+
+
+
+############################################################
+# Values on Parent Tag                       ###############
+############################################################
+
+<http://ns.inria.fr/kg/index#2a57470847c2baf4fa370d26058797c5Metadata> ns1:hasQualityMeasurement _:b37990 ;
+ns1:hasQualityMeasurement _:b37991 ;
+ns1:hasQualityMeasurement _:b37992 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#5cdd41b02ee1d1ee00c6f8e7f1f5560cMetadata> ns1:hasQualityMeasurement _:b38008 ;
+ns1:hasQualityMeasurement _:b38009 ;
+ns1:hasQualityMeasurement _:b38010 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#356d3827ec2d6a630c4ce2a5cd5b0f28Metadata> ns1:hasQualityMeasurement _:b37996 ;
+ns1:hasQualityMeasurement _:b37997 ;
+ns1:hasQualityMeasurement _:b37998 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#c79b222d130b8904ba628a125aefc453Metadata> ns1:hasQualityMeasurement _:b38053 ;
+ns1:hasQualityMeasurement _:b38054 ;
+ns1:hasQualityMeasurement _:b38055 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#a22bd8278fa7908b505e7e047412519eMetadata> ns1:hasQualityMeasurement _:b38029 ;
+ns1:hasQualityMeasurement _:b38030 ;
+ns1:hasQualityMeasurement _:b38031 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#fa2584d188c6281ac56af9490425fab0Metadata> ns1:hasQualityMeasurement _:b38059 ;
+ns1:hasQualityMeasurement _:b38060 ;
+ns1:hasQualityMeasurement _:b38061 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#8b892c6e5537af4aba47ec66bea03deaMetadata> ns1:hasQualityMeasurement _:b38026 ;
+ns1:hasQualityMeasurement _:b38027 ;
+ns1:hasQualityMeasurement _:b38028 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#a853e557f4b8ccd61e3f33b3abd8298bMetadata> ns1:hasQualityMeasurement _:b38032 ;
+ns1:hasQualityMeasurement _:b38033 ;
+ns1:hasQualityMeasurement _:b38034 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#2543a5ffd4172433a52675a5d98f1589Metadata> ns1:hasQualityMeasurement _:b37987 ;
+ns1:hasQualityMeasurement _:b37988 ;
+ns1:hasQualityMeasurement _:b37989 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#7a321314530e8de0b8072703793cb3c4Metadata> ns1:hasQualityMeasurement _:b38020 ;
+ns1:hasQualityMeasurement _:b38021 ;
+ns1:hasQualityMeasurement _:b38022 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#c652ed13fded9cf1d49011b361aa88e1Metadata> ns1:hasQualityMeasurement _:b38050 ;
+ns1:hasQualityMeasurement _:b38051 ;
+ns1:hasQualityMeasurement _:b38052 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#b2d6b65e58fa68df467b6a39159694b3Metadata> ns1:hasQualityMeasurement _:b38044 ;
+ns1:hasQualityMeasurement _:b38045 ;
+ns1:hasQualityMeasurement _:b38046 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#591d4770cf9d1ca2a4104e41143c9c7eMetadata> ns1:hasQualityMeasurement _:b38005 ;
+ns1:hasQualityMeasurement _:b38006 ;
+ns1:hasQualityMeasurement _:b38007 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#ab4ab9da1468c1a2339ff12bb41add61Metadata> ns1:hasQualityMeasurement _:b38035 ;
+ns1:hasQualityMeasurement _:b38036 ;
+ns1:hasQualityMeasurement _:b38037 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#320369d0dc9424ee9757157e076da94dMetadata> ns1:hasQualityMeasurement _:b37993 ;
+ns1:hasQualityMeasurement _:b37994 ;
+ns1:hasQualityMeasurement _:b37995 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b38050 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.1"^^xsd:decimal .
+
+_:b37997 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.125"^^xsd:decimal .
+
+_:b37998 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.3833332949999848"^^xsd:decimal .
+
+_:b37999 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.475"^^xsd:decimal .
+
+_:b37993 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.3"^^xsd:decimal .
+
+_:b38048 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.15"^^xsd:decimal .
+
+_:b37994 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38049 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.49666664933331983"^^xsd:decimal .
+
+_:b37995 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.549999979999986"^^xsd:decimal .
+
+<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> ;
+ns2:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+
+_:b37996 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38044 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.1"^^xsd:decimal .
+
+_:b37990 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.3"^^xsd:decimal .
+
+_:b38045 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.1"^^xsd:decimal .
+
+_:b37991 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38046 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.3133333326666615"^^xsd:decimal .
+
+_:b37992 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.486666625666651"^^xsd:decimal .
+
+_:b38047 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.2583333333333333"^^xsd:decimal .
+
+_:b38040 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.45333330566665364"^^xsd:decimal .
+
+_:b38041 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.1"^^xsd:decimal .
+
+_:b38042 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38043 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.49666664933331983"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#799d08e6fa1fe5f6fd0168f6927150bbMetadata> ns1:hasQualityMeasurement _:b38017 ;
+ns1:hasQualityMeasurement _:b38018 ;
+ns1:hasQualityMeasurement _:b38019 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b38060 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38061 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.41666667166666516"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#68cb2be9d65dd56a9cc354b86c819d81Metadata> ns1:hasQualityMeasurement _:b38014 ;
+ns1:hasQualityMeasurement _:b38015 ;
+ns1:hasQualityMeasurement _:b38016 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#19c02e31bf2de918d1aa54378ca0f234Metadata> ns1:hasQualityMeasurement _:b37981 ;
+ns1:hasQualityMeasurement _:b37982 ;
+ns1:hasQualityMeasurement _:b37983 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b38059 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.05"^^xsd:decimal .
+
+_:b38055 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.09333330366665823"^^xsd:decimal .
+
+_:b38056 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.35"^^xsd:decimal .
+
+_:b38057 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.225"^^xsd:decimal .
+
+_:b38058 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.549999979999986"^^xsd:decimal .
+
+_:b38051 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.125"^^xsd:decimal .
+
+_:b38052 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.576666638666651"^^xsd:decimal .
+
+_:b38053 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38054 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#5e8bdc47244839a10b50a3b623001061Metadata> ns1:hasQualityMeasurement _:b38011 ;
+ns1:hasQualityMeasurement _:b38012 ;
+ns1:hasQualityMeasurement _:b38013 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b37979 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.125"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#182495ec3e4bbeb39d4bb3978c8fbb2cMetadata> ns1:hasQualityMeasurement _:b37978 ;
+ns1:hasQualityMeasurement _:b37979 ;
+ns1:hasQualityMeasurement _:b37980 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#de1105695ce05eef6d2822dbcfb07a2aMetadata> ns1:hasQualityMeasurement _:b38056 ;
+ns1:hasQualityMeasurement _:b38057 ;
+ns1:hasQualityMeasurement _:b38058 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b37975 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.15"^^xsd:decimal .
+
+_:b37976 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#134b159533ba77990dd69522f1f5bd4aMetadata> ns1:hasQualityMeasurement _:b37975 ;
+ns1:hasQualityMeasurement _:b37976 ;
+ns1:hasQualityMeasurement _:b37977 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b37977 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.5333333216666569"^^xsd:decimal .
+
+_:b37978 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38026 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.4375"^^xsd:decimal .
+
+_:b38027 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.185"^^xsd:decimal .
+
+_:b38028 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.6933333003333193"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#8650fe5de40f0a0db122e238b3fd1a6cMetadata> ns1:hasQualityMeasurement _:b38023 ;
+ns1:hasQualityMeasurement _:b38024 ;
+ns1:hasQualityMeasurement _:b38025 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b38029 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.05"^^xsd:decimal .
+
+_:b38022 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.5333333216666569"^^xsd:decimal .
+
+_:b38023 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38024 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.125"^^xsd:decimal .
+
+_:b38025 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.5133333026666506"^^xsd:decimal .
+
+_:b38020 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.15"^^xsd:decimal .
+
+_:b38021 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#5660352be64d0fa2263887a63d2f2f75Metadata> ns1:hasQualityMeasurement _:b38002 ;
+ns1:hasQualityMeasurement _:b38003 ;
+ns1:hasQualityMeasurement _:b38004 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b37986 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.06666665833332916"^^xsd:decimal .
+
+_:b37987 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.05"^^xsd:decimal .
+
+_:b37988 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.125"^^xsd:decimal .
+
+_:b37989 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.5099999453333124"^^xsd:decimal .
+
+_:b37982 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.2"^^xsd:decimal .
+
+_:b38037 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37983 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.41666667166666516"^^xsd:decimal .
+
+_:b38038 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.425"^^xsd:decimal .
+
+_:b37984 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38039 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37985 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38033 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.125"^^xsd:decimal .
+
+_:b38034 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.39666661766664935"^^xsd:decimal .
+
+_:b37980 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.45666664133331825"^^xsd:decimal .
+
+_:b38035 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b37981 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.48333333333333334"^^xsd:decimal .
+
+_:b38036 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38030 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.25"^^xsd:decimal .
+
+_:b38031 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.20666667466666827"^^xsd:decimal .
+
+_:b38032 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#ab7390bcbd3607c42e1bca15d21b1a35Metadata> ns1:hasQualityMeasurement _:b38038 ;
+ns1:hasQualityMeasurement _:b38039 ;
+ns1:hasQualityMeasurement _:b38040 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b38008 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.175"^^xsd:decimal .
+
+_:b38009 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.05"^^xsd:decimal .
+
+_:b38004 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.1699999889999953"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#c42e6547d48c55733c93fa9b70c9b8e0Metadata> ns1:hasQualityMeasurement _:b38047 ;
+ns1:hasQualityMeasurement _:b38048 ;
+ns1:hasQualityMeasurement _:b38049 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b38005 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38006 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38007 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.22666665533332608"^^xsd:decimal .
+
+_:b38000 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38001 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.3266666636666636"^^xsd:decimal .
+
+_:b38002 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.425"^^xsd:decimal .
+
+_:b38003 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.05"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#5654e4fe5d4333f45ef9589c254300beMetadata> ns1:hasQualityMeasurement _:b37999 ;
+ns1:hasQualityMeasurement _:b38000 ;
+ns1:hasQualityMeasurement _:b38001 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+<http://ns.inria.fr/kg/index#afe8fa085051a1d9122371efce96654bMetadata> ns1:hasQualityMeasurement _:b38041 ;
+ns1:hasQualityMeasurement _:b38042 ;
+ns1:hasQualityMeasurement _:b38043 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b38019 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.3266666636666636"^^xsd:decimal .
+
+_:b38015 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.05"^^xsd:decimal .
+
+_:b38016 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.3099999969999969"^^xsd:decimal .
+
+_:b38017 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.325"^^xsd:decimal .
+
+_:b38018 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#244de12c82b368f1bf7dc74e9b90be6dMetadata> ns1:hasQualityMeasurement _:b37984 ;
+ns1:hasQualityMeasurement _:b37985 ;
+ns1:hasQualityMeasurement _:b37986 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+
+_:b38011 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38012 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Maintenance measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38013 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.10999996199998738"^^xsd:decimal .
+
+_:b38014 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Collection measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:value "0.425"^^xsd:decimal .
+
+_:b38010 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Data Usage measurement" ;
+ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:value "0.549999979999986"^^xsd:decimal .
+
+
+
+
+############################################################
+# Values of Completeness                       #############
+############################################################
+
+<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> ;
+ns2:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+
+<http://ns.inria.fr/kg/index#2a57470847c2baf4fa370d26058797c5Metadata> ns1:hasQualityMeasurement _:b38067 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38070 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.2672222212222212"^^xsd:decimal .
+
+_:b38071 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.21499999633333178"^^xsd:decimal .
+
+_:b38072 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.07555555177777536"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#5e8bdc47244839a10b50a3b623001061Metadata> ns1:hasQualityMeasurement _:b38074 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#5cdd41b02ee1d1ee00c6f8e7f1f5560cMetadata> ns1:hasQualityMeasurement _:b38073 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#356d3827ec2d6a630c4ce2a5cd5b0f28Metadata> ns1:hasQualityMeasurement _:b38069 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#c79b222d130b8904ba628a125aefc453Metadata> ns1:hasQualityMeasurement _:b38088 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#182495ec3e4bbeb39d4bb3978c8fbb2cMetadata> ns1:hasQualityMeasurement _:b38063 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#a22bd8278fa7908b505e7e047412519eMetadata> ns1:hasQualityMeasurement _:b38080 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#de1105695ce05eef6d2822dbcfb07a2aMetadata> ns1:hasQualityMeasurement _:b38089 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#134b159533ba77990dd69522f1f5bd4aMetadata> ns1:hasQualityMeasurement _:b38062 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#fa2584d188c6281ac56af9490425fab0Metadata> ns1:hasQualityMeasurement _:b38090 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#8650fe5de40f0a0db122e238b3fd1a6cMetadata> ns1:hasQualityMeasurement _:b38078 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#8b892c6e5537af4aba47ec66bea03deaMetadata> ns1:hasQualityMeasurement _:b38079 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#a853e557f4b8ccd61e3f33b3abd8298bMetadata> ns1:hasQualityMeasurement _:b38081 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38066 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.22833331511110413"^^xsd:decimal .
+
+_:b38067 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.26222220855555034"^^xsd:decimal .
+
+_:b38068 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.283333326666662"^^xsd:decimal .
+
+_:b38069 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.1694444316666616"^^xsd:decimal .
+
+_:b38062 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.22777777388888565"^^xsd:decimal .
+
+_:b38063 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.19388888044443942"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#2543a5ffd4172433a52675a5d98f1589Metadata> ns1:hasQualityMeasurement _:b38066 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#7a321314530e8de0b8072703793cb3c4Metadata> ns1:hasQualityMeasurement _:b38077 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38064 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.36666666833333283"^^xsd:decimal .
+
+_:b38065 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.022222219444443053"^^xsd:decimal .
+
+_:b38080 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.1688888915555561"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#5660352be64d0fa2263887a63d2f2f75Metadata> ns1:hasQualityMeasurement _:b38071 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38081 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.17388887255554977"^^xsd:decimal .
+
+_:b38082 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.0"^^xsd:decimal .
+
+_:b38083 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.2927777685555512"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#c652ed13fded9cf1d49011b361aa88e1Metadata> ns1:hasQualityMeasurement _:b38087 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#b2d6b65e58fa68df467b6a39159694b3Metadata> ns1:hasQualityMeasurement _:b38085 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38077 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.22777777388888565"^^xsd:decimal .
+
+_:b38078 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.2127777675555502"^^xsd:decimal .
+
+_:b38079 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.43861110011110643"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#591d4770cf9d1ca2a4104e41143c9c7eMetadata> ns1:hasQualityMeasurement _:b38072 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38073 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.25833332666666203"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#ab4ab9da1468c1a2339ff12bb41add61Metadata> ns1:hasQualityMeasurement _:b38082 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38074 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.036666653999995795"^^xsd:decimal .
+
+_:b38075 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.26166666566666563"^^xsd:decimal .
+
+_:b38076 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.2172222212222212"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#ab7390bcbd3607c42e1bca15d21b1a35Metadata> ns1:hasQualityMeasurement _:b38083 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#320369d0dc9424ee9757157e076da94dMetadata> ns1:hasQualityMeasurement _:b38068 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38090 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.15555555722222172"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#c42e6547d48c55733c93fa9b70c9b8e0Metadata> ns1:hasQualityMeasurement _:b38086 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+_:b38088 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.03111110122221941"^^xsd:decimal .
+
+_:b38089 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.3749999933333286"^^xsd:decimal .
+
+_:b38084 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.1988888831111066"^^xsd:decimal .
+
+_:b38085 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.17111111088888717"^^xsd:decimal .
+
+_:b38086 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.3016666608888844"^^xsd:decimal .
+
+_:b38087 rdf:type ns1:QualityMeasurement ;
+rdfs:label "Completeness measurement"@en ;
+ns1:isMeasurementOf "Completeness"@en ;
+ns1:value "0.26722221288888365"^^xsd:decimal .
+
+<http://ns.inria.fr/kg/index#799d08e6fa1fe5f6fd0168f6927150bbMetadata> ns1:hasQualityMeasurement _:b38076 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#68cb2be9d65dd56a9cc354b86c819d81Metadata> ns1:hasQualityMeasurement _:b38075 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#5654e4fe5d4333f45ef9589c254300beMetadata> ns1:hasQualityMeasurement _:b38070 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#afe8fa085051a1d9122371efce96654bMetadata> ns1:hasQualityMeasurement _:b38084 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#19c02e31bf2de918d1aa54378ca0f234Metadata> ns1:hasQualityMeasurement _:b38064 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+
+<http://ns.inria.fr/kg/index#244de12c82b368f1bf7dc74e9b90be6dMetadata> ns1:hasQualityMeasurement _:b38065 ;
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
