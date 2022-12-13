@@ -1,7 +1,7 @@
 # KG accountability
 
 This work is part of the [DeKalog project](https://dekalog.univ-nantes.fr).
-This code is made to be used along with [IndeGx](https://github.com/Wimmics/dekalog).
+This code is made to be used along with [IndeGx](https://github.com/Wimmics/dekalog), version v2.6.2 was used for these experiments.
 
 - It provides a new set of rules to measure accountability of knowledge graphs in [rules/](https://github.com/Jendersen/KG_accountability/tree/main/rules).
 - [information_need/](https://github.com/Jendersen/KG_accountability/tree/main/InformationNeed) provides the ontology SIN-O to describe information needs, and a first information need focused on accountability.
