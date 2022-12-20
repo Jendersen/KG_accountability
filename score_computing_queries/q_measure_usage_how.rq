@@ -3,19 +3,19 @@ PREFIX dqv: <http://www.w3.org/ns/dqv#>
 PREFIX sin: <http://www.exemple.com/sin#> .
 
 CONSTRUCT {
-	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq#activity> ;
+	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_usage_how.rq#activity> ;
 		dqv:hasQualityMeasurement [
 			a dqv:QualityMeasurement ;
 			rdfs:label "Usage access measurement" ;
 			dqv:computedOn ?endpointDescription ;
-			dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq>;
+			dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_usage_how.rq>;
 			dqv:value ?val_access ;
 			prov:generatedAtTime $dateLiteral
 		] .
-	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq> a dqv:Metric ;
+	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_usage_how.rq> a dqv:Metric ;
 		rdfs:comment "How to access the KG? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access, and the characteristics of the endpoint if provided." ;
 	rdfs:label "Usage access" .
-	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_usage_how.rq#activity> ;
+	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_usage_how.rq#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_usage_how.rq#activity> ;
 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 } WHERE {
 	# Main

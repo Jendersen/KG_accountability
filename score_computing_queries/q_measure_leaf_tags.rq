@@ -6,14 +6,14 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 # Here we assume there is only one need defined. Else, each Tag, Question and Labeling should be linked with the InformationNeed.
 
 CONSTRUCT {
-	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> ;
+	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> ;
 		dqv:hasQualityMeasurement [
 			a dqv:QualityMeasurement ;
 			rdfs:label ?label ;
 			dqv:isMeasurementOf ?tag ;
 			dqv:value ?agg
 		] .
-	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> ;
+	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> ;
 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 } WHERE {
 	{ SELECT ?tag ?taglab ?kg (SUM(?val * ?w) / SUM(?w) AS ?agg) WHERE {

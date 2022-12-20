@@ -88,7 +88,7 @@ ns1:hasQualityMeasurement _:b43865 ;
 ns1:hasQualityMeasurement _:b43866 ;
 ns1:hasQualityMeasurement _:b43867 ;
 ns1:hasQualityMeasurement _:b43868 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43666 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
@@ -483,7 +483,7 @@ ns1:hasQualityMeasurement _:b43813 ;
 ns1:hasQualityMeasurement _:b43814 ;
 ns1:hasQualityMeasurement _:b43815 ;
 ns1:hasQualityMeasurement _:b43816 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43632 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
@@ -513,7 +513,7 @@ ns1:hasQualityMeasurement _:b43644 ;
 ns1:hasQualityMeasurement _:b43645 ;
 ns1:hasQualityMeasurement _:b43646 ;
 ns1:hasQualityMeasurement _:b43647 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#5660352be64d0fa2263887a63d2f2f75Metadata> ns1:hasQualityMeasurement _:b43687 ;
 ns1:hasQualityMeasurement _:b43688 ;
@@ -528,7 +528,7 @@ ns1:hasQualityMeasurement _:b43696 ;
 ns1:hasQualityMeasurement _:b43697 ;
 ns1:hasQualityMeasurement _:b43698 ;
 ns1:hasQualityMeasurement _:b43699 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43633 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
@@ -665,7 +665,7 @@ rdfs:label "Data Maintenance - Who measurement" ;
 ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
-<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> ;
+<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> ;
 ns2:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 
 _:b43622 rdf:type ns1:QualityMeasurement ;
@@ -1186,7 +1186,7 @@ ns1:hasQualityMeasurement _:b43657 ;
 ns1:hasQualityMeasurement _:b43658 ;
 ns1:hasQualityMeasurement _:b43659 ;
 ns1:hasQualityMeasurement _:b43660 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#182495ec3e4bbeb39d4bb3978c8fbb2cMetadata> ns1:hasQualityMeasurement _:b43583 ;
 ns1:hasQualityMeasurement _:b43584 ;
@@ -1201,7 +1201,7 @@ ns1:hasQualityMeasurement _:b43592 ;
 ns1:hasQualityMeasurement _:b43593 ;
 ns1:hasQualityMeasurement _:b43594 ;
 ns1:hasQualityMeasurement _:b43595 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#a853e557f4b8ccd61e3f33b3abd8298bMetadata> ns1:hasQualityMeasurement _:b43817 ;
 ns1:hasQualityMeasurement _:b43818 ;
@@ -1216,7 +1216,7 @@ ns1:hasQualityMeasurement _:b43826 ;
 ns1:hasQualityMeasurement _:b43827 ;
 ns1:hasQualityMeasurement _:b43828 ;
 ns1:hasQualityMeasurement _:b43829 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43592 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
@@ -1271,7 +1271,7 @@ ns1:hasQualityMeasurement _:b43722 ;
 ns1:hasQualityMeasurement _:b43723 ;
 ns1:hasQualityMeasurement _:b43724 ;
 ns1:hasQualityMeasurement _:b43725 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43590 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
@@ -1296,7 +1296,7 @@ ns1:hasQualityMeasurement _:b43683 ;
 ns1:hasQualityMeasurement _:b43684 ;
 ns1:hasQualityMeasurement _:b43685 ;
 ns1:hasQualityMeasurement _:b43686 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43581 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
@@ -1361,7 +1361,7 @@ ns1:hasQualityMeasurement _:b43748 ;
 ns1:hasQualityMeasurement _:b43749 ;
 ns1:hasQualityMeasurement _:b43750 ;
 ns1:hasQualityMeasurement _:b43751 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43570 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
@@ -1461,7 +1461,7 @@ ns1:hasQualityMeasurement _:b43709 ;
 ns1:hasQualityMeasurement _:b43710 ;
 ns1:hasQualityMeasurement _:b43711 ;
 ns1:hasQualityMeasurement _:b43712 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43578 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
@@ -1541,7 +1541,7 @@ ns1:hasQualityMeasurement _:b43943 ;
 ns1:hasQualityMeasurement _:b43944 ;
 ns1:hasQualityMeasurement _:b43945 ;
 ns1:hasQualityMeasurement _:b43946 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43790 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
@@ -1611,7 +1611,7 @@ ns1:hasQualityMeasurement _:b43917 ;
 ns1:hasQualityMeasurement _:b43918 ;
 ns1:hasQualityMeasurement _:b43919 ;
 ns1:hasQualityMeasurement _:b43920 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43675 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
@@ -1646,7 +1646,7 @@ ns1:hasQualityMeasurement _:b43670 ;
 ns1:hasQualityMeasurement _:b43671 ;
 ns1:hasQualityMeasurement _:b43672 ;
 ns1:hasQualityMeasurement _:b43673 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#ab4ab9da1468c1a2339ff12bb41add61Metadata> ns1:hasQualityMeasurement _:b43830 ;
 ns1:hasQualityMeasurement _:b43831 ;
@@ -1661,7 +1661,7 @@ ns1:hasQualityMeasurement _:b43839 ;
 ns1:hasQualityMeasurement _:b43840 ;
 ns1:hasQualityMeasurement _:b43841 ;
 ns1:hasQualityMeasurement _:b43842 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43677 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
@@ -1701,7 +1701,7 @@ ns1:hasQualityMeasurement _:b43605 ;
 ns1:hasQualityMeasurement _:b43606 ;
 ns1:hasQualityMeasurement _:b43607 ;
 ns1:hasQualityMeasurement _:b43608 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#2543a5ffd4172433a52675a5d98f1589Metadata> ns1:hasQualityMeasurement _:b43622 ;
 ns1:hasQualityMeasurement _:b43623 ;
@@ -1716,7 +1716,7 @@ ns1:hasQualityMeasurement _:b43631 ;
 ns1:hasQualityMeasurement _:b43632 ;
 ns1:hasQualityMeasurement _:b43633 ;
 ns1:hasQualityMeasurement _:b43634 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#de1105695ce05eef6d2822dbcfb07a2aMetadata> ns1:hasQualityMeasurement _:b43921 ;
 ns1:hasQualityMeasurement _:b43922 ;
@@ -1731,7 +1731,7 @@ ns1:hasQualityMeasurement _:b43930 ;
 ns1:hasQualityMeasurement _:b43931 ;
 ns1:hasQualityMeasurement _:b43932 ;
 ns1:hasQualityMeasurement _:b43933 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43940 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
@@ -1801,7 +1801,7 @@ ns1:hasQualityMeasurement _:b43579 ;
 ns1:hasQualityMeasurement _:b43580 ;
 ns1:hasQualityMeasurement _:b43581 ;
 ns1:hasQualityMeasurement _:b43582 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43701 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
@@ -1921,7 +1921,7 @@ ns1:hasQualityMeasurement _:b43774 ;
 ns1:hasQualityMeasurement _:b43775 ;
 ns1:hasQualityMeasurement _:b43776 ;
 ns1:hasQualityMeasurement _:b43777 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43930 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
@@ -2116,7 +2116,7 @@ ns1:hasQualityMeasurement _:b43735 ;
 ns1:hasQualityMeasurement _:b43736 ;
 ns1:hasQualityMeasurement _:b43737 ;
 ns1:hasQualityMeasurement _:b43738 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43917 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
@@ -2146,7 +2146,7 @@ ns1:hasQualityMeasurement _:b43800 ;
 ns1:hasQualityMeasurement _:b43801 ;
 ns1:hasQualityMeasurement _:b43802 ;
 ns1:hasQualityMeasurement _:b43803 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43910 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
@@ -2191,7 +2191,7 @@ ns1:hasQualityMeasurement _:b43891 ;
 ns1:hasQualityMeasurement _:b43892 ;
 ns1:hasQualityMeasurement _:b43893 ;
 ns1:hasQualityMeasurement _:b43894 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 _:b43905 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
@@ -2256,7 +2256,7 @@ ns1:hasQualityMeasurement _:b43618 ;
 ns1:hasQualityMeasurement _:b43619 ;
 ns1:hasQualityMeasurement _:b43620 ;
 ns1:hasQualityMeasurement _:b43621 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#799d08e6fa1fe5f6fd0168f6927150bbMetadata> ns1:hasQualityMeasurement _:b43752 ;
 ns1:hasQualityMeasurement _:b43753 ;
@@ -2271,7 +2271,7 @@ ns1:hasQualityMeasurement _:b43761 ;
 ns1:hasQualityMeasurement _:b43762 ;
 ns1:hasQualityMeasurement _:b43763 ;
 ns1:hasQualityMeasurement _:b43764 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#8650fe5de40f0a0db122e238b3fd1a6cMetadata> ns1:hasQualityMeasurement _:b43778 ;
 ns1:hasQualityMeasurement _:b43779 ;
@@ -2286,7 +2286,7 @@ ns1:hasQualityMeasurement _:b43787 ;
 ns1:hasQualityMeasurement _:b43788 ;
 ns1:hasQualityMeasurement _:b43789 ;
 ns1:hasQualityMeasurement _:b43790 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#ab7390bcbd3607c42e1bca15d21b1a35Metadata> ns1:hasQualityMeasurement _:b43843 ;
 ns1:hasQualityMeasurement _:b43844 ;
@@ -2301,7 +2301,7 @@ ns1:hasQualityMeasurement _:b43852 ;
 ns1:hasQualityMeasurement _:b43853 ;
 ns1:hasQualityMeasurement _:b43854 ;
 ns1:hasQualityMeasurement _:b43855 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#b2d6b65e58fa68df467b6a39159694b3Metadata> ns1:hasQualityMeasurement _:b43869 ;
 ns1:hasQualityMeasurement _:b43870 ;
@@ -2316,7 +2316,7 @@ ns1:hasQualityMeasurement _:b43878 ;
 ns1:hasQualityMeasurement _:b43879 ;
 ns1:hasQualityMeasurement _:b43880 ;
 ns1:hasQualityMeasurement _:b43881 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#c652ed13fded9cf1d49011b361aa88e1Metadata> ns1:hasQualityMeasurement _:b43895 ;
 ns1:hasQualityMeasurement _:b43896 ;
@@ -2331,7 +2331,7 @@ ns1:hasQualityMeasurement _:b43904 ;
 ns1:hasQualityMeasurement _:b43905 ;
 ns1:hasQualityMeasurement _:b43906 ;
 ns1:hasQualityMeasurement _:b43907 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_leaf_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_leaf_tags.rq#activity> .
 
 
 
@@ -2342,7 +2342,7 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 <http://ns.inria.fr/kg/index#afe8fa085051a1d9122371efce96654bMetadata> ns1:hasQualityMeasurement _:b44013 ;
 ns1:hasQualityMeasurement _:b44014 ;
 ns1:hasQualityMeasurement _:b44015 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43949 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
@@ -2352,7 +2352,7 @@ ns1:value "0.5333333216666569"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#134b159533ba77990dd69522f1f5bd4aMetadata> ns1:hasQualityMeasurement _:b43947 ;
 ns1:hasQualityMeasurement _:b43948 ;
 ns1:hasQualityMeasurement _:b43949 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43947 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
@@ -2367,32 +2367,32 @@ ns1:value "0.0"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#19c02e31bf2de918d1aa54378ca0f234Metadata> ns1:hasQualityMeasurement _:b43953 ;
 ns1:hasQualityMeasurement _:b43954 ;
 ns1:hasQualityMeasurement _:b43955 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#320369d0dc9424ee9757157e076da94dMetadata> ns1:hasQualityMeasurement _:b43965 ;
 ns1:hasQualityMeasurement _:b43966 ;
 ns1:hasQualityMeasurement _:b43967 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#7a321314530e8de0b8072703793cb3c4Metadata> ns1:hasQualityMeasurement _:b43992 ;
 ns1:hasQualityMeasurement _:b43993 ;
 ns1:hasQualityMeasurement _:b43994 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#182495ec3e4bbeb39d4bb3978c8fbb2cMetadata> ns1:hasQualityMeasurement _:b43950 ;
 ns1:hasQualityMeasurement _:b43951 ;
 ns1:hasQualityMeasurement _:b43952 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#a853e557f4b8ccd61e3f33b3abd8298bMetadata> ns1:hasQualityMeasurement _:b44004 ;
 ns1:hasQualityMeasurement _:b44005 ;
 ns1:hasQualityMeasurement _:b44006 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#2543a5ffd4172433a52675a5d98f1589Metadata> ns1:hasQualityMeasurement _:b43959 ;
 ns1:hasQualityMeasurement _:b43960 ;
 ns1:hasQualityMeasurement _:b43961 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43990 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
@@ -2422,7 +2422,7 @@ ns1:value "0.5333333216666569"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#a22bd8278fa7908b505e7e047412519eMetadata> ns1:hasQualityMeasurement _:b44001 ;
 ns1:hasQualityMeasurement _:b44002 ;
 ns1:hasQualityMeasurement _:b44003 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43995 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
@@ -2432,27 +2432,27 @@ ns1:value "0.0"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#5cdd41b02ee1d1ee00c6f8e7f1f5560cMetadata> ns1:hasQualityMeasurement _:b43980 ;
 ns1:hasQualityMeasurement _:b43981 ;
 ns1:hasQualityMeasurement _:b43982 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#2a57470847c2baf4fa370d26058797c5Metadata> ns1:hasQualityMeasurement _:b43962 ;
 ns1:hasQualityMeasurement _:b43963 ;
 ns1:hasQualityMeasurement _:b43964 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#5e8bdc47244839a10b50a3b623001061Metadata> ns1:hasQualityMeasurement _:b43983 ;
 ns1:hasQualityMeasurement _:b43984 ;
 ns1:hasQualityMeasurement _:b43985 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#5660352be64d0fa2263887a63d2f2f75Metadata> ns1:hasQualityMeasurement _:b43974 ;
 ns1:hasQualityMeasurement _:b43975 ;
 ns1:hasQualityMeasurement _:b43976 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#8b892c6e5537af4aba47ec66bea03deaMetadata> ns1:hasQualityMeasurement _:b43998 ;
 ns1:hasQualityMeasurement _:b43999 ;
 ns1:hasQualityMeasurement _:b44000 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43996 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
@@ -2477,12 +2477,12 @@ ns1:value "0.185"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#5654e4fe5d4333f45ef9589c254300beMetadata> ns1:hasQualityMeasurement _:b43971 ;
 ns1:hasQualityMeasurement _:b43972 ;
 ns1:hasQualityMeasurement _:b43973 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#c42e6547d48c55733c93fa9b70c9b8e0Metadata> ns1:hasQualityMeasurement _:b44019 ;
 ns1:hasQualityMeasurement _:b44020 ;
 ns1:hasQualityMeasurement _:b44021 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b44033 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
@@ -2529,7 +2529,7 @@ rdfs:label "Data Usage measurement" ;
 ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
 ns1:value "0.549999979999986"^^xsd:decimal .
 
-<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> ;
+<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> ;
 ns2:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 
 _:b43985 rdf:type ns1:QualityMeasurement ;
@@ -2555,7 +2555,7 @@ ns1:value "0.3099999969999969"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#68cb2be9d65dd56a9cc354b86c819d81Metadata> ns1:hasQualityMeasurement _:b43986 ;
 ns1:hasQualityMeasurement _:b43987 ;
 ns1:hasQualityMeasurement _:b43988 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43989 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
@@ -2625,7 +2625,7 @@ ns1:value "0.09333330366665823"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#244de12c82b368f1bf7dc74e9b90be6dMetadata> ns1:hasQualityMeasurement _:b43956 ;
 ns1:hasQualityMeasurement _:b43957 ;
 ns1:hasQualityMeasurement _:b43958 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b44020 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
@@ -2635,12 +2635,12 @@ ns1:value "0.15"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#799d08e6fa1fe5f6fd0168f6927150bbMetadata> ns1:hasQualityMeasurement _:b43989 ;
 ns1:hasQualityMeasurement _:b43990 ;
 ns1:hasQualityMeasurement _:b43991 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#591d4770cf9d1ca2a4104e41143c9c7eMetadata> ns1:hasQualityMeasurement _:b43977 ;
 ns1:hasQualityMeasurement _:b43978 ;
 ns1:hasQualityMeasurement _:b43979 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43974 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
@@ -2735,12 +2735,12 @@ ns1:value "0.1"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#8650fe5de40f0a0db122e238b3fd1a6cMetadata> ns1:hasQualityMeasurement _:b43995 ;
 ns1:hasQualityMeasurement _:b43996 ;
 ns1:hasQualityMeasurement _:b43997 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#ab7390bcbd3607c42e1bca15d21b1a35Metadata> ns1:hasQualityMeasurement _:b44010 ;
 ns1:hasQualityMeasurement _:b44011 ;
 ns1:hasQualityMeasurement _:b44012 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43963 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
@@ -2765,7 +2765,7 @@ ns1:value "0.3133333326666615"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#fa2584d188c6281ac56af9490425fab0Metadata> ns1:hasQualityMeasurement _:b44031 ;
 ns1:hasQualityMeasurement _:b44032 ;
 ns1:hasQualityMeasurement _:b44033 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43965 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
@@ -2820,7 +2820,7 @@ ns1:value "0.20666667466666827"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#c79b222d130b8904ba628a125aefc453Metadata> ns1:hasQualityMeasurement _:b44025 ;
 ns1:hasQualityMeasurement _:b44026 ;
 ns1:hasQualityMeasurement _:b44027 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43950 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
@@ -2845,22 +2845,22 @@ ns1:value "0.125"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#356d3827ec2d6a630c4ce2a5cd5b0f28Metadata> ns1:hasQualityMeasurement _:b43968 ;
 ns1:hasQualityMeasurement _:b43969 ;
 ns1:hasQualityMeasurement _:b43970 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#ab4ab9da1468c1a2339ff12bb41add61Metadata> ns1:hasQualityMeasurement _:b44007 ;
 ns1:hasQualityMeasurement _:b44008 ;
 ns1:hasQualityMeasurement _:b44009 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#de1105695ce05eef6d2822dbcfb07a2aMetadata> ns1:hasQualityMeasurement _:b44028 ;
 ns1:hasQualityMeasurement _:b44029 ;
 ns1:hasQualityMeasurement _:b44030 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 <http://ns.inria.fr/kg/index#b2d6b65e58fa68df467b6a39159694b3Metadata> ns1:hasQualityMeasurement _:b44016 ;
 ns1:hasQualityMeasurement _:b44017 ;
 ns1:hasQualityMeasurement _:b44018 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43952 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
@@ -2910,7 +2910,7 @@ ns1:value "0.0"^^xsd:decimal .
 <http://ns.inria.fr/kg/index#c652ed13fded9cf1d49011b361aa88e1Metadata> ns1:hasQualityMeasurement _:b44022 ;
 ns1:hasQualityMeasurement _:b44023 ;
 ns1:hasQualityMeasurement _:b44024 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_parent_tags.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_parent_tags.rq#activity> .
 
 _:b43958 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
@@ -2960,13 +2960,13 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.22833331511110413"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#afe8fa085051a1d9122371efce96654bMetadata> ns1:hasQualityMeasurement _:b44056 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#134b159533ba77990dd69522f1f5bd4aMetadata> ns1:hasQualityMeasurement _:b44034 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#68cb2be9d65dd56a9cc354b86c819d81Metadata> ns1:hasQualityMeasurement _:b44047 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 _:b44060 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Completeness measurement"@en ;
@@ -2979,7 +2979,7 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.15555555722222172"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#244de12c82b368f1bf7dc74e9b90be6dMetadata> ns1:hasQualityMeasurement _:b44037 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 _:b44061 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Completeness measurement"@en ;
@@ -2987,25 +2987,25 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.3749999933333286"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#19c02e31bf2de918d1aa54378ca0f234Metadata> ns1:hasQualityMeasurement _:b44036 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#799d08e6fa1fe5f6fd0168f6927150bbMetadata> ns1:hasQualityMeasurement _:b44048 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#320369d0dc9424ee9757157e076da94dMetadata> ns1:hasQualityMeasurement _:b44040 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#591d4770cf9d1ca2a4104e41143c9c7eMetadata> ns1:hasQualityMeasurement _:b44044 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#7a321314530e8de0b8072703793cb3c4Metadata> ns1:hasQualityMeasurement _:b44049 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#182495ec3e4bbeb39d4bb3978c8fbb2cMetadata> ns1:hasQualityMeasurement _:b44035 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#a853e557f4b8ccd61e3f33b3abd8298bMetadata> ns1:hasQualityMeasurement _:b44053 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 _:b44055 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Completeness measurement"@en ;
@@ -3038,10 +3038,10 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.3016666608888844"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#2543a5ffd4172433a52675a5d98f1589Metadata> ns1:hasQualityMeasurement _:b44038 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#8650fe5de40f0a0db122e238b3fd1a6cMetadata> ns1:hasQualityMeasurement _:b44050 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 _:b44051 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Completeness measurement"@en ;
@@ -3053,7 +3053,7 @@ rdfs:label "Completeness measurement"@en ;
 ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.2127777675555502"^^xsd:decimal .
 
-<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> ;
+<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> ns2:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> ;
 ns2:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 
 _:b44053 rdf:type ns1:QualityMeasurement ;
@@ -3067,10 +3067,10 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.1688888915555561"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#ab7390bcbd3607c42e1bca15d21b1a35Metadata> ns1:hasQualityMeasurement _:b44055 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#fa2584d188c6281ac56af9490425fab0Metadata> ns1:hasQualityMeasurement _:b44062 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 _:b44044 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Completeness measurement"@en ;
@@ -3103,10 +3103,10 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.26166666566666563"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#c79b222d130b8904ba628a125aefc453Metadata> ns1:hasQualityMeasurement _:b44060 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#a22bd8278fa7908b505e7e047412519eMetadata> ns1:hasQualityMeasurement _:b44052 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 _:b44049 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Completeness measurement"@en ;
@@ -3114,10 +3114,10 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.22777777388888565"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#356d3827ec2d6a630c4ce2a5cd5b0f28Metadata> ns1:hasQualityMeasurement _:b44041 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#5cdd41b02ee1d1ee00c6f8e7f1f5560cMetadata> ns1:hasQualityMeasurement _:b44045 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 _:b44040 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Completeness measurement"@en ;
@@ -3130,10 +3130,10 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#2a57470847c2baf4fa370d26058797c5Metadata> ns1:hasQualityMeasurement _:b44039 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#ab4ab9da1468c1a2339ff12bb41add61Metadata> ns1:hasQualityMeasurement _:b44054 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 _:b44041 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Completeness measurement"@en ;
@@ -3141,25 +3141,25 @@ ns1:isMeasurementOf "Completeness"@en ;
 ns1:value "0.1694444316666616"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#de1105695ce05eef6d2822dbcfb07a2aMetadata> ns1:hasQualityMeasurement _:b44061 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#5e8bdc47244839a10b50a3b623001061Metadata> ns1:hasQualityMeasurement _:b44046 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#b2d6b65e58fa68df467b6a39159694b3Metadata> ns1:hasQualityMeasurement _:b44057 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#5660352be64d0fa2263887a63d2f2f75Metadata> ns1:hasQualityMeasurement _:b44043 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#8b892c6e5537af4aba47ec66bea03deaMetadata> ns1:hasQualityMeasurement _:b44051 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#c652ed13fded9cf1d49011b361aa88e1Metadata> ns1:hasQualityMeasurement _:b44059 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#5654e4fe5d4333f45ef9589c254300beMetadata> ns1:hasQualityMeasurement _:b44042 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
 
 <http://ns.inria.fr/kg/index#c42e6547d48c55733c93fa9b70c9b8e0Metadata> ns1:hasQualityMeasurement _:b44058 ;
-ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/queries/q_measure_completeness.rq#activity> .
+ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_completeness.rq#activity> .
