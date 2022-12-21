@@ -9,7 +9,7 @@ This code is made to be used along with [IndeGx](https://github.com/Wimmics/deka
 - [catalogs/](catalogs/) was taken from IndeGx. It is the catalog of endpoints used for our experiments.
 - [results/](results/) are the results of our experiments on the 27 preselected endpoints. Each result is divided into four files: *output-part1* and *output-part2* are the result of IndeGx with our rules ; *measures_workflow* are the result of the execution of the queries *q_measure_creator_who.rq*, *q_measure_maintenance_who.rq* and *q_measure_usage_how.rq* ; *measures_tags* are the result of the execution of the other queries. *results_summary.csv* provides the completeness score of KGs on each tag.
 
-The queries *q_measure_creator_who.rq*, *q_measure_maintenance_who.rq*, and *q_measure_usage_how.rq* have to be executed first and their results be used for the execution of the other queries. All queries have to be executed on the output files in *results* with manual import of the two rdf files *liquid.ttl* and *sin.ttl*.
+The queries *q_measure_creator_who.rq*, *q_measure_maintenance_who.rq*, and *q_measure_usage_how.rq* have to be executed first and their results be used for the execution of the other queries. All queries have to be executed on the output files in *results* with manual import of the two rdf files *accountability.ttl* and *sin.ttl*.
 
 ## Description of SIN-O: Structured Information Need Ontology
 
