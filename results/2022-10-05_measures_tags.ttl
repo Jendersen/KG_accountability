@@ -10,87 +10,87 @@
 
 _:b33614 rdf:type <http://www.w3.org/ns/dqv#QualityMeasurement> ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.6666666666666666"^^xsd:decimal .
 
 _:b33735 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33615 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33736 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33612 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.24999987499993748"^^xsd:decimal .
 
 _:b33733 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33613 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.799999959999992"^^xsd:decimal .
 
 _:b33734 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33618 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33739 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33619 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33616 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33737 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.4"^^xsd:decimal .
 
 _:b33617 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33738 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33610 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33731 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#591d4770cf9d1ca2a4104e41143c9c7eMetadata> ns1:hasQualityMeasurement _:b33513 ;
@@ -110,167 +110,167 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33611 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.24"^^xsd:decimal .
 
 _:b33732 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b33730 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.13333322666664532"^^xsd:decimal .
 
 _:b33504 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33625 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33746 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33505 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33626 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.200000040000008"^^xsd:decimal .
 
 _:b33747 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33502 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33623 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33744 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33503 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33624 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33745 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33508 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.08333329166664583"^^xsd:decimal .
 
 _:b33629 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33509 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.26666665333333067"^^xsd:decimal .
 
 _:b33506 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33627 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33748 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33507 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33628 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33749 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33500 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33621 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33742 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33501 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33622 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33743 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.6666667333333467"^^xsd:decimal .
 
 _:b33740 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33620 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33741 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.4"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#244de12c82b368f1bf7dc74e9b90be6dMetadata> ns1:hasQualityMeasurement _:b33422 ;
@@ -290,57 +290,57 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33719 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33713 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33714 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33711 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.4"^^xsd:decimal .
 
 _:b33712 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33717 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.4666666933333387"^^xsd:decimal .
 
 _:b33718 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33715 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33716 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33710 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33609 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#68cb2be9d65dd56a9cc354b86c819d81Metadata> ns1:hasQualityMeasurement _:b33552 ;
@@ -360,97 +360,97 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33603 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33724 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33604 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33725 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33601 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33722 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33602 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33723 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33607 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b33728 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33608 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33729 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.08333329166664583"^^xsd:decimal .
 
 _:b33605 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33726 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33606 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33727 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33720 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33600 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.7333333466666694"^^xsd:decimal .
 
 _:b33721 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#2a57470847c2baf4fa370d26058797c5Metadata> ns1:hasQualityMeasurement _:b33448 ;
@@ -470,12 +470,12 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33708 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33709 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#799d08e6fa1fe5f6fd0168f6927150bbMetadata> ns1:hasQualityMeasurement _:b33565 ;
@@ -495,42 +495,42 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33702 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.6"^^xsd:decimal .
 
 _:b33703 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33700 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33701 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33706 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33707 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33704 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.400000080000016"^^xsd:decimal .
 
 _:b33705 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#182495ec3e4bbeb39d4bb3978c8fbb2cMetadata> ns1:hasQualityMeasurement _:b33396 ;
@@ -550,152 +550,152 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33458 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33579 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33459 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33452 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33573 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.08333329166664583"^^xsd:decimal .
 
 _:b33694 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33453 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33574 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.4666666933333387"^^xsd:decimal .
 
 _:b33695 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33450 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33571 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33692 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33451 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33572 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33693 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33456 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.24999987499993748"^^xsd:decimal .
 
 _:b33577 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33698 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.5333333333333333"^^xsd:decimal .
 
 _:b33457 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.599999919999984"^^xsd:decimal .
 
 _:b33578 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33699 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33454 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33575 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33696 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33455 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33576 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b33697 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33690 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33570 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33691 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#c652ed13fded9cf1d49011b361aa88e1Metadata> ns1:hasQualityMeasurement _:b33708 ;
@@ -715,252 +715,252 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33469 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33463 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33584 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33464 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33585 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33461 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33582 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33462 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33583 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33467 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33588 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33468 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33589 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33465 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33586 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.24999987499993748"^^xsd:decimal .
 
 _:b33466 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33587 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.400000080000016"^^xsd:decimal .
 
 _:b33580 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33460 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b33581 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.6"^^xsd:decimal .
 
 _:b33438 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33559 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33439 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33436 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33557 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33678 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.400000080000016"^^xsd:decimal .
 
 _:b33437 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33558 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33679 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33430 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.08333329166664583"^^xsd:decimal .
 
 _:b33551 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33672 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.4"^^xsd:decimal .
 
 _:b33431 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33552 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33673 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33670 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33550 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b33671 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33434 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33555 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33676 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33435 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33556 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33677 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33432 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33553 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33674 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33433 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b33554 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33675 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#ab7390bcbd3607c42e1bca15d21b1a35Metadata> ns1:hasQualityMeasurement _:b33656 ;
@@ -995,302 +995,302 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33449 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33447 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33568 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.3"^^xsd:decimal .
 
 _:b33689 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33448 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33569 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33441 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33562 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33683 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33442 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33563 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33684 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33560 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.08333329166664583"^^xsd:decimal .
 
 _:b33681 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33440 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33561 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.4666666933333387"^^xsd:decimal .
 
 _:b33682 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33445 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33566 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33687 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33446 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33567 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33688 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33443 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33564 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33685 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33444 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.13333322666664532"^^xsd:decimal .
 
 _:b33565 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33686 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33680 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33416 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.3"^^xsd:decimal .
 
 _:b33537 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33658 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33417 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.08333329166664583"^^xsd:decimal .
 
 _:b33538 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33659 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33414 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33535 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.6666667333333467"^^xsd:decimal .
 
 _:b33656 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33415 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33536 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33657 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33418 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.6666667333333467"^^xsd:decimal .
 
 _:b33539 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33419 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33650 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33530 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33651 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33412 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.4333333333333333"^^xsd:decimal .
 
 _:b33533 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33654 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33413 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33534 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33655 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33410 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33531 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33652 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.4666666933333387"^^xsd:decimal .
 
 _:b33411 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33532 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33653 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#c79b222d130b8904ba628a125aefc453Metadata> ns1:hasQualityMeasurement _:b33721 ;
@@ -1310,152 +1310,152 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33427 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33548 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.13333322666664532"^^xsd:decimal .
 
 _:b33669 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33428 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33549 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33425 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33546 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33667 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33426 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33547 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.16666658333329165"^^xsd:decimal .
 
 _:b33668 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33429 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33540 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33661 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33420 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33541 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33662 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33660 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33423 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33544 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33665 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.26666665333333067"^^xsd:decimal .
 
 _:b33424 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33545 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33666 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33421 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33542 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33663 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33422 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33543 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33664 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.24999987499993748"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#afe8fa085051a1d9122371efce96654bMetadata> ns1:hasQualityMeasurement _:b33669 ;
@@ -1475,217 +1475,217 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33515 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33636 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33757 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33516 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33637 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33758 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33513 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33634 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33755 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.08333329166664583"^^xsd:decimal .
 
 _:b33514 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33635 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33756 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.6666667333333467"^^xsd:decimal .
 
 _:b33519 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33517 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33638 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.24999987499993748"^^xsd:decimal .
 
 _:b33759 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33518 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33639 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.39999987999997605"^^xsd:decimal .
 
 _:b33750 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33511 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33632 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33753 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33512 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33633 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33754 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33630 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33751 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33510 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33631 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33752 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33405 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.200000040000008"^^xsd:decimal .
 
 _:b33526 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33647 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33406 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33527 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33648 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33403 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33524 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33645 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33404 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33525 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33646 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33409 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#5660352be64d0fa2263887a63d2f2f75Metadata> ns1:hasQualityMeasurement _:b33500 ;
@@ -1735,47 +1735,47 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33407 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33528 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33649 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33408 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33529 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b33640 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33401 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33522 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.4666666933333387"^^xsd:decimal .
 
 _:b33643 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#5e8bdc47244839a10b50a3b623001061Metadata> ns1:hasQualityMeasurement _:b33539 ;
@@ -1795,42 +1795,42 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33402 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33523 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33644 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33520 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33641 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33400 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33521 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.16666658333329165"^^xsd:decimal .
 
 _:b33642 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.25"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#320369d0dc9424ee9757157e076da94dMetadata> ns1:hasQualityMeasurement _:b33461 ;
@@ -1850,7 +1850,7 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33397 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#de1105695ce05eef6d2822dbcfb07a2aMetadata> ns1:hasQualityMeasurement _:b33734 ;
@@ -1870,42 +1870,42 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33398 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33395 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33396 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33399 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33390 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33393 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33394 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33391 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.24999987499993748"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#356d3827ec2d6a630c4ce2a5cd5b0f28Metadata> ns1:hasQualityMeasurement _:b33474 ;
@@ -1925,57 +1925,57 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33392 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.6666667333333467"^^xsd:decimal .
 
 _:b33496 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.4666666933333387"^^xsd:decimal .
 
 _:b33497 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33494 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33495 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.08333329166664583"^^xsd:decimal .
 
 _:b33498 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b33499 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33492 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33493 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33490 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.4"^^xsd:decimal .
 
 _:b33491 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#5cdd41b02ee1d1ee00c6f8e7f1f5560cMetadata> ns1:hasQualityMeasurement _:b33526 ;
@@ -1995,37 +1995,37 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33386 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.6"^^xsd:decimal .
 
 _:b33387 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33384 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33385 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33388 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33389 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33383 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#5654e4fe5d4333f45ef9589c254300beMetadata> ns1:hasQualityMeasurement _:b33487 ;
@@ -2045,132 +2045,132 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33474 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33595 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33475 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33596 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33472 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "1.0"^^xsd:decimal .
 
 _:b33593 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33473 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33594 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33478 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33599 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.3333331666665833"^^xsd:decimal .
 
 _:b33479 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_when> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33476 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33597 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33477 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33598 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33470 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.6666667333333467"^^xsd:decimal .
 
 _:b33591 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33471 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33592 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33590 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33485 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_where> ;
 ns1:value "0.75"^^xsd:decimal .
 
 _:b33486 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_who> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b33483 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - What measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_what> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_what> ;
 ns1:value "0.33333326666665336"^^xsd:decimal .
 
 _:b33484 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_when> ;
 ns1:value "0.3333333333333333"^^xsd:decimal .
 
 _:b33489 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_where> ;
 ns1:value "0.5"^^xsd:decimal .
 
 _:b33487 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_how> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#7a321314530e8de0b8072703793cb3c4Metadata> ns1:hasQualityMeasurement _:b33578 ;
@@ -2190,7 +2190,7 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33488 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection - When measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection_when> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection_when> ;
 ns1:value "1.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#19c02e31bf2de918d1aa54378ca0f234Metadata> ns1:hasQualityMeasurement _:b33409 ;
@@ -2210,17 +2210,17 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b33481 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Who measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_who> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_who> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b33482 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage - How measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage_how> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage_how> ;
 ns1:value "0.24999987499993748"^^xsd:decimal .
 
 _:b33480 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance - Where measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance_where> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance_where> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#a853e557f4b8ccd61e3f33b3abd8298bMetadata> ns1:hasQualityMeasurement _:b33630 ;
@@ -2338,22 +2338,22 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133406 rdf:type <http://www.w3.org/ns/dqv#QualityMeasurement> ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133407 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.549999979999986"^^xsd:decimal .
 
 _:b133408 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133409 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.125"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#ab4ab9da1468c1a2339ff12bb41add61Metadata> ns1:hasQualityMeasurement _:b133447 ;
@@ -2373,47 +2373,47 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133400 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.125"^^xsd:decimal .
 
 _:b133401 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.5099999453333124"^^xsd:decimal .
 
 _:b133402 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.3"^^xsd:decimal .
 
 _:b133403 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133404 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.486666625666651"^^xsd:decimal .
 
 _:b133405 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.3"^^xsd:decimal .
 
 _:b133417 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133418 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133419 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.22666665533332608"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#de1105695ce05eef6d2822dbcfb07a2aMetadata> ns1:hasQualityMeasurement _:b133468 ;
@@ -2438,32 +2438,32 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133410 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.3833332949999848"^^xsd:decimal .
 
 _:b133411 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.475"^^xsd:decimal .
 
 _:b133412 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133413 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.3266666636666636"^^xsd:decimal .
 
 _:b133414 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.425"^^xsd:decimal .
 
 _:b133415 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.05"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#5e8bdc47244839a10b50a3b623001061Metadata> ns1:hasQualityMeasurement _:b133423 ;
@@ -2473,17 +2473,17 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133416 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.1699999889999953"^^xsd:decimal .
 
 _:b133428 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.3099999969999969"^^xsd:decimal .
 
 _:b133429 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.325"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#244de12c82b368f1bf7dc74e9b90be6dMetadata> ns1:hasQualityMeasurement _:b133396 ;
@@ -2493,12 +2493,12 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133387 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.15"^^xsd:decimal .
 
 _:b133420 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.175"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#2543a5ffd4172433a52675a5d98f1589Metadata> ns1:hasQualityMeasurement _:b133399 ;
@@ -2508,52 +2508,52 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133388 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133421 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.05"^^xsd:decimal .
 
 _:b133389 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.5333333216666569"^^xsd:decimal .
 
 _:b133422 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.549999979999986"^^xsd:decimal .
 
 _:b133423 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133424 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133425 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.10999996199998738"^^xsd:decimal .
 
 _:b133426 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.425"^^xsd:decimal .
 
 _:b133427 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.05"^^xsd:decimal .
 
 _:b133439 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.185"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#5654e4fe5d4333f45ef9589c254300beMetadata> ns1:hasQualityMeasurement _:b133411 ;
@@ -2563,97 +2563,97 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133390 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133391 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.125"^^xsd:decimal .
 
 _:b133392 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.45666664133331825"^^xsd:decimal .
 
 _:b133393 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.48333333333333334"^^xsd:decimal .
 
 _:b133394 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.2"^^xsd:decimal .
 
 _:b133395 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.41666667166666516"^^xsd:decimal .
 
 _:b133396 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133397 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133430 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133398 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.06666665833332916"^^xsd:decimal .
 
 _:b133431 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.3266666636666636"^^xsd:decimal .
 
 _:b133399 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.05"^^xsd:decimal .
 
 _:b133432 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.15"^^xsd:decimal .
 
 _:b133433 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133434 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.3299999909999907"^^xsd:decimal .
 
 _:b133435 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133436 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.125"^^xsd:decimal .
 
 _:b133437 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.5133333026666506"^^xsd:decimal .
 
 _:b133438 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.4375"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#8650fe5de40f0a0db122e238b3fd1a6cMetadata> ns1:hasQualityMeasurement _:b133435 ;
@@ -2668,52 +2668,52 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133440 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.6933333003333193"^^xsd:decimal .
 
 _:b133441 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.05"^^xsd:decimal .
 
 _:b133442 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.25"^^xsd:decimal .
 
 _:b133443 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.20666667466666827"^^xsd:decimal .
 
 _:b133444 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133445 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.125"^^xsd:decimal .
 
 _:b133446 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.39666661766664935"^^xsd:decimal .
 
 _:b133447 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.05"^^xsd:decimal .
 
 _:b133448 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.125"^^xsd:decimal .
 
 _:b133449 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.45999997199998444"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#fa2584d188c6281ac56af9490425fab0Metadata> ns1:hasQualityMeasurement _:b133471 ;
@@ -2738,52 +2738,52 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133450 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.425"^^xsd:decimal .
 
 _:b133451 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133452 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.45333330566665364"^^xsd:decimal .
 
 _:b133453 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.1"^^xsd:decimal .
 
 _:b133454 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133455 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.49666664933331983"^^xsd:decimal .
 
 _:b133456 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133457 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133458 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133459 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.2583333333333333"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#c42e6547d48c55733c93fa9b70c9b8e0Metadata> ns1:hasQualityMeasurement _:b133459 ;
@@ -2798,7 +2798,7 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133460 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.15"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#a853e557f4b8ccd61e3f33b3abd8298bMetadata> ns1:hasQualityMeasurement _:b133444 ;
@@ -2808,12 +2808,12 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133461 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.49666664933331983"^^xsd:decimal .
 
 _:b133462 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.1"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#5660352be64d0fa2263887a63d2f2f75Metadata> ns1:hasQualityMeasurement _:b133414 ;
@@ -2823,22 +2823,22 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133463 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.125"^^xsd:decimal .
 
 _:b133464 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.576666638666651"^^xsd:decimal .
 
 _:b133465 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133466 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#591d4770cf9d1ca2a4104e41143c9c7eMetadata> ns1:hasQualityMeasurement _:b133417 ;
@@ -2853,17 +2853,17 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133467 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.09333330366665823"^^xsd:decimal .
 
 _:b133468 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.35"^^xsd:decimal .
 
 _:b133469 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.225"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#19c02e31bf2de918d1aa54378ca0f234Metadata> ns1:hasQualityMeasurement _:b133393 ;
@@ -2893,22 +2893,22 @@ ns2:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountabilit
 
 _:b133470 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.549999979999986"^^xsd:decimal .
 
 _:b133471 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Collection measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#collection> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#collection> ;
 ns1:value "0.05"^^xsd:decimal .
 
 _:b133472 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Maintenance measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#maintenance> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#maintenance> ;
 ns1:value "0.0"^^xsd:decimal .
 
 _:b133473 rdf:type ns1:QualityMeasurement ;
 rdfs:label "Data Usage measurement" ;
-ns1:isMeasurementOf <http://www.exemple.com/liquid#usage> ;
+ns1:isMeasurementOf <http://www.exemple.com/acc_need#usage> ;
 ns1:value "0.41666667166666516"^^xsd:decimal .
 
 <http://ns.inria.fr/kg/index#182495ec3e4bbeb39d4bb3978c8fbb2cMetadata> ns1:hasQualityMeasurement _:b133390 ;
