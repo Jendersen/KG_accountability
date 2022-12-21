@@ -23,6 +23,6 @@ Finally, to avoid defining inconsistent or unexpected analysis dimensions, we on
 
 ## Description of the Information Need about Accountability
 
-The information need about accountability has been adapted from the [LiQuID metadata model](https://ceur-ws.org/Vol-2716/paper5.pdf), both its hierarchical structure and the questions illustrating each field of this structure. The information need we defined is illustrated in the following Figure.
+The information need about accountability has been adapted from the [LiQuID metadata model](https://ceur-ws.org/Vol-2716/paper5.pdf), both its hierarchical structure and the questions illustrating each field of this structure. The information need we defined is illustrated in the following Figure. The correspondance between the LiQuID questions and our adaptation in the context of Knowledge Graphs is available [here](docs/README.md).
 
 [![Information need on accountability](docs/tag_quest_query.png)](docs/tag_question_query.pdf)
