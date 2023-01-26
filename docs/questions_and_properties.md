@@ -1,6 +1,6 @@
 # Questions and associated properties
 
-This file presents the questions asked to KGs, sorted by their associated tag. The *preferred properties* column shows a list of properties that can be used to answer the question. The properties must be associated with the URI of the KG. Unless otherwise specified, it is sufficient to provide at least one of them. Other properties can also be accepted, see the files in rules/.
+This file presents the questions asked to KGs, sorted by their associated tag. The *preferred properties* column shows a list of properties that can be used to answer the question. The properties must be associated with the URI of the KG. Unless otherwise specified, it is sufficient to provide at least one of them. Other properties can also be accepted, see the files in [rules/](../rules/).
 
 ## Data Collection
 
@@ -70,7 +70,7 @@ This file presents the questions asked to KGs, sorted by their associated tag. T
 <td>Maintenance. Where</td>
 <td>Modification location</td>
 <td>From what physical location (state, country, continent, ...) is or will the KG be maintained?</td>
-<td><em>see query in <a href="rules/maintenance/maintenance_location.ttl">rules/</a></em></td>
+<td><em>see query in <a href="../rules/maintenance/maintenance_location.ttl">rules/</a></em></td>
 </tr>
 <tr>
 <td>Maintenance. How</td>
