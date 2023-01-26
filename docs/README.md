@@ -1,5 +1,7 @@
 # Adaptation of the LiQuID questions to the context of Knowledge Graphs (KGs)
 
+To see the required properties for each question, see [rules/](../rules/) folder for an exhaustive view, or [this file](questions_and_properties.md) for a more synthetic summary.
+
 ## Data Collection
 
 | Tag | Questions from LiQuID | Questions adapted to KG |
