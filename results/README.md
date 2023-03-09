@@ -10,8 +10,8 @@ The file [results_summary.csv](results/results_summary.csv) summarises the compl
 As all these scores are available, a fine analysis is possible to compare knowledge graphs with respect to each aspect.
 For example, the following figure compares the accountability scores obtained by some knowledge graphs on the different steps of the lifecycle:
 
-<p align="center"><a href="docs/comp_classic_inria.png"><img src="docs/comp_classic_inria.png" alt="Comparison of two KGs on the steps of the lifecycle" width="70%" height="70%"></a></p>
+<p align="center"><a href="/docs/comp_classic_inria.png"><img src="/docs/comp_classic_inria.png" alt="Comparison of two KGs on the steps of the lifecycle" width="70%" height="70%"></a></p>
 
 In order to study and understand these scores, the two following figures detail the results on the different question types for each step of the lifecycle.
-<p align="center"><a href="docs/comp_classic.png"><img src="docs/comp_classic.png" alt="Comparison of two KGs on the question types" width="95%" height="95%"></a></p>
-<p align="center"><a href="docs/comp_inria.png"><img src="docs/comp_inria.png" alt="Comparison of two KGs on the question types" width="95%" height="95%"></a></p>
+<p align="center"><a href="/docs/comp_classic.png"><img src="/docs/comp_classic.png" alt="Comparison of two KGs on the question types" width="95%" height="95%"></a></p>
+<p align="center"><a href="/docs/comp_inria.png"><img src="/docs/comp_inria.png" alt="Comparison of two KGs on the question types" width="95%" height="95%"></a></p>
