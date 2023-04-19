@@ -63,6 +63,7 @@
                     ?kg dcterms:rights ?rights .
                     ?kg dcterms:accessRights ?rights .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find an access statement
                     {?kg dce:rights ?rights .}
                     UNION {?kg dcterms:rights ?rights .}
@@ -92,6 +93,7 @@
                     ?kg void:exampleResource ?ex .
                     ?kg skos:example ?ex .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find an example
                     {?kg schema:workExample ?ex .}
                     UNION {?kg void:exampleResource ?ex .}
@@ -123,6 +125,7 @@
                     ?kg schema:review ?quality .
                     ?kg dqv:hasQualityAnnotation ?quality .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a quality statement
                     {?kg schema:review ?quality .}
                     UNION {?kg dqv:hasQualityAnnotation ?quality . }
@@ -147,6 +150,7 @@
                     ?res dcterms:alternative ?id .
                     ?res skos:altLabel ?id .
                 } WHERE {
+                    ?res a dcat:Dataset .
                     { ?res schema:alternateName ?id }
                     UNION { ?res dcterms:alternative ?id }
                     UNION { ?res skos:altLabel ?id }
@@ -173,6 +177,7 @@
                 ?res dcterms:identifier ?id .
                 ?res adms:identifier ?id .
             } WHERE {
+                ?res a dcat:Dataset .
                 { ?res schema:identifier ?id }
                 UNION { ?res dce:identifier ?id }
                 UNION { ?res dcterms:identifier ?id }
@@ -204,6 +209,7 @@
                     ?kg schema:encodingFormat ?format .
                     ?kg void:feature ?feature .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a serialization format
                     {?kg dce:format ?format .}
                     UNION {?kg dcterms:format ?format .}
@@ -235,6 +241,7 @@
                     ?kg schema:audience ?audience .
                     ?kg dataid:usefulness ?audience .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find an audience
                     {?kg dcterms:audience ?audience .}
                     UNION {?kg schema:audience ?audience .}
@@ -268,6 +275,7 @@
                     ?kg prov:wasDerivedFrom ?source .
                     ?kg prov:hadPrimarySource ?source .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a source
                     {?kg dce:source ?source .}
                     UNION {?kg dcterms:source ?source .}
@@ -308,6 +316,7 @@
                         prov:endedAtTime ?date .
                     ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a date of creation
                     {?kg dcterms:created ?date .}
                     UNION {?kg schema:dateCreated ?date .}
@@ -343,6 +352,7 @@
                     ?kg schema:keywords ?keyword .
                     ?kg dcat:keyword ?keyword .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a keyword
                     {?kg schema:keywords ?keyword .}
                     UNION {?kg dcat:keyword ?keyword .}
@@ -370,6 +380,7 @@
                     {?kg schema:contentURL ?url .}
                     UNION {?kg void:sparqlEndpoint ?url .}
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a SPARQL endpoint
                     {?kg schema:contentURL ?url .}
                     UNION {?kg void:sparqlEndpoint ?url .}
@@ -405,6 +416,7 @@
                     ?service dcat:endpointURL ?endpoint .
                     ?service sd:endpoint ?endpoint .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a SPARQL endpoint
                     {?kg dcat:accessService ?service .
                            ?service dcat:endpointURL ?endpoint .  }
@@ -438,6 +450,7 @@
                     ?serviceDescription dcat:endpointURL ?endpoint .
                     ?serviceDescription sd:endpoint ?endpoint .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     { ?kg schema:contentURL ?endpoint .}
                     UNION {?kg void:sparqlEndpoint ?endpoint .}
                     # Find a SPARQL endpoint
@@ -482,6 +495,7 @@
                             prov:atLocation ?location .
                         ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a location of creation
                     { ?kg schema:locationCreated ?location .}
                     UNION { ?kg pav:createdAt ?location .}
@@ -510,6 +524,7 @@
                     ?res schema:inLanguage ?id .
                     ?res dcterms:language ?id .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     { ?res schema:inLanguage ?id }
                     UNION { ?res dcterms:language ?id }
                 }
@@ -564,6 +579,7 @@
                     ]
                     ?agent a prov:SoftwareAgent .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a method or software
                     {?kg dcterms:accrualMethod ?method .}
                     UNION {?kg pav:createdWith ?agent .}
@@ -611,6 +627,7 @@
                     ?res sto:license ?license .
                     ?res nie:license ?license .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a license
                     { ?res dcterms:license ?license }
                     UNION { ?res schema:license ?license }
@@ -639,6 +656,7 @@
                     ?res schema:temporalCoverage ?id .
                     ?res dcterms:temporal ?id .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     { ?res schema:temporalCoverage ?id }
                     UNION { ?res dcterms:temporal ?id }
                 }
@@ -674,6 +692,7 @@
                         prov:wasAssociatedWith ?creator .
                     ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a creator
                     {?kg dce:creator ?creator .}
                     UNION {?kg dcterms:creator ?creator .}
@@ -714,6 +733,7 @@
                     ?res dcterms:title ?id .
                     ?res rdfs:label ?id .
                 } WHERE {
+                    ?res a dcat:Dataset .
                     { ?res schema:name ?id }
                     UNION { ?res dce:title ?id }
                     UNION { ?res dcterms:title ?id }
@@ -750,6 +770,7 @@
                     ?kg owl:comment ?desc .
                     ?kg skos:note ?desc .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a description
                     {?kg rdfs:comment ?desc .}
                     UNION {?kg dce:description ?desc . }
@@ -788,6 +809,7 @@
                         prov:startedAtTime ?date .
                     ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a date of modification
                     {?kg dcterms:modified ?date .}
                     UNION {?kg schema:dateModified ?date .}
@@ -825,6 +847,7 @@
                          prov:endedAtTime ?date .
                     ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a date of modification
                     {?kg dcterms:modified ?date .}
                     UNION {?kg schema:dateModified ?date .}
@@ -862,6 +885,7 @@
                         ?dateProperty ?date .
                     ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a date of modification
                     {?kg dcterms:modified ?date .}
                     UNION {?kg schema:dateModified ?date .}
@@ -903,6 +927,7 @@
                     ?kg schema:about ?topic .
                     ?kg dcat:theme ?topic .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a topic
                     {?kg dce:subject ?topic .}
                     UNION {?kg dcterms:subject ?topic .}
@@ -934,6 +959,7 @@
                     ?kg schema:distribution ?dist .
                     ?kg dcat:distribution ?dist .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a distribution
                     {?kg schema:distribution ?dist .}
                     UNION {?kg dcat:distribution ?dist .}
@@ -956,6 +982,7 @@
                     ?res schema:relatedLink ?id .
                     ?res rdfs:seeAlso ?id .
                 } WHERE {
+                    ?res a dcat:Dataset .
                     { ?res schema:relatedLink ?id }
                     UNION { ?res rdfs:seeAlso ?id }
                 }
@@ -978,6 +1005,7 @@
                     ?res adms:versionNotes ?id .
                     ?res owl:versionInfo ?id .
                 } WHERE {
+                    ?res a dcat:Dataset .
                     { ?res adms:versionNotes ?id }
                     UNION { ?res owl:versionInfo ?id }
                 }
@@ -1003,6 +1031,7 @@
                 INSERT {
                     ?kg void:dataDump ?url .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a dump
                     ?kg dcat:distribution ?dist .
                     ?dist dcat:downloadURL ?url .
@@ -1027,6 +1056,7 @@
                             dcat:downloadURL ?url .
                         ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a dump
                     ?kg void:dataDump ?url .
                     FILTER ( NOT EXISTS {
@@ -1055,6 +1085,7 @@
                     ?res pav:previousVersion ?id .
                     ?res owl:priorVersion ?id .
                 } WHERE {
+                    ?res a dcat:Dataset .
                     { ?res dcterms:isVersionOf ?id }
                     UNION { ?res pav:previousVersion ?id }
                     UNION { ?res owl:priorVersion ?id }
@@ -1081,6 +1112,7 @@
                     ?res pav:version ?id .
                     ?res pav:hasCurrentVersion ?id .
                 } WHERE {
+                    ?res a dcat:Dataset .
                     { ?res schema:version ?id }
                     UNION { ?res dcterms:hasVersion ?id }
                     UNION { ?res dcat:version ?id }
@@ -1116,6 +1148,7 @@
                             prov:wasAssociatedWith ?contributor .
                         ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a contributor
                     {?kg dce:contributor ?contributor .}
                     UNION {?kg dcterms:contributor ?contributor .}
@@ -1157,6 +1190,7 @@
                             prov:wasAssociatedWith ?contributor .
                         ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a contributor
                     {?kg dce:contributor ?contributor .}
                     UNION {?kg dcterms:contributor ?contributor .}
@@ -1197,6 +1231,7 @@
                     ?kg schema:datePublished ?date .
                     ?kg schema:sdDatePublished ?date .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a date of publication
                     {?kg dcterms:issued ?date .}
                     UNION {?kg dcterms:available ?date .}
@@ -1227,6 +1262,7 @@
                     ?res dcterms:conformsTo ?id .
                     ?res void:vocabulary ?id .
                 } WHERE {
+                    ?res a dcat:Dataset .
                     { ?res dcterms:conformsTo ?id }
                     UNION { ?res void:vocabulary ?id }
                 }
@@ -1252,6 +1288,7 @@
                     ?kg schema:expires ?date .
                     ?kg prov:invalidatedAtTime ?date .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a date of end of availability
                     {?kg schema:expires ?date .
                     UNION {?kg prov:invalidatedAtTime ?date .}
@@ -1274,6 +1311,7 @@
                     ?res schema:publication ?id .
                     ?res dcterms:references ?id .
                 } WHERE {
+                    ?res a dcat:Dataset .
                     { ?res schema:publication ?id }
                     UNION { ?res dcterms:references ?id }
                 }
@@ -1301,6 +1339,7 @@
                     ?kg schema:url ?url .
                     ?kg dcat:landingPage ?url .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a webpage
                     {?kg foaf:homepage ?url .}
                     UNION {?kg schema:url ?url .}
@@ -1331,6 +1370,7 @@
                         dcat:accessURL ?url .
                     ]
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a webpage
                     {?kg foaf:homepage ?url .}
                     UNION {?kg schema:url ?url .}
@@ -1358,6 +1398,7 @@
                     ?kg dcterms:valid ?date .
                     ?kg schema:expires ?date .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a date of end of validity
                     {?kg dcterms:valid ?date .}
                     UNION {?kg schema:expires ?date .}
@@ -1391,6 +1432,7 @@
                             prov:wasAssociatedWith ?publisher .
                         ] .
                 } WHERE {
+                    ?kg a dcat:Dataset .
                     # Find a publisher
                     {?kg dce:publisher ?publisher .}
                     UNION {?kg dcterms:publisher ?publisher .}
