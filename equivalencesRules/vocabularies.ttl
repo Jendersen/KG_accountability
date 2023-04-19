@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Presence of the vocabulary used." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for the vocabulary used by the KG." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>

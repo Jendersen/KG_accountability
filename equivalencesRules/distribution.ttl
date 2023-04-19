@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Presence of a distribution." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for a distribution of the KG." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>

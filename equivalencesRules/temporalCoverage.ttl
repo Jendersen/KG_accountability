@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Presence of a temporal coverage." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for a temporal coverage." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>

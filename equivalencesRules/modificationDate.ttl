@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Presence of a date of modification." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for a date of modification of the KG." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>

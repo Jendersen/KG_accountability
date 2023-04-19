@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Indication of languages used." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for the indication of the languages used in the KG." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>

@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Presence of a creator." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for a creator or an author of the KG." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>

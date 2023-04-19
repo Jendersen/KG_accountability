@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Presence of a webpage." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for a webpage where to find the KG." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>

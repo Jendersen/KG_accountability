@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Presence of a method or a software for the creation." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for a method or a software for the creation of the KG." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>

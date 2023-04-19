@@ -29,7 +29,7 @@
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Contribute .
                 ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?contributor .
-                ?creator a ?type .
+                ?contributor a ?type .
                 VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
             }
         }

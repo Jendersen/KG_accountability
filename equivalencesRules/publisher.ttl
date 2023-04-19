@@ -3,7 +3,7 @@
 
 <> a kgi:TestQuery ;
     dcterms:title "Presence of a publisher." ;
-    dcterms:isReferencedBy <manifest.ttl> ;
+    dcterms:isReferencedBy <_manifest.ttl> ;
     dcterms:description "Look for a publisher of the KG." ;
     kgi:query """
         PREFIX void: <http://rdfs.org/ns/void#>
@@ -19,7 +19,7 @@
         ASK {
             # Find a publisher
             {?kg dce:publisher ?publisher .}
-            UNION {?kg dcterms:publisher ?publisher .
+            UNION {?kg dcterms:publisher ?publisher .}
             UNION {?kg schema:publisher ?publisher .}
             UNION {?kg schema:sdPublisher ?publisher .}
             UNION {?kg pav:providedBy ?publisher .}
@@ -28,7 +28,7 @@
                   ?kg prov:wasGeneratedBy ?act .
                   ?act a prov:Publish .
                   ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?publisher .
-                  ?creator a ?type .
+                  ?publisher a ?type .
                   VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
             }
         }
