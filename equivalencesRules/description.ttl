@@ -20,6 +20,7 @@
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
+        PREFIX powder-s: <http://www.w3.org/2007/05/powder-s#>
         ASK {
             # Find a description
             {?kg rdfs:comment ?desc .}
@@ -29,5 +30,6 @@
             UNION {?kg dataid:dataDescription ?desc .}
             UNION {?kg owl:comment ?desc .}
             UNION {?kg skos:note ?desc .}
+            UNION { ?kg powder-s:text ?desc }
         }
 """ .
