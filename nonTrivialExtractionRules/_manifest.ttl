@@ -30,6 +30,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
@@ -72,6 +73,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
@@ -119,6 +121,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
@@ -166,6 +169,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
@@ -215,6 +219,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
@@ -264,6 +269,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                ?kg dcat:distribution ?dist .
                ?dist dcat:downloadURL ?url .
@@ -308,6 +314,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Contribute .
@@ -357,6 +364,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
@@ -399,6 +407,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
@@ -445,6 +454,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 ?act a prov:Publish .
@@ -487,6 +497,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 ?act a prov:Publish .
@@ -533,6 +544,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg prov:wasGeneratedBy ?act .
                 ?act a prov:Publish .
@@ -582,6 +594,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg dcat:accessService ?service .
                 ?service dcat:endpointURL ?endpoint .
@@ -623,6 +636,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg dcat:accessService ?service .
                 ?service sd:endpoint ?endpoint .
@@ -664,6 +678,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?service dcat:servesDataset ?kg .
                 ?service dcat:endpointURL ?endpoint .
@@ -705,6 +720,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?service dcat:servesDataset ?kg .
                 ?service sd:endpoint ?endpoint .
@@ -750,6 +766,7 @@
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
                 ?kg dcat:distribution ?dist .
                 ?dist dcat:accessURL ?url .
