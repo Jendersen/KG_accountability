@@ -16,7 +16,9 @@
         <provPublisherExtraction.ttl>
         <dcatEndpointExtraction.ttl>
         <dcatWebpageExtraction.ttl>
-        <dcatRequirements.ttl>
+    ) ;
+    mf:include (
+        <../equivalencesRules/_manifest.ttl>
     ) .
 
 <simpleExtraction.ttl> a mf:ManifestEntry ;
@@ -318,7 +320,7 @@
                # ?act a prov:Create .
                ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?creator .
                ?creator a ?type .
-               VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization } 
+               VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
                 OPTIONAL {
                     ?act a ?actType .
                 }
