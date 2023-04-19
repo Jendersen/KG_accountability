@@ -18,7 +18,7 @@
         PREFIX dcterms: <http://purl.org/dc/terms/>
         ASK {
             # Find a location of creation
-            {?kg schema:locationCreated ?location .
+            {?kg schema:locationCreated ?location .}
             UNION {?kg pav:createdAt ?location .}
             # With PROV
             UNION {

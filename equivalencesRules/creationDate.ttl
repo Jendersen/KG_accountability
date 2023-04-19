@@ -18,7 +18,7 @@
         PREFIX dcterms: <http://purl.org/dc/terms/>
         ASK {
             # Find a date of creation
-            {?kg dcterms:created ?date .
+            {?kg dcterms:created ?date .}
             UNION {?kg schema:dateCreated ?date .}
             UNION {?kg pav:createdOn ?date .}
             UNION {?kg prov:generatedAtTime ?date .}

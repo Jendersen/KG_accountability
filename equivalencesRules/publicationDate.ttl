@@ -18,7 +18,7 @@
         PREFIX dcterms: <http://purl.org/dc/terms/>
         ASK {
             # Find a date of publication
-            {?kg dcterms:issued ?date .
+            {?kg dcterms:issued ?date .}
             UNION {?kg dcterms:available ?date .}
             UNION {?kg schema:datePublished ?date .}
             UNION {?kg schema:sdDatePublished ?date .}

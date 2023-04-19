@@ -18,7 +18,7 @@
         PREFIX dcterms: <http://purl.org/dc/terms/>
         ASK {
             # Find a date of end of availability
-            {?kg schema:expires ?date .
+            {?kg schema:expires ?date .}
             UNION {?kg prov:invalidatedAtTime ?date .}
         }
 """ .

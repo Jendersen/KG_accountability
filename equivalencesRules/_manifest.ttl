@@ -309,7 +309,7 @@
                     ]
                 } WHERE {
                     # Find a date of creation
-                    {?kg dcterms:created ?date .
+                    {?kg dcterms:created ?date .}
                     UNION {?kg schema:dateCreated ?date .}
                     UNION {?kg pav:createdOn ?date .}
                     UNION {?kg prov:generatedAtTime ?date .}
@@ -483,7 +483,7 @@
                         ]
                 } WHERE {
                     # Find a location of creation
-                    { ?kg schema:locationCreated ?location .
+                    { ?kg schema:locationCreated ?location .}
                     UNION { ?kg pav:createdAt ?location .}
                     # With PROV
                     UNION {
@@ -789,7 +789,7 @@
                     ]
                 } WHERE {
                     # Find a date of modification
-                    {?kg dcterms:modified ?date .
+                    {?kg dcterms:modified ?date .}
                     UNION {?kg schema:dateModified ?date .}
                     UNION {?kg pav:lastUpdateOn ?date .}
                     UNION {?kg pav:contributedOn ?date .}
@@ -826,7 +826,7 @@
                     ]
                 } WHERE {
                     # Find a date of modification
-                    {?kg dcterms:modified ?date .
+                    {?kg dcterms:modified ?date .}
                     UNION {?kg schema:dateModified ?date .}
                     UNION {?kg pav:lastUpdateOn ?date .}
                     UNION {?kg pav:contributedOn ?date .}
@@ -863,7 +863,7 @@
                     ]
                 } WHERE {
                     # Find a date of modification
-                    {?kg dcterms:modified ?date .
+                    {?kg dcterms:modified ?date .}
                     UNION {?kg schema:dateModified ?date .}
                     UNION {?kg pav:lastUpdateOn ?date .}
                     UNION {?kg pav:contributedOn ?date .}
@@ -1118,7 +1118,7 @@
                 } WHERE {
                     # Find a contributor
                     {?kg dce:contributor ?contributor .}
-                    UNION {?kg dcterms:contributor ?contributor .
+                    UNION {?kg dcterms:contributor ?contributor .}
                     UNION {?kg schema:contributor ?contributor .}
                     UNION {?kg pav:contributedBy ?contributor .}
                     # Find an editor
@@ -1159,7 +1159,7 @@
                 } WHERE {
                     # Find a contributor
                     {?kg dce:contributor ?contributor .}
-                    UNION {?kg dcterms:contributor ?contributor .
+                    UNION {?kg dcterms:contributor ?contributor .}
                     UNION {?kg schema:contributor ?contributor .}
                     UNION {?kg pav:contributedBy ?contributor .}
                     # Find an editor
@@ -1198,7 +1198,7 @@
                     ?kg schema:sdDatePublished ?date .
                 } WHERE {
                     # Find a date of publication
-                    {?kg dcterms:issued ?date .
+                    {?kg dcterms:issued ?date .}
                     UNION {?kg dcterms:available ?date .}
                     UNION {?kg schema:datePublished ?date .}
                     UNION {?kg schema:sdDatePublished ?date .}
@@ -1359,7 +1359,7 @@
                     ?kg schema:expires ?date .
                 } WHERE {
                     # Find a date of end of validity
-                    {?kg dcterms:valid ?date .
+                    {?kg dcterms:valid ?date .}
                     UNION {?kg schema:expires ?date .}
                 }
             """

@@ -18,7 +18,7 @@
         PREFIX dcterms: <http://purl.org/dc/terms/>
         ASK {
             # Find a date of modification
-            {?kg dcterms:modified ?date .
+            {?kg dcterms:modified ?date .}
             UNION {?kg schema:dateModified ?date .}
             UNION {?kg pav:lastUpdateOn ?date .}
             UNION {?kg pav:contributedOn ?date .}

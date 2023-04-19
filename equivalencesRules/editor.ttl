@@ -19,7 +19,7 @@
         ASK {
             # Find a contributor
             {?kg dce:contributor ?contributor .}
-            UNION {?kg dcterms:contributor ?contributor .
+            UNION {?kg dcterms:contributor ?contributor .}
             UNION {?kg schema:contributor ?contributor .}
             UNION {?kg pav:contributedBy ?contributor .}
             # Find an editor
