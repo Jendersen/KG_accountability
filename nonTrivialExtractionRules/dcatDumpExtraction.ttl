@@ -37,7 +37,11 @@
             UNION {?service dcat:servesDataset ?kg .
                    ?service sd:endpoint $rawEndpointUrl . }
 
-            ?kg dcat:distribution ?dist .
-            ?dist dcat:downloadURL ?url .
+              { ?kg dcat:distribution ?dist .
+                ?dist dcat:downloadURL ?url . }
+              UNION {
+                ?kg schema:distribution ?dist .
+                ?dist schema:contentUrl ?url .
+              }
         }
 """ .
