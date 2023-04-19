@@ -22,5 +22,7 @@
             {?kg void:dataDump ?url .}
             UNION {?kg dcat:distribution ?dist .
                    ?dist dcat:downloadURL ?url .}
+            UNION {?kg schema:distribution ?dist .
+                    ?dist schema:contentUrl ?url}
         }
 """ .
