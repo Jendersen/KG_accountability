@@ -33,6 +33,12 @@
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             CONSTRUCT {
+                ?kg a dcat:Dataset .
+                ?kg a void:Dataset .
+                ?kg a dcmitype:Dataset .
+                ?kg a schema:Dataset .
+                ?kg a sd:Dataset .
+                ?kg a dataid:Dataset .
                 ?kg ?p ?o .
             } WHERE {
                 # Find the KG : is a Dataset
