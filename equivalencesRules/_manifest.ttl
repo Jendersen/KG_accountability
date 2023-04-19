@@ -18,7 +18,6 @@
         <endValidity.ttl>
         <examples.ttl>
         <identifier.ttl>
-        <iriTemplate.ttl>
         <keyword.ttl>
         <language.ttl>
         <license.ttl>
