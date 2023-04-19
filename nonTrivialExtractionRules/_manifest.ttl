@@ -1,0 +1,781 @@
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix kgi: <http://ns.inria.fr/kg/index#> .
+
+<> a mf:Manifest ;
+    mf:entries (
+        <provCreationDateExtraction.ttl>
+        <provCreationLocationExtraction.ttl>
+        <provCreationMethodExtraction.ttl>
+        <provCreatorExtraction.ttl>
+        <dcatDumpExtraction.ttl>
+        <provEditorExtraction.ttl>
+        <provModificationDateExtraction.ttl>
+        <provPublicationDateExtraction.ttl>
+        <provPublisherExtraction.ttl>
+        <dcatEndpointExtraction.ttl>
+        <dcatWebpageExtraction.ttl>
+    ) .
+
+<provCreationDateExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                # ?act a prov:Create .
+                ?act prov:startedAtTime ?date .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                ?kg prov:wasGeneratedBy ?act .
+                # ?act a prov:Create .
+                ?act prov:startedAtTime ?date .
+            }
+            """
+        ]
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                # ?act a prov:Create .
+                ?act prov:endedAtTime ?date .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                  ?kg prov:wasGeneratedBy ?act .
+                  # ?act a prov:Create .
+                  ?act prov:endedAtTime ?date .
+            }
+            """
+        ]
+    ) .
+
+
+<provCreationLocationExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                # ?act a prov:Create .
+                ?act prov:atLocation ?location .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                 ?kg prov:wasGeneratedBy ?act .
+                 # ?act a prov:Create .
+                 ?act prov:atLocation ?location .
+            }
+            """
+        ]
+    ) .
+
+
+<provCreationMethodExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                # ?act a prov:Create .
+                ?act prov:wasAssociatedWith ?agent .
+                ?agent a prov:SoftwareAgent .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+               ?kg prov:wasGeneratedBy ?act .
+               # ?act a prov:Create .
+               ?act prov:wasAssociatedWith ?agent .
+               ?agent a prov:SoftwareAgent .
+            }
+            """
+        ]
+    ) .
+
+
+<provCreatorExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                # ?act a prov:Create .
+                ?act prov:wasAssociatedWith ?creator .
+                ?creator a ?type .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+               ?kg prov:wasGeneratedBy ?act .
+               # ?act a prov:Create .
+               ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?creator .
+               ?creator a ?type .
+               VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
+            }
+            """
+        ]
+    ) .
+
+<dcatDumpExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+               ?kg dcat:distribution ?dist .
+               ?dist dcat:downloadURL ?url .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+               ?kg dcat:distribution ?dist .
+               ?dist dcat:downloadURL ?url .
+            }
+            """
+        ]
+    ) .
+
+<provEditorExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                # ?act a prov:Contribute .
+                ?act prov:wasAssociatedWith ?contributor .
+                ?contributor a ?type .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                 ?kg prov:wasGeneratedBy ?act .
+                 # ?act a prov:Contribute .
+                 ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?contributor .
+                 ?contributor a ?type .
+                 VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
+            }
+            """
+        ]
+    ) .
+
+<provModificationDateExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
+                ?act prov:startedAtTime ?date .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                ?kg prov:wasGeneratedBy ?act .
+                # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
+                ?act prov:startedAtTime ?date .
+            }
+            """
+        ]
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
+                ?act prov:endedAtTime ?date .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                 ?kg prov:wasGeneratedBy ?act .
+                 # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
+                 ?act prov:endedAtTime ?date .
+            }
+            """
+        ]
+    ) .
+
+<provPublicationDateExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                ?act a prov:Publish .
+                ?act prov:startedAtTime ?date .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                ?kg prov:wasGeneratedBy ?act .
+                ?act a prov:Publish .
+                ?act prov:startedAtTime ?date .
+            }
+            """
+        ]
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                ?act a prov:Publish .
+                ?act prov:endedAtTime ?date .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                 ?kg prov:wasGeneratedBy ?act .
+                 ?act a prov:Publish .
+                 ?act prov:endedAtTime ?date .
+            }
+            """
+        ]
+    ) .
+
+<provPublisherExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg prov:wasGeneratedBy ?act .
+                ?act a prov:Publish .
+                ?act prov:wasAssociatedWith ?publisher .
+                ?publisher a ?type .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                ?kg prov:wasGeneratedBy ?act .
+                ?act a prov:Publish .
+                ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?publisher .
+                ?publisher a ?type .
+                VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
+            }
+            """
+        ]
+    ) .
+
+<dcatEndpointExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg dcat:accessService ?service .
+                ?service dcat:endpointURL ?endpoint .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                 # Find a SPARQL endpoint
+                 ?kg dcat:accessService ?service .
+                 ?service dcat:endpointURL ?endpoint .
+            }
+            """
+        ]
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg dcat:accessService ?service .
+                ?service sd:endpoint ?endpoint .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                 # Find a SPARQL endpoint
+                 ?kg dcat:accessService ?service .
+                 ?service sd:endpoint ?endpoint .
+            }
+            """
+        ]
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?service dcat:servesDataset ?kg .
+                ?service dcat:endpointURL ?endpoint .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                 # Find a SPARQL endpoint
+                 ?service dcat:servesDataset ?kg .
+                 ?service dcat:endpointURL ?endpoint .
+            }
+            """
+        ]
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?service dcat:servesDataset ?kg .
+                ?service sd:endpoint ?endpoint .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                 # Find a SPARQL endpoint
+                 ?service dcat:servesDataset ?kg .
+                 ?service sd:endpoint ?endpoint .
+            }
+            """
+        ]
+    ) .
+
+<dcatWebpageExtraction.ttl> a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+            PREFIX void: <http://rdfs.org/ns/void#>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+            PREFIX schema: <http://schema.org/>
+            PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
+            PREFIX pav: <http://purl.org/pav/>
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX dce: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            CONSTRUCT {
+                ?kg dcat:distribution ?dist .
+                ?dist dcat:accessURL ?url .
+            } WHERE {
+                # Find the KG : is a Dataset
+                { ?kg a dcat:Dataset }
+                UNION { ?kg a void:Dataset }
+                UNION { ?kg a dcmitype:Dataset }
+                UNION { ?kg a schema:Dataset }
+                UNION { ?kg a sd:Dataset }
+                UNION { ?kg a dataid:Dataset }
+
+                # is linked directly or not to the endpoint
+                { ?kg ?endpointLink $rawEndpointUrl . }
+                UNION {?kg dcat:accessService ?service .
+                       ?service dcat:endpointURL $rawEndpointUrl .  }
+                UNION {?kg dcat:accessService ?service .
+                       ?service sd:endpoint $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service dcat:endpointURL $rawEndpointUrl . }
+                UNION {?service dcat:servesDataset ?kg .
+                       ?service sd:endpoint $rawEndpointUrl . }
+
+                ?kg dcat:distribution ?dist .
+                ?dist dcat:accessURL ?url .
+            }
+            """
+        ]
+    ) .
