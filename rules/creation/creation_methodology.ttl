@@ -1,44 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Creation methodology" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "Which methods or tools were used for data creation?" ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX prov: <http://www.w3.org/ns/prov#>
-        PREFIX pav: <http://purl.org/pav/>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dce: <http://purl.org/dc/elements/1.1/>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            # Find a method/tool
-            # method
-            {?kg dcterms:accrualMethod ?method .}
-            # (software) agent
-            UNION {
-              {?kg pav:createdWith ?agent .}
-              UNION {?kg pav:retrievedBy ?agent .}
-              UNION {?kg pav:importedBy ?agent .}
-              {?agent dcterms:description ?desc .}
-              UNION {?agent dce:description ?desc . }
-              UNION {?agent schema:description ?desc .}
-            }
-            # activity
-            UNION {
-              ?kg prov:wasGeneratedBy ?activity .
-              {?activity a prov:Create . } UNION {?activity a prov:Contribute . }
-              {?activity dcterms:description ?desc .}
-              UNION {?activity dce:description ?desc . }
-              UNION {?activity schema:description ?desc .}
-            }
-        }
-""" .
+    dcterms:description "Which methods or tools were used for data creation?" .

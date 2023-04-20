@@ -1,33 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Creation source" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "From what original source(s) were the data collected or derived?" ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX prov: <http://www.w3.org/ns/prov#>
-        PREFIX pav: <http://purl.org/pav/>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dce: <http://purl.org/dc/elements/1.1/>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            # Find a source
-            {?kg dcterms:source ?source . }
-            UNION {?kg dce:source ?source .}
-            UNION {?kg prov:wasDerivedFrom ?source .}
-            UNION {?kg prov:hadPrimarySource ?source .}
-            UNION {?kg pav:derivedFrom ?source .}
-            UNION {?kg pav:importedFrom ?source .}
-            UNION {?kg pav:retrievedFrom ?source .}
-            UNION {?kg schema:isBasedOn ?source .}
-        }
-""" .
+    dcterms:description "From what original source(s) were the data collected or derived?" .
