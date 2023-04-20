@@ -119,22 +119,22 @@
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
+                        prov:generatedAtTime ?time .
                 }
                 INSERT {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime ?time .
                 } WHERE {
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
 
                     ?kg a void:Dataset .
                     ?kg dcterms:modified ?date .
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime ?time .
                 }
             """
         ]
@@ -157,22 +157,22 @@
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
+                        prov:generatedAtTime ?time .
                 }
                 INSERT {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime ?time .
                 } WHERE {
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
 
                     ?kg a void:Dataset .
                     ?kg dcterms:accrualPeriodicity ?frequency
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime ?time .
                 }
             """
         ]
@@ -195,16 +195,13 @@
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
+                        prov:generatedAtTime ?time .
                 }
                 INSERT {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime ?time .
                 } WHERE {
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
 
                     ?kg a void:Dataset .
 
@@ -214,6 +211,9 @@
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime ?time .
                 }
             """
         ]
@@ -236,16 +236,13 @@
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
+                        prov:generatedAtTime ?time .
                 }
                 INSERT {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "true"^^xsd:boolean ;
                         prov:generatedAtTime ?time .
                 } WHERE {
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
 
                     ?kg a void:Dataset .
 
@@ -253,7 +250,7 @@
                     {?kg dcterms:accrualMethod ?method .}
                     # activity
                     UNION {
-                        ?kg prov:wasGeneratedBy ?activity . 
+                        ?kg prov:wasGeneratedBy ?activity .
                         # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
                         # {?activity dcterms:description ?desc .} UNION {?activity dce:description ?desc . } UNION {?activity schema:description ?desc .}
                         ?agent a prov:SoftwareAgent .
@@ -261,6 +258,9 @@
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime ?time .
                 }
             """
         ]
