@@ -24,8 +24,8 @@
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
                     ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementConstributor .
-                    ?qualityMeasurementConstributor a dqv:QualityMeasurement ;
+                        dqv:hasQualityMeasurement ?qualityMeasurementContributor .
+                    ?qualityMeasurementContributor a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor measurement" ;
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
@@ -38,8 +38,8 @@
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 
 #                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
-#                        dqv:hasQualityMeasurement ?qualityMeasurementConstributorID .
-#                    ?qualityMeasurementConstributorID a dqv:QualityMeasurement ;
+#                        dqv:hasQualityMeasurement ?qualityMeasurementContributorID .
+#                    ?qualityMeasurementContributorID a dqv:QualityMeasurement ;
 #                        rdfs:label "Creation contributor identification measurement" ;
 #                        dqv:computedOn ?endpointDescription, ?contributor ;
 #                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
@@ -52,8 +52,8 @@
 #                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
 #
 #                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
-#                        dqv:hasQualityMeasurement ?qualityMeasurementConstributorType .
-#                    ?qualityMeasurementConstributorType a dqv:QualityMeasurement ;
+#                        dqv:hasQualityMeasurement ?qualityMeasurementContributorType .
+#                    ?qualityMeasurementContributorType a dqv:QualityMeasurement ;
 #                        rdfs:label "Creation contributor type measurement" ;
 #                        dqv:computedOn ?endpointDescription, ?contributor ;
 #                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
@@ -98,9 +98,9 @@
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurementConstributor)
-#                   BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementConstributorID)
-#                   BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementConstributorType)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurementContributor)
+#                   BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorID)
+#                   BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorType)
 #                   BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementQualification)
 #                   BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementInfluences)
                     BIND(NOW() AS ?time)
@@ -178,8 +178,8 @@
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
                     ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementConstributorID .
-                    ?qualityMeasurementConstributorID a dqv:QualityMeasurement ;
+                        dqv:hasQualityMeasurement ?qualityMeasurementContributorID .
+                    ?qualityMeasurementContributorID a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor identification measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
@@ -227,7 +227,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementConstributorID)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorID)
                     BIND(NOW() AS ?time)
                 }
             """
@@ -248,8 +248,8 @@
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
                     ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementConstributorID .
-                    ?qualityMeasurementConstributorID a dqv:QualityMeasurement ;
+                        dqv:hasQualityMeasurement ?qualityMeasurementContributorID .
+                    ?qualityMeasurementContributorID a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor identification measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
@@ -284,7 +284,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementConstributorID)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorID)
                     BIND(NOW() AS ?time)
                 }
             """
@@ -309,8 +309,8 @@
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
                     ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementConstributorType .
-                    ?qualityMeasurementConstributorType a dqv:QualityMeasurement ;
+                        dqv:hasQualityMeasurement ?qualityMeasurementContributorType .
+                    ?qualityMeasurementContributorType a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor type measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
@@ -340,7 +340,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementConstributorType)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorType)
                     BIND(NOW() AS ?time)
                 }
             """
@@ -361,8 +361,8 @@
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
                     ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementConstributorType .
-                    ?qualityMeasurementConstributorType a dqv:QualityMeasurement ;
+                        dqv:hasQualityMeasurement ?qualityMeasurementContributorType .
+                    ?qualityMeasurementContributorType a dqv:QualityMeasurement ;
                         rdfs:label "Creation contributor type measurement" ;
                         dqv:computedOn ?endpointDescription, ?contributor ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
@@ -394,7 +394,7 @@
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementConstributorType)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorType)
                     BIND(NOW() AS ?time)
                 }
             """
