@@ -1,37 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Creation contributor influences" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX prov: <http://www.w3.org/ns/prov#>
-        PREFIX pav: <http://purl.org/pav/>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dce: <http://purl.org/dc/elements/1.1/>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-            # Find a contributor
-            { ?kg ?contribProp ?contributor .
-              VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
-            }
-            UNION {
-              ?kg prov:wasGeneratedBy ?act .
-              {?act a prov:Create . } UNION {?act a prov:Contribute . }
-              ?act prov:wasAssociatedWith ?contributor .
-            }
-        
-            {?contributor ?prop ?influence .
-            VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
-            UNION {?group foaf:member ?contributor . }
-        }
-""" .
+    dcterms:description "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." .

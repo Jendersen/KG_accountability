@@ -14,6 +14,14 @@
                 PREFIX prov: <http://www.w3.org/ns/prov#>
                 PREFIX dqv: <http://www.w3.org/ns/dqv#>
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcterms: <http://purl.org/dc/terms/>
+                PREFIX dce: <http://purl.org/dc/elements/1.1/>
+                PREFIX pav: <http://purl.org/pav/>
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX schema: <http://schema.org/>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
                     ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
@@ -30,9 +38,25 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
+                    { ?kg a dcat:Dataset }
+                    UNION { ?kg a void:Dataset }
+                    ?kg void:sparqlEndpoint ?endpointUrl .
+
+                    # Find a contributor
+                    {
+                        ?kg ?contribProp ?contributor .
+                        VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
+                    }
+                    UNION {
+                        ?kg prov:wasGeneratedBy ?act .
+                        ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?creator .
+                        ?creator a ?type .
+                        VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
+                    }
+
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -40,35 +64,6 @@
         <creation_contributorType.ttl>
         <creation_contributorQualification.ttl>
         <creation_contributorInfluences.ttl>
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
-                        rdfs:comment "Who are the creators and contributors of the dataset? What is her/his/its role in the data creation process?" ;
-                        rdfs:label "Creation contributor" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
      ) .
 
 <creation_contributorID.ttl> a mf:ManifestEntry ;
@@ -102,11 +97,12 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
+                    {SELECT DISTINCT ?contributor ?endpointUrl WHERE {
                         # Find the KG
                         { ?kg a dcat:Dataset }
                         UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
+                        ?kg void:sparqlEndpoint ?endpointUrl .
+
                         # Find a contributor
                         { ?kg ?contribProp ?contributor .
                           VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
@@ -129,9 +125,9 @@
                         ?contributor ?contactProp ?contact .
                         VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -164,11 +160,11 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
+                    {SELECT DISTINCT ?contributor ?endpointUrl WHERE {
                         # Find the KG
                         { ?kg a dcat:Dataset }
                         UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
+                        ?kg void:sparqlEndpoint ?endpointUrl .
                         # Find a contributor
                         { ?kg ?contribProp ?contributor .
                           VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
@@ -192,61 +188,9 @@
                           VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
                         }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor identification measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
-                        rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
-                        rdfs:label "Creation contributor identification" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
-                        # Find the KG
-                        { ?kg a dcat:Dataset }
-                        UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
-
-                        # Find a contributor
-                        {   ?kg ?contribProp ?contributor .
-                            VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
-                        } UNION {
-                            ?kg prov:wasGeneratedBy ?act .
-                            {?act a prov:Create . } UNION {?act a prov:Contribute . }
-                            ?act prov:wasAssociatedWith ?contributor .
-                        }
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -283,11 +227,12 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
+                    {SELECT DISTINCT ?contributor ?endpointUrl WHERE {
                         # Find the KG
                         { ?kg a dcat:Dataset }
                         UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
+                        ?kg void:sparqlEndpoint ?endpointUrl .
+
                         # Find a contributor
                         { ?kg ?contribProp ?contributor .
                           VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
@@ -307,9 +252,9 @@
                         UNION {?contributor a schema:Organization .}
                         UNION {?contributor a prov:Organization .}
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -343,11 +288,12 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
+                    {SELECT DISTINCT ?contributor ?endpointUrl WHERE {
                         # Find the KG
                         { ?kg a dcat:Dataset }
                         UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
+                        ?kg void:sparqlEndpoint ?endpointUrl .
+
                         # Find a contributor
                         { ?kg ?contribProp ?contributor .
                           VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
@@ -368,61 +314,9 @@
                           UNION {?contributor a prov:Organization .}
                         }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor type measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
-                        rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
-                        rdfs:label "Creation contributor type" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
-                        # Find the KG
-                        { ?kg a dcat:Dataset }
-                        UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
-
-                        # Find a contributor
-                        {   ?kg ?contribProp ?contributor .
-                            VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
-                        } UNION {
-                            ?kg prov:wasGeneratedBy ?act .
-                            {?act a prov:Create . } UNION {?act a prov:Contribute . }
-                            ?act prov:wasAssociatedWith ?contributor .
-                        }
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -459,11 +353,12 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
+                    {SELECT DISTINCT ?contributor ?endpointUrl WHERE {
                         # Find the KG
                         { ?kg a dcat:Dataset }
                         UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
+                        ?kg void:sparqlEndpoint ?endpointUrl .
+
                         # Find a contributor
                         { ?kg ?contribProp ?contributor .
                           VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
@@ -489,9 +384,9 @@
                         UNION {?contributor foaf:schoolHomepage ?school . }
                         UNION {?contributor schema:alumniOf ?school .}
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -524,11 +419,12 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
+                    {SELECT DISTINCT ?contributor ?endpointUrl WHERE {
                         # Find the KG
                         { ?kg a dcat:Dataset }
                         UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
+                        ?kg void:sparqlEndpoint ?endpointUrl .
+
                         # Find a contributor
                         { ?kg ?contribProp ?contributor .
                           VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
@@ -556,61 +452,9 @@
                           UNION {?contributor schema:alumniOf ?school .}
                         }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor qualification measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
-                        rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
-                        rdfs:label "Creation contributor qualification" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
-                        # Find the KG
-                        { ?kg a dcat:Dataset }
-                        UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
-
-                        # Find a contributor
-                        {   ?kg ?contribProp ?contributor .
-                            VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
-                        } UNION {
-                            ?kg prov:wasGeneratedBy ?act .
-                            {?act a prov:Create . } UNION {?act a prov:Contribute . }
-                            ?act prov:wasAssociatedWith ?contributor .
-                        }
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -647,11 +491,12 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
+                    {SELECT DISTINCT ?contributor ?endpointUrl WHERE {
                         # Find the KG
                         { ?kg a dcat:Dataset }
                         UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
+                        ?kg void:sparqlEndpoint ?endpointUrl .
+
                         # Find a contributor
                         { ?kg ?contribProp ?contributor .
                           VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
@@ -666,9 +511,9 @@
                         VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
                         UNION {?group foaf:member ?contributor . }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]
@@ -701,11 +546,12 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
+                    {SELECT DISTINCT ?contributor ?endpointUrl WHERE {
                         # Find the KG
                         { ?kg a dcat:Dataset }
                         UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
+                        ?kg void:sparqlEndpoint ?endpointUrl .
+
                         # Find a contributor
                         { ?kg ?contribProp ?contributor .
                           VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
@@ -716,66 +562,14 @@
                           ?act prov:wasAssociatedWith ?contributor .
                         }
                         FILTER NOT EXISTS {
-                        {?contributor ?prop ?influence .
-                            VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
-                            UNION {?group foaf:member ?contributor . }
-                        }
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor influences measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
-                        rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
-                        rdfs:label "Creation contributor influences" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    {SELECT DISTINCT ?contributor WHERE {
-                        # Find the KG
-                        { ?kg a dcat:Dataset }
-                        UNION { ?kg a void:Dataset }
-                        ?kg ?endpointLink $rawEndpointUrl .
-
-                        # Find a contributor
-                        {   ?kg ?contribProp ?contributor .
-                            VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
-                        } UNION {
-                            ?kg prov:wasGeneratedBy ?act .
-                            {?act a prov:Create . } UNION {?act a prov:Contribute . }
-                            ?act prov:wasAssociatedWith ?contributor .
-                        }
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
+                            {?contributor ?prop ?influence .
+                                VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
+                                UNION {?group foaf:member ?contributor . }
+                            }
+                        }}
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?endpointUrl)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?endpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurement)
                 }
             """
         ]

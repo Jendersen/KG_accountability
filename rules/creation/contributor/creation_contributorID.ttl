@@ -1,48 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Creation contributor identification" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX prov: <http://www.w3.org/ns/prov#>
-        PREFIX pav: <http://purl.org/pav/>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dce: <http://purl.org/dc/elements/1.1/>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-            # Find a contributor
-            { ?kg ?contribProp ?contributor .
-              VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
-            }
-            UNION {
-              ?kg prov:wasGeneratedBy ?act .
-              {?act a prov:Create . } UNION {?act a prov:Contribute . }
-              ?act prov:wasAssociatedWith ?contributor .
-            }
-
-            # name
-            {?contributor rdfs:label ?name .}
-            UNION {?contributor schema:name ?name .}
-            UNION {?contributor foaf:name ?name .}
-            UNION {?contributor schema:legalName ?name}
-            UNION {?contributor schema:givenName ?fname ;
-                                schema:familyName ?name .}
-            UNION {?contributor foaf:givenName ?fname ;
-                                foaf:familyName ?name .}
-            UNION {?contributor foaf:firstName ?fname ;
-                                foaf:lastName ?name .}
-            # contact
-            ?contributor ?contactProp ?contact .
-            VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
-        }
-""" .
+    dcterms:description "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" .

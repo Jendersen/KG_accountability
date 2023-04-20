@@ -1,40 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Creation contributor type" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "Is the contributor (of the data creation process) a person or an organization?" ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX prov: <http://www.w3.org/ns/prov#>
-        PREFIX pav: <http://purl.org/pav/>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dce: <http://purl.org/dc/elements/1.1/>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-            # Find a contributor
-            { ?kg ?contribProp ?contributor .
-              VALUES ?contribProp { dcterms:creator dce:creator dcterms:contributor dce:contributor schema:creator schema:author schema:contributor schema:editor foaf:maker pav:createdBy pav:authoredBy pav:contributedBy pav:curatedBy }
-            }
-            UNION {
-              ?kg prov:wasGeneratedBy ?act .
-              {?act a prov:Create . } UNION {?act a prov:Contribute . }
-              ?act prov:wasAssociatedWith ?contributor .
-            }
-            # Is it a person ?
-            {?contributor a foaf:Person .}
-            UNION {?contributor a schema:Person .}
-            UNION {?contributor a prov:Person .}
-            # Or, is it an organization ?
-            UNION {?contributor a foaf:Organization .}
-            UNION {?contributor a schema:Organization .}
-            UNION {?contributor a prov:Organization .}
-        }
-""" .
+    dcterms:description "Is the contributor (of the data creation process) a person or an organization?" .
