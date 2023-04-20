@@ -311,8 +311,8 @@
                     ?kg prov:generatedAtTime ?date .
                     # With PROV
                     ?kg prov:wasGeneratedBy [
-                        a prov:Create , prov:Contribute .
-                        prov:endedAtTime ?date .
+                        a prov:Create , prov:Contribute ;
+                        prov:endedAtTime ?date
                     ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -598,9 +598,9 @@
                     ?kg pav:importedBy ?agent .
                     # With PROV
                     ?kg prov:wasGeneratedBy  [
-                         a prov:Create .
-                         prov:wasAssociatedWith ?agent .
-                    ]
+                             a prov:Create ;
+                             prov:wasAssociatedWith ?agent
+                        ] .
                     ?agent a prov:SoftwareAgent .
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -712,8 +712,8 @@
                     ?kg pav:authoredBy ?creator .
                     # With PROV
                     ?kg prov:wasGeneratedBy [
-                        a prov:Create .
-                        prov:wasAssociatedWith ?creator .
+                        a prov:Create ;
+                        prov:wasAssociatedWith ?creator
                     ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -831,8 +831,8 @@
                     ?kg pav:contributedOn ?date .
                     # With PROV
                     ?kg prov:wasGeneratedBy [
-                        a prov:Modify .
-                        prov:startedAtTime ?date .
+                        a prov:Modify ;
+                        prov:startedAtTime ?date
                     ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -869,8 +869,8 @@
                     ?kg pav:contributedOn ?date .
                     # With PROV
                     ?kg prov:wasGeneratedBy [
-                        a prov:Modify .
-                         prov:endedAtTime ?date .
+                        a prov:Modify ;
+                         prov:endedAtTime ?date
                     ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -907,8 +907,8 @@
                     ?kg pav:contributedOn ?date .
                     # With PROV
                     ?kg prov:wasGeneratedBy [
-                        a ?activityType .
-                        ?dateProperty ?date .
+                        a ?activityType ;
+                        ?dateProperty ?date
                     ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -922,8 +922,8 @@
                         ?kg prov:wasGeneratedBy ?act .
                         ?act a ?activityType .
                         ?act ?dateProperty ?date .
-                        VALUES ?activityType ( prov:Contribute prov:Modify prov:Replace )
-                        VALUES ?dateProperty ( prov:startedAtTime prov:endedAtTime )
+                        VALUES ?activityType { prov:Contribute prov:Modify prov:Replace }
+                        VALUES ?dateProperty { prov:startedAtTime prov:endedAtTime }
                     }
                 }
             """
@@ -1084,7 +1084,7 @@
                 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                 INSERT {
                     ?kg dcat:distribution [
-                            dcat:downloadURL ?url .
+                            dcat:downloadURL ?url
                         ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -1116,7 +1116,7 @@
                 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                 INSERT {
                     ?kg schema:distribution [
-                            schema:contentUrl ?url .
+                            schema:contentUrl ?url
                         ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -1211,8 +1211,8 @@
                     ?kg pav:contributedBy ?contributor .
                     ?kg schema:editor ?contributor .
                     ?kg prov:wasGeneratedBy [
-                            a prov:Contribute .
-                            prov:wasAssociatedWith ?contributor .
+                            a prov:Contribute ;
+                            prov:wasAssociatedWith ?contributor
                         ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -1253,8 +1253,8 @@
                     ?kg pav:contributedBy ?contributor .
                     ?kg schema:editor ?contributor .
                     ?kg prov:wasGeneratedBy [
-                            a prov:Contribute .
-                            prov:wasAssociatedWith ?contributor .
+                            a prov:Contribute ;
+                            prov:wasAssociatedWith ?contributor
                         ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -1462,7 +1462,7 @@
                     ?kg schema:url ?url .
                     ?kg dcat:landingPage ?url .
                     ?kg dcat:distribution [
-                        dcat:accessURL ?url .
+                        dcat:accessURL ?url
                     ]
                 } WHERE {
                     ?kg a dcat:Dataset .
@@ -1523,8 +1523,8 @@
                     ?kg schema:sdPublisher ?publisher .
                     ?kg pav:providedBy ?publisher .
                     ?kg prov:wasGeneratedBy [
-                            a prov:Publish .
-                            prov:wasAssociatedWith ?publisher .
+                            a prov:Publish ;
+                            prov:wasAssociatedWith ?publisher
                         ] .
                 } WHERE {
                     ?kg a dcat:Dataset .
