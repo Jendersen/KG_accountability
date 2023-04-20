@@ -56,9 +56,9 @@
                     {?act prov:startedAtTime ?pubStartDate .}
                     UNION {?act prov:endedAtTime ?pubEndDate .}
 
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
                 }
             """
@@ -110,9 +110,9 @@
                             UNION {?act prov:endedAtTime ?pubEndDate .}
                         })
 
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
                 }
             """
@@ -163,9 +163,9 @@
 
                     ?kg prov:invalidatedAtTime ?date .
 
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
                 }
             """
@@ -214,9 +214,9 @@
                             ?kg prov:invalidatedAtTime ?date .
                         })
 
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
                 }
             """
@@ -266,9 +266,9 @@
                     ?kg a dcat:Dataset .
 
                     ?kg dcterms:valid ?date .
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
                 }
             """
@@ -316,9 +316,9 @@
                     FILTER (NOT EXISTS {
                             ?kg dcterms:valid ?date .
                         })
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)
                 }
             """
