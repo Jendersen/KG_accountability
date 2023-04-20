@@ -1,33 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Modification date" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "When was the dataset last maintained/modified?" ;
-    kgi:query """
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        PREFIX schema: <http://schema.org/>
-        PREFIX pav: <http://purl.org/pav/>
-        PREFIX prov: <http://www.w3.org/ns/prov#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION {?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-
-            {?kg dcterms:modified ?lastModified .}
-            UNION {?kg schema:dateModified ?lastModified .}
-            UNION {?kg pav:lastUpdateOn ?lastModified .}
-            UNION {?kg pav:lastRefreshedOn ?lastModified .}
-            UNION {?kg pav:contributedOn ?lastModified .}
-            UNION {?kg prov:wasGeneratedBy ?act .
-                {?act a prov:Contribute . }
-                UNION {?act a prov:Modify . }
-                UNION {?act a prov:Replace . }
-                {?act prov:startedAtTime ?startDate .}
-                UNION {?act prov:endedAtTime ?endDate .} }
-        }
-""" .
+    dcterms:description "When was the dataset last maintained/modified?" .

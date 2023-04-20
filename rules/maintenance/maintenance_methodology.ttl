@@ -1,35 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Maintenance methodology" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "What will be the methodology/ procedure for data maintenance?" ;
-    kgi:query """
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        PREFIX prov: <http://www.w3.org/ns/prov#>
-        PREFIX dce: <http://purl.org/dc/elements/1.1/>
-        PREFIX schema: <http://schema.org/>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION {?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            # method
-            {?kg dcterms:accrualMethod ?method .}
-            # activity
-            UNION {
-                ?kg prov:wasGeneratedBy ?activity . 
-                {?act a prov:Contribute . }
-                UNION {?act a prov:Modify . }
-                UNION {?act a prov:Replace . }
-                {?activity dcterms:description ?desc .}
-                UNION {?activity dce:description ?desc . }
-                UNION {?activity schema:description ?desc .}
-             }
-        }
-        
-""" .
+    dcterms:description "What will be the methodology/ procedure for data maintenance?" .
