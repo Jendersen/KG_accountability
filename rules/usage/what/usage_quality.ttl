@@ -1,24 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Usage dataset quality" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "Provide information about the quality of the dataset." ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX dqv: <http://www.w3.org/ns/dqv#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            {?kg dqv:hasQualityMeasurement ?quality .}
-            UNION {?kg dqv:hasQualityAnnoation ?quality .}
-            UNION {?kg schema:award ?quality .}
-            UNION {?kg schema:review ?quality .}
-        }
-""" .
+    dcterms:description "Provide information about the quality of the dataset." .

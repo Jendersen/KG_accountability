@@ -4,22 +4,4 @@
 <> a kgi:TestQuery ;
     dcterms:title "Usage RDF serialization" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "What RDF serialization formats does the dataset support?" ;
-    kgi:query """
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        PREFIX dce: <http://purl.org/dc/elements/1.1/>
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            {?kg void:feature ?feature .}
-            UNION {?kg dcterms:format ?format .}
-            UNION {?kg dce:format ?format .}
-            UNION {?kg schema:encodingFormat ?format .}
-        }
-""" .
+    dcterms:description "What RDF serialization formats does the dataset support?" .

@@ -1,28 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Usage dataset description" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "What is a general description of the dataset? " ;
-    kgi:query """
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        PREFIX dce: <http://purl.org/dc/elements/1.1/>
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            {?kg dcterms:description ?desc .}
-            UNION { ?kg dce:description ?desc . }
-            UNION {?kg rdfs:comment ?desc .}
-            UNION {?kg schema:description ?desc .}
-            UNION {?kg dataid:dataDescription ?desc .}
-        }
-""" .
+    dcterms:description "What is a general description of the dataset? " .
