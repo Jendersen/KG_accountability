@@ -220,6 +220,7 @@
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 PREFIX dcterms: <http://purl.org/dc/terms/>
+                PREFIX pav: <http://purl.org/pav/>
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
@@ -235,7 +236,8 @@
                         prov:generatedAtTime ?dateLiteral .
 
                     ?kg a void:Dataset .
-                    ?kg dcterms:accrualMethod ?meth .
+                    { ?kg dcterms:accrualMethod ?meth . }
+                    UNION { ?kg pav:createdWith ?agent . }
                     
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_methodology.ttl")), "Measure")) AS ?qualityMeasurement)
                     BIND(NOW() AS ?time)

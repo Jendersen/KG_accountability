@@ -592,7 +592,6 @@
                 PREFIX dce: <http://purl.org/dc/elements/1.1/>
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 INSERT {
-                    ?kg dcterms:accrualMethod ?method .
                     ?kg pav:createdWith ?agent .
                     ?kg pav:retrievedBy ?agent .
                     ?kg pav:importedBy ?agent .
@@ -605,8 +604,7 @@
                 } WHERE {
                     ?kg a dcat:Dataset .
                     # Find a method or software
-                    {?kg dcterms:accrualMethod ?method .}
-                    UNION {?kg pav:createdWith ?agent .}
+                    {?kg pav:createdWith ?agent .}
                     UNION {?kg pav:retrievedBy ?agent .}
                     UNION {?kg pav:importedBy ?agent .}
                     # With PROV
