@@ -1,36 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Usage access procedure" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "How to access the dataset? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access." ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX schema: <http://schema.org/>
-        PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            { ?kg void:sparqlEndpoint ?endpoint . }
-            UNION { ?kg void:dataDump ?dump . }
-            UNION { ?kg schema:distribution ?dump .}
-            UNION { ?kg dcat:distribution ?dist .
-                    ?dist dcat:downloadURL ?dump . }
-            UNION { ?service dcat:servesDataset ?kg .
-                    ?service dcat:endpointURL ?endpoint . }
-            UNION { ?kg dcat:accessService ?service .
-                    ?service dcat:endpointURL ?endpoint .  }
-            UNION { ?kg dcat:accessService ?service .
-                    ?service sd:endpoint ?endpoint . }
-            UNION { ?service dcat:servesDataset ?kg .
-                    ?service sd:endpoint ?endpoint . }
-            UNION { ?kg dcat:distribution ?dist .
-                    ?dist dataid:accessProcedure ?procedure . }
-        }
-""" .
+    dcterms:description "How to access the dataset? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access." .

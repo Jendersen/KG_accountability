@@ -1,22 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Usage reuse" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "How to use, reuse or integrate the dataset?" ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            {?kg dataid:reuseAndIntegration ?info .}
-            UNION {?kg schema:usageInfo ?info .}
-        }
-""" .
+    dcterms:description "How to use, reuse or integrate the dataset?" .

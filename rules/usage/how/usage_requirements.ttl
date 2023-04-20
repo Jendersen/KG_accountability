@@ -4,18 +4,4 @@
 <> a kgi:TestQuery ;
     dcterms:title "Usage requirements" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "What are the requirements to use the dataset?" ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            ?kg dcat:distribution ?dist .
-            ?dist dataid:softwareRequirement ?requirements .
-        }
-""" .
+    dcterms:description "What are the requirements to use the dataset?" ..
