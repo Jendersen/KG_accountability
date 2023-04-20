@@ -3,9 +3,51 @@
 
 <> a mf:Manifest ;
     mf:entries (
-        <maintenance_contributor.ttl>
+        <initialization.ttl>
     ) .
 
+<initialization.ttl>  a mf:ManifestEntry ;
+    kgi:onSuccess (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcterms: <http://purl.org/dc/terms/>
+                PREFIX dce: <http://purl.org/dc/elements/1.1/>
+                PREFIX pav: <http://purl.org/pav/>
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX schema: <http://schema.org/>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurementContributor .
+                    ?qualityMeasurementContributor a dqv:QualityMeasurement ;
+                        rdfs:label "Maintenance contributor measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime ?time .
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> a dqv:Metric ;
+                        rdfs:comment "Who are the maintainers of the dataset? What is her/his/its role in this process?" ;
+                        rdfs:label "Maintenance contributor" .
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    ?kg a void:Dataset .
+                    
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl")), "Measure")) AS ?qualityMeasurementContributor)
+                    BIND(NOW() AS ?time)
+                }
+            """
+        ]
+        <maintenance_contributor.ttl>
+    ) .
 
 <maintenance_contributor.ttl> a mf:ManifestEntry ;
     kgi:onSuccess (
@@ -14,25 +56,36 @@
                 PREFIX prov: <http://www.w3.org/ns/prov#>
                 PREFIX dqv: <http://www.w3.org/ns/dqv#>
                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcterms: <http://purl.org/dc/terms/>
+                PREFIX dce: <http://purl.org/dc/elements/1.1/>
+                PREFIX pav: <http://purl.org/pav/>
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX schema: <http://schema.org/>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                INSERT{
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance contributor measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime ?dateLiteral .
+                }
+                INSERT {
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> a dqv:Metric ;
-                        rdfs:comment "Who are the maintainers of the dataset? What is her/his/its role in this process?" ;
-                        rdfs:label "Maintenance contributor" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                        prov:generatedAtTime ?time .
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
+                    ?kg a void:Dataset .
+
+                    { ?kg dcterms:contributor ?contributor . }
+                    UNION { ?kg schema:maintainer ?contributor . }
+
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
+
+                    ?qualityMeasurement a dqv:QualityMeasurement ;
+                        dqv:value "false"^^xsd:boolean ;
+                        prov:generatedAtTime ?dateLiteral .
                 }
             """
         ]
@@ -40,36 +93,8 @@
         <maintenance_contributorID.ttl>
         <maintenance_contributorQualification.ttl>
         <maintenance_contributorInfluences.ttl>
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                INSERT{
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance contributor measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> a dqv:Metric ;
-                        rdfs:comment "Who are the maintainers of the dataset? What is her/his/its role in this process?" ;
-                        rdfs:label "Maintenance contributor" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
      ) .
+
 
 <maintenance_contributorType.ttl> a mf:ManifestEntry ;
     kgi:onSuccess (
@@ -95,18 +120,17 @@
                         dqv:computedOn ?endpointDescription, ?maintainer ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> a dqv:Metric ;
                         rdfs:comment "Is the maintainer a person or an organization ?" ;
                         rdfs:label "Maintenance contributor type" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
+                    {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
                       { ?kg a dcat:Dataset }
                       UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
                       # Find maintainer
                       {?kg dcterms:contributor ?maintainer . }
                       UNION {?kg dce:contributor ?maintainer . }
@@ -127,9 +151,10 @@
                       UNION {?maintainer a schema:Organization .}
                       UNION {?maintainer a prov:Organization .}
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -155,18 +180,17 @@
                         dqv:computedOn ?endpointDescription, ?maintainer ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> a dqv:Metric ;
                         rdfs:comment "Is the maintainer a person or an organization ?" ;
                         rdfs:label "Maintenance contributor type" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
+                    {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
                       { ?kg a dcat:Dataset }
                       UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
                       # Find maintainer
                       {?kg dcterms:contributor ?maintainer . }
                       UNION {?kg dce:contributor ?maintainer . }
@@ -189,67 +213,15 @@
                           UNION {?maintainer a prov:Organization .}
                       }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance contributor type measurement" ;
-                        dqv:computedOn ?endpointDescription, ?maintainer ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> a dqv:Metric ;
-                        rdfs:comment "Is the maintainer a person or an organization ?" ;
-                        rdfs:label "Maintenance contributor type" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
-                      # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
-                      # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorType.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
      ) .
+
 
 <maintenance_contributorID.ttl> a mf:ManifestEntry ;
     kgi:onSuccess (
@@ -275,18 +247,17 @@
                         dqv:computedOn ?endpointDescription, ?maintainer ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> a dqv:Metric ;
                         rdfs:comment "What are all information relevant to the identification of the maintainer: what is the name of the contributor and a point of contact (email, or phone number, or address, or homepage) ?" ;
                         rdfs:label "Maintenance contributor ID" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
+                    {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
                       { ?kg a dcat:Dataset }
                       UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
                       # Find maintainer
                       {?kg dcterms:contributor ?maintainer . }
                       UNION {?kg dce:contributor ?maintainer . }
@@ -313,9 +284,10 @@
                       ?maintainer ?contactProp ?contact .
                       VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -341,18 +313,17 @@
                         dqv:computedOn ?endpointDescription, ?maintainer ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> a dqv:Metric ;
                         rdfs:comment "What are all information relevant to the identification of the maintainer: what is the name of the contributor and a point of contact (email, or phone number, or address, or homepage) ?" ;
                         rdfs:label "Maintenance contributor ID" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
+                    {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
                       { ?kg a dcat:Dataset }
                       UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
                       # Find maintainer
                       {?kg dcterms:contributor ?maintainer . }
                       UNION {?kg dce:contributor ?maintainer . }
@@ -381,63 +352,10 @@
                           VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
                       }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance contributor ID measurement" ;
-                        dqv:computedOn ?endpointDescription, ?maintainer ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> a dqv:Metric ;
-                        rdfs:comment "What are all information relevant to the identification of the maintainer: what is the name of the contributor and a point of contact (email, or phone number, or address, or homepage) ?" ;
-                        rdfs:label "Maintenance contributor ID" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
-                      # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
-                      # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -467,18 +385,17 @@
                         dqv:computedOn ?endpointDescription, ?maintainer ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> a dqv:Metric ;
                         rdfs:comment "What are the qualifications of the maintainer?" ;
                         rdfs:label "Maintenance contributor qualification" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
+                    {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
                       { ?kg a dcat:Dataset }
                       UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
                       # Find maintainer
                       {?kg dcterms:contributor ?maintainer . }
                       UNION {?kg dce:contributor ?maintainer . }
@@ -506,9 +423,10 @@
                       UNION {?maintainer foaf:schoolHomepage ?school . }
                       UNION {?maintainer schema:alumniOf ?school .}
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -534,18 +452,17 @@
                         dqv:computedOn ?endpointDescription, ?maintainer ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> a dqv:Metric ;
                         rdfs:comment "What are the qualifications of the maintainer?" ;
                         rdfs:label "Maintenance contributor qualification" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
+                    {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
                       { ?kg a dcat:Dataset }
                       UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
                       # Find maintainer
                       {?kg dcterms:contributor ?maintainer . }
                       UNION {?kg dce:contributor ?maintainer . }
@@ -574,63 +491,10 @@
                           UNION {?maintainer schema:alumniOf ?school .}
                       }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance contributor qualification measurement" ;
-                        dqv:computedOn ?endpointDescription, ?maintainer ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> a dqv:Metric ;
-                        rdfs:comment "What are the qualifications of the maintainer?" ;
-                        rdfs:label "Maintenance contributor qualification" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
-                      # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
-                      # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -660,18 +524,17 @@
                         dqv:computedOn ?endpointDescription, ?maintainer ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> a dqv:Metric ;
                         rdfs:comment "Concerning the maintainer, provide all characteristics which could have an influence on the data set." ;
                         rdfs:label "Maintenance contributor influences" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
+                    {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
                       { ?kg a dcat:Dataset }
                       UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
                       # Find maintainer
                       {?kg dcterms:contributor ?maintainer . }
                       UNION {?kg dce:contributor ?maintainer . }
@@ -687,9 +550,10 @@
                       VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
                       UNION {?group foaf:member ?maintainer . }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -715,18 +579,17 @@
                         dqv:computedOn ?endpointDescription, ?maintainer ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> a dqv:Metric ;
                         rdfs:comment "Concerning the maintainer, provide all characteristics which could have an influence on the data set." ;
                         rdfs:label "Maintenance contributor influences" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
+                    {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
                       { ?kg a dcat:Dataset }
                       UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
                       # Find maintainer
                       {?kg dcterms:contributor ?maintainer . }
                       UNION {?kg dce:contributor ?maintainer . }
@@ -744,63 +607,10 @@
                           UNION {?group foaf:member ?maintainer . }
                       }
                     }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
-                }
-            """
-        ]
-     ) ;
-    kgi:onFailure (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                CONSTRUCT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance contributor influences measurement" ;
-                        dqv:computedOn ?endpointDescription, ?maintainer ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> a dqv:Metric ;
-                        rdfs:comment "Concerning the maintainer, provide all characteristics which could have an influence on the data set." ;
-                        rdfs:label "Maintenance contributor influences" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
-                } WHERE {
-                    {SELECT DISTINCT ?maintainer WHERE {
-                      # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
-                      ?kg ?endpointLink $rawEndpointUrl .
-                      # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
-                    }}
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
