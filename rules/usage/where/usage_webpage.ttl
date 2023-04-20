@@ -1,23 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Usage dataset webpage" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "What is the webpage presenting the dataset and/or allowing to gain access to it?" ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            {?kg foaf:homepage ?webpage .}
-            UNION {?kg dcat:landingPage ?webpage .}
-            UNION {?kg dcat:distribution ?dist .
-                   ?dist dcat:accessURL ?webpage . }
-        }
-""" .
+    dcterms:description "What is the webpage presenting the dataset and/or allowing to gain access to it?" .

@@ -1,22 +1,7 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<> a kgi:TestQuery ;
+<> a kgi:DummyTest ;
     dcterms:title "Usage End validity" ;
     dcterms:isReferencedBy <manifest.ttl> ;
-    dcterms:description "Until when is the dataset valid?" ;
-    kgi:query """
-        PREFIX void: <http://rdfs.org/ns/void#>
-        PREFIX dcat: <http://www.w3.org/ns/dcat#>
-        PREFIX schema: <http://schema.org/>
-        PREFIX dcterms: <http://purl.org/dc/terms/>
-        ASK {
-            # Find the KG
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            ?kg ?endpointLink $rawEndpointUrl .
-        
-            {?kg dcterms:valid ?date .}
-            UNION {?kg schema:expires ?date .}
-        }
-""" .
+    dcterms:description "Until when is the dataset valid?" .

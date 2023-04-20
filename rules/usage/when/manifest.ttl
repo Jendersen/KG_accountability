@@ -25,21 +25,28 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
                         rdfs:comment "Since when was the dataset available?" ;
                         rdfs:label "Usage start availability" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    # Find the KG
+                    ?kg a dcat:Dataset .
+
+                    ?kg prov:wasGeneratedBy ?act .
+                    ?act a prov:Publish .
+                    {?act prov:startedAtTime ?pubStartDate .}
+                    UNION {?act prov:endedAtTime ?pubEndDate .}
+
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
-     ) ;
-    kgi:onFailure (
         [
             mf:action """
                 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -54,16 +61,27 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
                         rdfs:comment "Since when was the dataset available?" ;
                         rdfs:label "Usage start availability" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    # Find the KG
+                    ?kg a dcat:Dataset .
+
+                    FILTER (NOT EXISTS {
+                            ?kg prov:wasGeneratedBy ?act .
+                            ?act a prov:Publish .
+                            {?act prov:startedAtTime ?pubStartDate .}
+                            UNION {?act prov:endedAtTime ?pubEndDate .}
+                        })
+
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -85,21 +103,25 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
                         rdfs:comment "Until when is the dataset available?" ;
                         rdfs:label "Usage End availability" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    # Find the KG
+                    ?kg a dcat:Dataset .
+
+                    ?kg prov:invalidatedAtTime ?date .
+
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
-     ) ;
-    kgi:onFailure (
         [
             mf:action """
                 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -114,16 +136,24 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
                         rdfs:comment "Until when is the dataset available?" ;
                         rdfs:label "Usage End availability" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    # Find the KG
+                    ?kg a dcat:Dataset .
+
+                    FILTER (NOT EXISTS {
+                            ?kg prov:invalidatedAtTime ?date .
+                        })
+
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -145,21 +175,24 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
                         rdfs:comment "Until when is the dataset valid?" ;
                         rdfs:label "Usage End validity" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
+                    # Find the KG
+                    ?kg a dcat:Dataset .
+
+                    ?kg dcterms:valid ?date .
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
-     ) ;
-    kgi:onFailure (
         [
             mf:action """
                 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -174,16 +207,23 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
                         rdfs:comment "Until when is the dataset valid?" ;
                         rdfs:label "Usage End validity" .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Metadata")) AS ?metadataDescription)
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str($rawEndpointUrl), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
+                    # Find the KG
+                    ?kg a dcat:Dataset .
+
+                    FILTER (NOT EXISTS {
+                            ?kg dcterms:valid ?date .
+                        })
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?url)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?url), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]

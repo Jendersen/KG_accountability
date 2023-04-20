@@ -29,7 +29,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> a dqv:Metric ;
                         rdfs:comment "Provides some examples of the published data." ;
                         rdfs:label "Usage examples" .
@@ -42,6 +42,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -59,7 +60,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> a dqv:Metric ;
                         rdfs:comment "Provides some examples of the published data." ;
                         rdfs:label "Usage examples" .
@@ -74,6 +75,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -95,7 +97,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> a dqv:Metric ;
                         rdfs:comment "What concepts, topics or subjects does the dataset cover?" ;
                         rdfs:label "Usage concepts covered" .
@@ -110,6 +112,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -127,7 +130,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> a dqv:Metric ;
                         rdfs:comment "What concepts, topics or subjects does the dataset cover?" ;
                         rdfs:label "Usage concepts covered" .
@@ -144,6 +147,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -165,7 +169,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> a dqv:Metric ;
                         rdfs:comment "What is a general description of the dataset?" ;
                         rdfs:label "Usage dataset description" .
@@ -179,6 +183,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -196,7 +201,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> a dqv:Metric ;
                         rdfs:comment "What is a general description of the dataset?" ;
                         rdfs:label "Usage dataset description" .
@@ -212,6 +217,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -233,7 +239,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> a dqv:Metric ;
                         rdfs:comment "How many triples are there in the dataset?" ;
                         rdfs:label "Usage dataset triples" .
@@ -248,6 +254,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -265,7 +272,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> a dqv:Metric ;
                         rdfs:comment "How many triples are there in the dataset?" ;
                         rdfs:label "Usage dataset triples" .
@@ -282,6 +289,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -303,7 +311,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> a dqv:Metric ;
                         rdfs:comment "How many entities, properties and classes are there in the dataset?" ;
                         rdfs:label "Usage dataset entities" .
@@ -319,6 +327,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -336,7 +345,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> a dqv:Metric ;
                         rdfs:comment "How many entities, properties and classes are there in the dataset?" ;
                         rdfs:label "Usage dataset entities" .
@@ -354,6 +363,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -375,7 +385,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> a dqv:Metric ;
                         rdfs:comment "What RDF serialization formats does the dataset support?" ;
                         rdfs:label "Usage RDF serialization" .
@@ -389,6 +399,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -406,7 +417,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> a dqv:Metric ;
                         rdfs:comment "What RDF serialization formats does the dataset support?" ;
                         rdfs:label "Usage RDF serialization" .
@@ -422,6 +433,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -443,7 +455,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
                         dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> a dqv:Metric ;
                         rdfs:comment "Provide information about the quality of the dataset." ;
                         rdfs:label "Usage dataset quality" .
@@ -457,6 +469,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
@@ -474,7 +487,7 @@
                         dqv:computedOn ?endpointDescription ;
                         dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime $dateLiteral .
+                        prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> a dqv:Metric ;
                         rdfs:comment "Provide information about the quality of the dataset." ;
                         rdfs:label "Usage dataset quality" .
@@ -490,6 +503,7 @@
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl")), "Measure")) AS ?qualityMeasurement)
+                    BIND(NOW() AS ?time)
                 }
             """
         ]
