@@ -46,6 +46,7 @@
                 ?kg a schema:Dataset .
                 ?kg a sd:Dataset .
                 ?kg a dataid:Dataset .
+                ?kg void:sparqlEndpoint $rawEndpointUrl .
                 ?kg ?p ?o .
             } WHERE {
                 # Find the KG : is a Dataset
