@@ -6,10 +6,7 @@
         <contributor/manifest.ttl>
     ) ;
     mf:entries (
-        <creation_date.ttl>
-        <creation_location.ttl>
-        <creation_source.ttl>
-        <creation_methodology.ttl>
+        <initialization.ttl>
     ) .
 
 <initialization.ttl>  a mf:ManifestEntry ;
