@@ -106,8 +106,8 @@
                     { ?kg a dcat:Dataset }
                     UNION { ?kg a void:Dataset }
 
-                    {?kg schema:contentURL ?url .}
-                    UNION {?kg void:sparqlEndpoint ?url .}
+                    {?kg schema:contentURL ?endpoint .}
+                    UNION {?kg void:sparqlEndpoint ?endpoint .}
                     UNION {?kg dcat:accessService ?service .
                            ?service dcat:endpointURL ?endpoint .  }
                     UNION {?kg dcat:accessService ?service .
@@ -118,11 +118,11 @@
                            ?service sd:endpoint ?endpoint . }
                     UNION { ?kg dcat:distribution ?dist .
                            ?dist dataid:accessProcedure ?procedure . }
-                    UNION {?kg void:dataDump ?url .}
+                    UNION {?kg void:dataDump ?endpoint .}
                     UNION {?kg dcat:distribution ?dist .
-                          ?dist dcat:downloadURL ?url .}
+                          ?dist dcat:downloadURL ?endpoint .}
                     UNION {?kg schema:distribution ?dist .
-                           ?dist schema:contentUrl ?url}
+                           ?dist schema:contentUrl ?endpoint}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_access.ttl")), "Measure")) AS ?qualityMeasurement)
@@ -163,8 +163,8 @@
                    { ?kg a dcat:Dataset }
                    UNION { ?kg a void:Dataset }
 
-                   {?kg schema:contentURL ?url .}
-                   UNION {?kg void:sparqlEndpoint ?url .}
+                   {?kg schema:contentURL ?endpoint .}
+                   UNION {?kg void:sparqlEndpoint ?endpoint .}
                    UNION {?kg dcat:accessService ?service .
                           ?service dcat:endpointURL ?endpoint .  }
                    UNION {?kg dcat:accessService ?service .
@@ -211,8 +211,8 @@
                    { ?kg a dcat:Dataset }
                    UNION { ?kg a void:Dataset }
 
-                   {?kg schema:contentURL ?url .}
-                   UNION {?kg void:sparqlEndpoint ?url .}
+                   {?kg schema:contentURL ?endpoint .}
+                   UNION {?kg void:sparqlEndpoint ?endpoint .}
                    UNION {?kg dcat:accessService ?service .
                           ?service dcat:endpointURL ?endpoint .  }
                    UNION {?kg dcat:accessService ?service .
