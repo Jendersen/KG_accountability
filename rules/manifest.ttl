@@ -4,9 +4,9 @@
 <> a mf:Manifest ;
     mf:entries (
         <initialization.ttl>
-    ) ;
-    mf:include (
-        <../score_computing_rules/_manifest.ttl>
+    # ) ;
+    # mf:include (
+    #     <../score_computing_rules/_manifest.ttl>
     ) .
 
 <initialization.ttl> a mf:ManifestEntry ;

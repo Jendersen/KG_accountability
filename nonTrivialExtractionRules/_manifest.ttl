@@ -19,9 +19,9 @@
         <endpointPropertiesExtraction.ttl>
         <dcatWebpageExtraction.ttl>
         <dcatRequirements.ttl>
-    ) ;
-    mf:include (
-        <../equivalencesRules/_manifest.ttl>
+    # ) ;
+    # mf:include (
+    #     <../equivalencesRules/_manifest.ttl>
     ) .
 
 <simpleExtraction.ttl> a mf:ManifestEntry ;
@@ -649,7 +649,7 @@
                 # Properties: qualifications
                 ?contributor ?prop ?qualifications .
                 VALUES ?prop { foaf:workInfoHomepage schema:hasOccupation schema:jobTitle schema:award schema:knowsAbout foaf:publiations foaf:schoolHomepage schema:alumniOf }
-            
+
             }
             """
         ]
@@ -704,7 +704,7 @@
                 # Properties: qualifications
                 ?contributor schema:hasCredential ?credential .
                 ?credential schema:competencyRequired ?skills .
-            
+
             }
             """
         ]
@@ -1357,7 +1357,7 @@
                         ?service dcat:endpointURL ?endpoint . }
                 UNION {?service dcat:servesDataset ?kg .
                         ?service sd:endpoint ?endpoint . }
-                
+
                 ?endpoint sd:supportedLanguage ?language .
             }
             """
@@ -1406,7 +1406,7 @@
                         ?service dcat:endpointURL ?endpoint . }
                 UNION {?service dcat:servesDataset ?kg .
                         ?service sd:endpoint ?endpoint . }
-                
+
                 ?endpoint sd:resultFormat ?format .
             }
             """
