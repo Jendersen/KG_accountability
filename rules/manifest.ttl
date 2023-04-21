@@ -6,9 +6,7 @@
         <initialization.ttl>
     ) ;
     mf:include (
-        <creation/manifest.ttl>
-        <maintenance/manifest.ttl>
-        <usage/manifest.ttl>
+        <../score_computing_rules/_manifest.ttl>
     ) .
 
 <initialization.ttl> a mf:ManifestEntry ;
@@ -41,4 +39,7 @@
                 }
             """
         ]
+        <creation/manifest.ttl>
+        <maintenance/manifest.ttl>
+        <usage/manifest.ttl>
     ) .

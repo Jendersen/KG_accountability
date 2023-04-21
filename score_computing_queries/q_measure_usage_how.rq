@@ -1,6 +1,6 @@
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX dqv: <http://www.w3.org/ns/dqv#>
-PREFIX sin: <http://www.exemple.com/sin#> .
+PREFIX sin: <http://www.exemple.com/sin#>
 
 CONSTRUCT {
 	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_usage_how.rq#activity> ;

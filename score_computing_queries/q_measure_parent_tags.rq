@@ -1,7 +1,7 @@
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX dqv: <http://www.w3.org/ns/dqv#>
 PREFIX sin: <http://www.exemple.com/sin#> .
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 # Here we assume there is only one need defined. Else, each Tag, Question and Labeling should be linked with the InformationNeed.
 
