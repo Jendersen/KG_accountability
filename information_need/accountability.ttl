@@ -122,7 +122,7 @@
 :q1 a sin:Question ;
     rdfs:label "Who are the creators of the KG and their role in this process? For all creators, indicates whether they are a person or an organization, provide information to identify them (name and point of contact such as email, or phone number, or address, or homepage), provide their qualifications, provide all characteristics which could have an influence on the KG."@en ;
     sin:requiredBy :accountabilityNeed ;
-    sin:isImplementedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_creator_who.rq> .
+    sin:isImplementedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl> .
 :q101 a sin:Question ;
     rdfs:label "Who are the creators and contributors of the kg? What is her/his/its role in the data creation process?"@en ;
     sin:requiredBy :accountabilityNeed ;
@@ -164,7 +164,7 @@
 :q6 a sin:Question ;
     rdfs:label "Who are the maintainers of the KG and their role in this process? For all maintainers, indicates whether they are a person or an organization, provide information to identify them (name and point of contact such as email, or phone number, or address, or homepage), provide their qualifications, provide all characteristics which could have an influence on the KG."@en ;
     sin:requiredBy :accountabilityNeed ;
-    sin:isImplementedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_maintenance_who.rq> .
+    sin:isImplementedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_maintenance_who.ttl> .
 :q601 a sin:Question ;
     rdfs:label "Who are the maintainers of the dataset? What is her/his/its role in this process?"@en ;
     sin:requiredBy :accountabilityNeed ;
@@ -250,7 +250,7 @@
 :q21 a sin:Question ;
     rdfs:label "How to access the KG? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access, and the characteristics of the endpoint if provided."@en ;
     sin:requiredBy :accountabilityNeed ;
-    sin:isImplementedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_usage_how.rq> .
+    sin:isImplementedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_usage_how.ttl> .
 :q211 a sin:Question ;
     rdfs:label "How to access the dataset? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access."@en ;
     sin:requiredBy :accountabilityNeed ;
@@ -465,7 +465,7 @@
 #################################
 #            Queries            #
 #################################
-<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_queries/q_measure_creator_who.rq> a sin:Query .
+<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl> a sin:Query .
 <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> a sin:Query .
 <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a sin:Query .
 <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a sin:Query .
