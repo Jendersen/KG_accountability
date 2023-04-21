@@ -311,7 +311,7 @@
                     ?kg prov:generatedAtTime ?date .
                     # With PROV
                     ?kg prov:wasGeneratedBy [
-                        a prov:Create , prov:Contribute ;
+                        a prov:Create ;
                         prov:endedAtTime ?date
                     ]
                 } WHERE {
@@ -731,6 +731,16 @@
                         ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?creator .
                         ?creator a ?type .
                         VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
+                        FILTER ( NOT EXISTS {
+                            { ?act a prov:Contribute . }
+                            UNION { ?act a prov:Accept . }
+                            UNION { ?act a prov:Copyright . }
+                            UNION { ?act a prov:Modify . }
+                            UNION { ?act a prov:Publish . }
+                            UNION { ?act a prov:Replace . }
+                            UNION { ?act a prov:RightsAssignment . }
+                            UNION { ?act a prov:Submit . }
+                        })
                     }
                 }
             """
@@ -1209,7 +1219,7 @@
                     ?kg pav:contributedBy ?contributor .
                     ?kg schema:editor ?contributor .
                     ?kg prov:wasGeneratedBy [
-                            a prov:Contribute ;
+                            a prov:Contribute , prov:Modify ;
                             prov:wasAssociatedWith ?contributor
                         ]
                 } WHERE {
@@ -1228,6 +1238,10 @@
                         ?act prov:wasAssociatedWith/prov:actedOnBehalfOf* ?contributor .
                         ?contributor a ?type .
                         VALUES ?type { foaf:Person schema:Person prov:Person foaf:Organization schema:Organization prov:Organization }
+                        FILTER ( NOT EXISTS {
+                            { ?act a prov:Create . }
+                            UNION { ?act a prov:Publish . }
+                        })
                     }
                 }
             """
@@ -1251,7 +1265,7 @@
                     ?kg pav:contributedBy ?contributor .
                     ?kg schema:editor ?contributor .
                     ?kg prov:wasGeneratedBy [
-                            a prov:Contribute ;
+                            a prov:Contribute , prov:Modify ;
                             prov:wasAssociatedWith ?contributor
                         ]
                 } WHERE {
