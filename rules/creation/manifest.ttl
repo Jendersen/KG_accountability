@@ -118,7 +118,7 @@
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
+                        prov:generatedAtTime ?dateLiteral .
                 }
                 INSERT {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
@@ -134,7 +134,7 @@
                     BIND(NOW() AS ?time)
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
+                        prov:generatedAtTime ?dateLiteral .
                 }
             """
         ]
@@ -155,7 +155,7 @@
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
+                        prov:generatedAtTime ?dateLiteral .
                 }
                 INSERT {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
@@ -170,7 +170,7 @@
                     BIND(NOW() AS ?time)
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
+                        prov:generatedAtTime ?dateLiteral .
                 }
             """
         ]
@@ -189,7 +189,7 @@
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
+                        prov:generatedAtTime ?dateLiteral .
                 }
                 INSERT {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
@@ -203,7 +203,7 @@
                     BIND(NOW() AS ?time)
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
+                        prov:generatedAtTime ?dateLiteral .
                 }
             """
         ]
@@ -223,7 +223,7 @@
                 DELETE {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
+                        prov:generatedAtTime ?dateLiteral .
                 }
                 INSERT {
                     ?qualityMeasurement a dqv:QualityMeasurement ;
@@ -239,7 +239,7 @@
                     BIND(NOW() AS ?time)
                     ?qualityMeasurement a dqv:QualityMeasurement ;
                         dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
+                        prov:generatedAtTime ?dateLiteral .
                 }
             """
         ]
