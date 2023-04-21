@@ -401,13 +401,13 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
                 INSERT {
-                    ?kg schema:contentURL ?url .
-                    ?kg void:sparqlEndpoint ?url .
+                    ?kg schema:contentURL ?endpoint .
+                    ?kg void:sparqlEndpoint ?endpoint .
                 } WHERE {
                     ?kg a dcat:Dataset .
                     # Find a SPARQL endpoint
-                    {?kg schema:contentURL ?url .}
-                    UNION {?kg void:sparqlEndpoint ?url .}
+                    {?kg schema:contentURL ?endpoint .}
+                    UNION {?kg void:sparqlEndpoint ?endpoint .}
                     UNION {?kg dcat:accessService ?service .
                            ?service dcat:endpointURL ?endpoint .  }
                     UNION {?kg dcat:accessService ?service .
