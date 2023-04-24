@@ -228,7 +228,7 @@
                         ?kg dce:format ?format .
                         ?kg dcterms:format ?format .
                         ?kg schema:encodingFormat ?format .
-                        ?kg void:feature ?feature .
+                        ?kg void:feature ?format .
                     }
                 } WHERE {
                     GRAPH ?kgGraph {
@@ -237,7 +237,7 @@
                         {?kg dce:format ?format .}
                         UNION {?kg dcterms:format ?format .}
                         UNION {?kg schema:encodingFormat ?format .}
-                        UNION {?kg void:feature ?feature .}
+                        UNION {?kg void:feature ?format .}
                     }
                 }
             """
