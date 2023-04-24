@@ -3,11 +3,52 @@
 
 <> a mf:Manifest ;
     mf:entries (
-        <initialization.ttl>
+        <maintenance_contributor.ttl>
     ) .
 
-<initialization.ttl>  a mf:ManifestEntry ;
+<maintenance_contributor.ttl> a mf:ManifestEntry ;
     kgi:onSuccess (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcterms: <http://purl.org/dc/terms/>
+                PREFIX dce: <http://purl.org/dc/elements/1.1/>
+                PREFIX pav: <http://purl.org/pav/>
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX schema: <http://schema.org/>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                INSERT {
+                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl#activity> ;
+                        dqv:hasQualityMeasurement ?qualityMeasurementContributor .
+                    ?qualityMeasurementContributor a dqv:QualityMeasurement ;
+                        rdfs:label "Maintenance contributor measurement" ;
+                        dqv:computedOn ?endpointDescription ;
+                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
+                        dqv:value "true"^^xsd:boolean ;
+                        prov:generatedAtTime ?time .
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> a dqv:Metric ;
+                        rdfs:comment "Who are the maintainers of the dataset? What is her/his/its role in this process?" ;
+                        rdfs:label "Maintenance contributor" .
+                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl> ;
+                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                } WHERE {
+                    ?kg a void:Dataset .
+
+                    { ?kg dcterms:contributor ?contributor . }
+                    UNION { ?kg schema:maintainer ?contributor . }
+
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl")), "Measure")) AS ?qualityMeasurementContributor)
+                    BIND(NOW() AS ?time)
+                }
+            """
+        ]
         [
             mf:action """
                 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -38,54 +79,16 @@
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
                     ?kg a void:Dataset .
-                    
+
+                    FILTER ( NOT EXISTS {
+                            { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg schema:maintainer ?contributor . }
+                        } )
+
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl")), "Measure")) AS ?qualityMeasurementContributor)
                     BIND(NOW() AS ?time)
-                }
-            """
-        ]
-        <maintenance_contributor.ttl>
-    ) .
-
-<maintenance_contributor.ttl> a mf:ManifestEntry ;
-    kgi:onSuccess (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                DELETE {
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
-                }
-                INSERT {
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                } WHERE {
-                    ?kg a void:Dataset .
-
-                    { ?kg dcterms:contributor ?contributor . }
-                    UNION { ?kg schema:maintainer ?contributor . }
-
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributor.ttl")), "Measure")) AS ?qualityMeasurement)
-                    BIND(NOW() AS ?time)
-
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?dateLiteral .
                 }
             """
         ]
