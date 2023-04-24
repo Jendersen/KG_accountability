@@ -1481,7 +1481,8 @@
                         ?service sd:endpoint $rawEndpointUrl . }
 
                     # Find a SPARQL endpoint
-                    { ?kg void:sparqlEndpoint ?endpoint . }
+                    { ?kg schema:contentUrl ?endpoint }
+                    UNION { ?kg void:sparqlEndpoint ?endpoint . }
                     UNION {?kg dcat:accessService ?service .
                             ?service dcat:endpointURL ?endpoint .  }
                     UNION {?kg dcat:accessService ?service .
@@ -1536,7 +1537,8 @@
                         ?service sd:endpoint $rawEndpointUrl . }
 
                     # Find a SPARQL endpoint
-                    { ?kg void:sparqlEndpoint ?endpoint . }
+                    { ?kg schema:contentUrl ?endpoint }
+                    UNION { ?kg void:sparqlEndpoint ?endpoint . }
                     UNION {?kg dcat:accessService ?service .
                             ?service dcat:endpointURL ?endpoint .  }
                     UNION {?kg dcat:accessService ?service .
