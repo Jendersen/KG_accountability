@@ -684,6 +684,7 @@
                             # ?act a prov:Create .
                             ?act prov:wasAssociatedWith ?agent .
                             ?agent a prov:SoftwareAgent .
+                            FILTER(! isLiteral(?agent))
                         }
                     }
                 }
