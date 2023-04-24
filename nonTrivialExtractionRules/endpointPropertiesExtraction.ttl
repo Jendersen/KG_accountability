@@ -27,6 +27,8 @@
             UNION { ?kg a dataid:Dataset }
 
             # is linked directly or not to the endpoint
+            {?kg schema:contentURL $rawEndpointUrl .}
+            UNION {?kg void:sparqlEndpoint $rawEndpointUrl .}
             { ?kg ?endpointLink $rawEndpointUrl . }
             UNION {?kg dcat:accessService ?service .
                    ?service dcat:endpointURL $rawEndpointUrl .  }
@@ -38,7 +40,9 @@
                    ?service sd:endpoint $rawEndpointUrl . }
 
              # Find a SPARQL endpoint
-             {?kg dcat:accessService ?service .
+             {?kg schema:contentURL ?endpoint .}
+             UNION {?kg void:sparqlEndpoint ?endpoint .}
+             UNION {?kg dcat:accessService ?service .
                     ?service dcat:endpointURL ?endpoint .  }
              UNION {?kg dcat:accessService ?service .
                     ?service sd:endpoint ?endpoint . }
@@ -46,7 +50,7 @@
                     ?service dcat:endpointURL ?endpoint . }
              UNION {?service dcat:servesDataset ?kg .
                     ?service sd:endpoint ?endpoint . }
-            
+
             { ?endpoint sd:supportedLanguage ?language . }
             UNION { ?endpoint sd:resultFormat ?format . }
         }
