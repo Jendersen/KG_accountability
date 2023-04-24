@@ -39,36 +39,41 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
-                ?kg a dcat:Dataset .
-                ?kg a void:Dataset .
-                ?kg a dcmitype:Dataset .
-                ?kg a schema:Dataset .
-                ?kg a sd:Dataset .
-                ?kg a dataid:Dataset .
-                ?kg void:sparqlEndpoint $rawEndpointUrl .
-                ?kg ?p ?o .
+            INSERT {
+                GRAPH ?kgGraph {
+                    ?kg a dcat:Dataset .
+                    ?kg a void:Dataset .
+                    ?kg a dcmitype:Dataset .
+                    ?kg a schema:Dataset .
+                    ?kg a sd:Dataset .
+                    ?kg a dataid:Dataset .
+                    ?kg void:sparqlEndpoint $rawEndpointUrl .
+                    ?kg ?p ?o .
+                }
             } WHERE {
-                # Find the KG : is a Dataset
-                { ?kg a dcat:Dataset }
-                UNION { ?kg a void:Dataset }
-                UNION { ?kg a dcmitype:Dataset }
-                UNION { ?kg a schema:Dataset }
-                UNION { ?kg a sd:Dataset }
-                UNION { ?kg a dataid:Dataset }
+                SERVICE $rawEndpointUrl {
+                    # Find the KG : is a Dataset
+                    { ?kg a dcat:Dataset }
+                    UNION { ?kg a void:Dataset }
+                    UNION { ?kg a dcmitype:Dataset }
+                    UNION { ?kg a schema:Dataset }
+                    UNION { ?kg a sd:Dataset }
+                    UNION { ?kg a dataid:Dataset }
 
-                # is linked directly or not to the endpoint
-                { ?kg ?endpointLink $rawEndpointUrl . }
-                UNION {?kg dcat:accessService ?service .
-                       ?service dcat:endpointURL $rawEndpointUrl .  }
-                UNION {?kg dcat:accessService ?service .
-                       ?service sd:endpoint $rawEndpointUrl . }
-                UNION {?service dcat:servesDataset ?kg .
-                       ?service dcat:endpointURL $rawEndpointUrl . }
-                UNION {?service dcat:servesDataset ?kg .
-                       ?service sd:endpoint $rawEndpointUrl . }
+                    # is linked directly or not to the endpoint
+                    { ?kg ?endpointLink $rawEndpointUrl . }
+                    UNION {?kg dcat:accessService ?service .
+                           ?service dcat:endpointURL $rawEndpointUrl .  }
+                    UNION {?kg dcat:accessService ?service .
+                           ?service sd:endpoint $rawEndpointUrl . }
+                    UNION {?service dcat:servesDataset ?kg .
+                           ?service dcat:endpointURL $rawEndpointUrl . }
+                    UNION {?service dcat:servesDataset ?kg .
+                           ?service sd:endpoint $rawEndpointUrl . }
 
-                ?kg ?p ?o .
+                    ?kg ?p ?o .
+                }
+                BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg))), "Graph")) AS ?kgGraph)
             }
             """
         ]
@@ -89,7 +94,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
                 ?act prov:startedAtTime ?date .
@@ -136,7 +141,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
                 ?act prov:endedAtTime ?date .
@@ -188,7 +193,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
                 ?act prov:atLocation ?location .
@@ -240,7 +245,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
                 ?act prov:wasAssociatedWith ?agent .
@@ -294,7 +299,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Create .
                 ?act prov:wasAssociatedWith ?creator .
@@ -348,7 +353,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?contributor a ?creatorType .
             } WHERE {
                 # Find the KG : is a Dataset
@@ -401,7 +406,7 @@
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            CONSTRUCT {
+            INSERT {
                 ?contributor ?nameProp ?name .
             } WHERE {
                 # Find the KG : is a Dataset
@@ -454,7 +459,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?contributor ?contactProp ?contact .
             } WHERE {
                 # Find the KG : is a Dataset
@@ -507,7 +512,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?contributor ?prop ?influence .
             } WHERE {
                 # Find the KG : is a Dataset
@@ -560,7 +565,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?group foaf:member ?contributor .
             } WHERE {
                 # Find the KG : is a Dataset
@@ -612,7 +617,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?contributor ?prop ?qualifications .
             } WHERE {
                 # Find the KG : is a Dataset
@@ -666,7 +671,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?contributor schema:hasCredential ?credential .
                 ?credential schema:competencyRequired ?skills .
             } WHERE {
@@ -725,7 +730,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                ?kg dcat:distribution ?dist .
                ?dist dcat:downloadURL ?url .
             } WHERE {
@@ -766,7 +771,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg schema:distribution ?dist .
                 ?dist schema:contentUrl ?url
             } WHERE {
@@ -811,7 +816,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # ?act a prov:Contribute .
                 ?act prov:wasAssociatedWith ?contributor .
@@ -865,7 +870,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
                 ?act prov:startedAtTime ?date .
@@ -912,7 +917,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
                 ?act prov:endedAtTime ?date .
@@ -963,7 +968,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
                 ?act prov:atLocation ?location .
@@ -1014,7 +1019,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 ?act a prov:Publish .
                 ?act prov:startedAtTime ?date .
@@ -1057,7 +1062,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 ?act a prov:Publish .
                 ?act prov:endedAtTime ?date .
@@ -1104,7 +1109,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg prov:wasGeneratedBy ?act .
                 ?act a prov:Publish .
                 ?act prov:wasAssociatedWith ?publisher .
@@ -1154,7 +1159,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg dcat:accessService ?service .
                 ?service dcat:endpointURL ?endpoint .
             } WHERE {
@@ -1196,7 +1201,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg dcat:accessService ?service .
                 ?service sd:endpoint ?endpoint .
             } WHERE {
@@ -1238,7 +1243,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?service dcat:servesDataset ?kg .
                 ?service dcat:endpointURL ?endpoint .
             } WHERE {
@@ -1280,7 +1285,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?service dcat:servesDataset ?kg .
                 ?service sd:endpoint ?endpoint .
             } WHERE {
@@ -1326,7 +1331,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?endpoint sd:supportedLanguage ?language .
             } WHERE {
                 # Find the KG : is a Dataset
@@ -1375,7 +1380,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?endpoint sd:resultFormat ?format .
             } WHERE {
                 # Find the KG : is a Dataset
@@ -1428,7 +1433,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg dcat:distribution ?dist .
                 ?dist dcat:accessURL ?url .
             } WHERE {
@@ -1473,7 +1478,7 @@
             PREFIX dce: <http://purl.org/dc/elements/1.1/>
             PREFIX dcterms: <http://purl.org/dc/terms/>
             PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-            CONSTRUCT {
+            INSERT {
                 ?kg dcat:distribution ?dist .
                 ?dist dataid:softwareRequirement ?requirements .
             } WHERE {
