@@ -44,7 +44,7 @@
                 		] .
                 	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl> a dqv:Metric ;
                 		rdfs:comment "Who are the creators of the KG and their role in this process? For all creators, indicates whether they are a person or an organization, provide information to identify them (name and point of contact such as email, or phone number, or address, or homepage), provide their qualifications, provide all characteristics which could have an influence on the KG." ;
-                    rdfs:label "Creator contributor" .
+                    rdfs:label "Aggregated creator contributor" .
                 	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl#activity> ;
                 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 }
@@ -121,7 +121,7 @@
                 		] .
                 	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_maintenance_who.ttl> a dqv:Metric ;
                 		rdfs:comment "Who are the maintainers of the KG and their role in this process? For all maintainers, indicates whether they are a person or an organization, provide information to identify them (name and point of contact such as email, or phone number, or address, or homepage), provide their qualifications, provide all characteristics which could have an influence on the KG." ;
-                    rdfs:label "Maintenance contributor" .
+                    rdfs:label "Aggregated Maintenance contributor" .
                 	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_maintenance_who.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_maintenance_who.ttl#activity> ;
                 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 }
@@ -206,7 +206,7 @@
                 		] .
                 	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_usage_how.ttl> a dqv:Metric ;
                 		rdfs:comment "How to access the KG? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access, and the characteristics of the endpoint if provided." ;
-                	rdfs:label "Usage access" .
+                	rdfs:label "Aggregated Usage access" .
                 	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_usage_how.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_usage_how.ttl#activity> ;
                 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 }
