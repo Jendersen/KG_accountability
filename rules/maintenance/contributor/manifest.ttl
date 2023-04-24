@@ -142,25 +142,21 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {
-                        SELECT DISTINCT ?kg ?maintainer WHERE {
-                            GRAPH ?kgGraph {
-                                # Find the KG
-                                ?kg a void:Dataset .
-                                # Find maintainer
-                                { ?kg dcterms:contributor ?maintainer . }
-                                UNION { ?kg schema:maintainer ?maintainer . }
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a void:Dataset .
+                        # Find maintainer
+                        { ?kg dcterms:contributor ?maintainer . }
+                        UNION { ?kg schema:maintainer ?maintainer . }
 
-                                # Is it a person ?
-                                {?maintainer a foaf:Person .}
-                                UNION {?maintainer a schema:Person .}
-                                UNION {?maintainer a prov:Person .}
-                                # Or, is it an organization ?
-                                UNION {?maintainer a foaf:Organization .}
-                                UNION {?maintainer a schema:Organization .}
-                                UNION {?maintainer a prov:Organization .}
-                            }
-                        }
+                        # Is it a person ?
+                        {?maintainer a foaf:Person .}
+                        UNION {?maintainer a schema:Person .}
+                        UNION {?maintainer a prov:Person .}
+                        # Or, is it an organization ?
+                        UNION {?maintainer a foaf:Organization .}
+                        UNION {?maintainer a schema:Organization .}
+                        UNION {?maintainer a prov:Organization .}
                     }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -200,27 +196,23 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {
-                        SELECT DISTINCT ?kg ?maintainer WHERE {
-                            GRAPH ?kgGraph {
-                                # Find the KG
-                                ?kg a void:Dataset .
-                                # Find maintainer
-                                { ?kg dcterms:contributor ?maintainer . }
-                                UNION { ?kg schema:maintainer ?maintainer . }
-                            }
-                            FILTER NOT EXISTS {
-                                GRAPH ?kgGraph {
-                                    # Is it a person ?
-                                    {?maintainer a foaf:Person .}
-                                    UNION {?maintainer a schema:Person .}
-                                    UNION {?maintainer a prov:Person .}
-                                    # Or, is it an organization ?
-                                    UNION {?maintainer a foaf:Organization .}
-                                    UNION {?maintainer a schema:Organization .}
-                                    UNION {?maintainer a prov:Organization .}
-                                }
-                            }
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a void:Dataset .
+                        # Find maintainer
+                        { ?kg dcterms:contributor ?maintainer . }
+                        UNION { ?kg schema:maintainer ?maintainer . }
+                    }
+                    FILTER NOT EXISTS {
+                        GRAPH ?kgGraph {
+                            # Is it a person ?
+                            {?maintainer a foaf:Person .}
+                            UNION {?maintainer a schema:Person .}
+                            UNION {?maintainer a prov:Person .}
+                            # Or, is it an organization ?
+                            UNION {?maintainer a foaf:Organization .}
+                            UNION {?maintainer a schema:Organization .}
+                            UNION {?maintainer a prov:Organization .}
                         }
                     }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -266,31 +258,27 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {
-                        SELECT DISTINCT ?kg ?maintainer WHERE {
-                            GRAPH ?kgGraph {
-                                # Find the KG
-                                ?kg a void:Dataset .
-                                # Find maintainer
-                                { ?kg dcterms:contributor ?maintainer . }
-                                UNION { ?kg schema:maintainer ?maintainer . }
-                                # name
-                                {?maintainer rdfs:label ?name .}
-                                UNION {?maintainer schema:name ?name .}
-                                UNION {?maintainer foaf:name ?name .}
-                                UNION {?maintainer schema:legalName ?name}
-                                UNION {?maintainer schema:givenName ?fname ;
-                                                   schema:familyName ?name .}
-                                UNION {?maintainer foaf:givenName ?fname ;
-                                                   foaf:familyName ?name .}
-                                UNION {?maintainer foaf:firstName ?fname ;
-                                                   foaf:lastName ?name .}
-                                # contact
-                                ?maintainer ?contactProp ?contact .
-                            }
-                            VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
-                        }
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a void:Dataset .
+                        # Find maintainer
+                        { ?kg dcterms:contributor ?maintainer . }
+                        UNION { ?kg schema:maintainer ?maintainer . }
+                        # name
+                        {?maintainer rdfs:label ?name .}
+                        UNION {?maintainer schema:name ?name .}
+                        UNION {?maintainer foaf:name ?name .}
+                        UNION {?maintainer schema:legalName ?name}
+                        UNION {?maintainer schema:givenName ?fname ;
+                                           schema:familyName ?name .}
+                        UNION {?maintainer foaf:givenName ?fname ;
+                                           foaf:familyName ?name .}
+                        UNION {?maintainer foaf:firstName ?fname ;
+                                           foaf:lastName ?name .}
+                        # contact
+                        ?maintainer ?contactProp ?contact .
                     }
+                    VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorID.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
@@ -329,35 +317,31 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {
-                        SELECT DISTINCT ?kg ?maintainer WHERE {
-                            GRAPH ?kgGraph {
-                                # Find the KG
-                                # Find the KG
-                                ?kg a void:Dataset .
-                                # Find maintainer
-                                { ?kg dcterms:contributor ?maintainer . }
-                                UNION { ?kg schema:maintainer ?maintainer . }
-                            }
-                            FILTER NOT EXISTS {
-                                GRAPH ?kgGraph {
-                                    # name
-                                    {?maintainer rdfs:label ?name .}
-                                    UNION {?maintainer schema:name ?name .}
-                                    UNION {?maintainer foaf:name ?name .}
-                                    UNION {?maintainer schema:legalName ?name}
-                                    UNION {?maintainer schema:givenName ?fname ;
-                                                        schema:familyName ?name .}
-                                    UNION {?maintainer foaf:givenName ?fname ;
-                                                     foaf:familyName ?name .}
-                                    UNION {?maintainer foaf:firstName ?fname ;
-                                                     foaf:lastName ?name .}
-                                    # contact
-                                    ?maintainer ?contactProp ?contact .
-                                }
-                                VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
-                            }
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        # Find the KG
+                        ?kg a void:Dataset .
+                        # Find maintainer
+                        { ?kg dcterms:contributor ?maintainer . }
+                        UNION { ?kg schema:maintainer ?maintainer . }
+                    }
+                    FILTER NOT EXISTS {
+                        GRAPH ?kgGraph {
+                            # name
+                            {?maintainer rdfs:label ?name .}
+                            UNION {?maintainer schema:name ?name .}
+                            UNION {?maintainer foaf:name ?name .}
+                            UNION {?maintainer schema:legalName ?name}
+                            UNION {?maintainer schema:givenName ?fname ;
+                                                schema:familyName ?name .}
+                            UNION {?maintainer foaf:givenName ?fname ;
+                                             foaf:familyName ?name .}
+                            UNION {?maintainer foaf:firstName ?fname ;
+                                             foaf:lastName ?name .}
+                            # contact
+                            ?maintainer ?contactProp ?contact .
                         }
+                        VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
                     }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -401,30 +385,28 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?kg ?maintainer WHERE {
-                        GRAPH ?kgGraph {
-                          # Find the KG
-                          ?kg a void:Dataset .
-                          # Find maintainer
-                          { ?kg dcterms:contributor ?maintainer . }
-                          UNION { ?kg schema:maintainer ?maintainer . }
-                          # Work
-                          {?maintainer foaf:workInfoHomepage ?work .}
-                          UNION {?maintainer schema:hasOccupation ?work .}
-                          UNION {?maintainer schema:jobTitle ?work .}
-                          # Skills
-                          UNION {?maintainer schema:award ?award .}
-                          UNION {?maintainer schema:hasCredential ?credential .
-                                 ?credential schema:competencyRequired ?skills .}
-                          UNION {?maintainer schema:knowsAbout ?topic .}
-                          # Optional
-                          # Publication
-                          UNION {?maintainer foaf:publiations ?publi . }
-                          # School
-                          UNION {?maintainer foaf:schoolHomepage ?school . }
-                          UNION {?maintainer schema:alumniOf ?school .}
-                      }
-                    }}
+                    GRAPH ?kgGraph {
+                      # Find the KG
+                      ?kg a void:Dataset .
+                      # Find maintainer
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
+                      # Work
+                      {?maintainer foaf:workInfoHomepage ?work .}
+                      UNION {?maintainer schema:hasOccupation ?work .}
+                      UNION {?maintainer schema:jobTitle ?work .}
+                      # Skills
+                      UNION {?maintainer schema:award ?award .}
+                      UNION {?maintainer schema:hasCredential ?credential .
+                             ?credential schema:competencyRequired ?skills .}
+                      UNION {?maintainer schema:knowsAbout ?topic .}
+                      # Optional
+                      # Publication
+                      UNION {?maintainer foaf:publications ?publi . }
+                      # School
+                      UNION {?maintainer foaf:schoolHomepage ?school . }
+                      UNION {?maintainer schema:alumniOf ?school .}
+                  }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorQualification.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
@@ -463,34 +445,30 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {
-                        SELECT DISTINCT ?kg ?maintainer WHERE {
-                            GRAPH ?kgGraph {
-                              # Find the KG
-                              ?kg a void:Dataset .
-                              # Find maintainer
-                              { ?kg dcterms:contributor ?maintainer . }
-                              UNION { ?kg schema:maintainer ?maintainer . }
+                    GRAPH ?kgGraph {
+                          # Find the KG
+                          ?kg a void:Dataset .
+                          # Find maintainer
+                          { ?kg dcterms:contributor ?maintainer . }
+                          UNION { ?kg schema:maintainer ?maintainer . }
+                      }
+                      FILTER NOT EXISTS {
+                          GRAPH ?kgGraph {
+                              # Work
+                              {?maintainer foaf:workInfoHomepage ?work .}
+                              UNION {?maintainer schema:hasOccupation ?work .}
+                              UNION {?maintainer schema:jobTitle ?work .}
+                              # Skills
+                              UNION {?maintainer schema:award ?award .}
+                              UNION {?maintainer schema:hasCredential ?credential .
+                                     ?credential schema:competencyRequired ?skills .}
+                              UNION {?maintainer schema:knowsAbout ?topic .}
+                              # Publication
+                              UNION {?maintainer foaf:publications ?publi . }
+                              # School
+                              UNION {?maintainer foaf:schoolHomepage ?school . }
+                              UNION {?maintainer schema:alumniOf ?school .}
                           }
-                          FILTER NOT EXISTS {
-                              GRAPH ?kgGraph {
-                                  # Work
-                                  {?maintainer foaf:workInfoHomepage ?work .}
-                                  UNION {?maintainer schema:hasOccupation ?work .}
-                                  UNION {?maintainer schema:jobTitle ?work .}
-                                  # Skills
-                                  UNION {?maintainer schema:award ?award .}
-                                  UNION {?maintainer schema:hasCredential ?credential .
-                                         ?credential schema:competencyRequired ?skills .}
-                                  UNION {?maintainer schema:knowsAbout ?topic .}
-                                  # Publication
-                                  UNION {?maintainer foaf:publiations ?publi . }
-                                  # School
-                                  UNION {?maintainer foaf:schoolHomepage ?school . }
-                                  UNION {?maintainer schema:alumniOf ?school .}
-                              }
-                          }
-                        }
                     }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -534,18 +512,16 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?kg ?maintainer WHERE {
-                        GRAPH ?kgGraph {
-                          # Find the KG
-                          ?kg a void:Dataset .
-                          # Find maintainer
-                          { ?kg dcterms:contributor ?maintainer . }
-                          UNION { ?kg schema:maintainer ?maintainer . }
-                          {?maintainer ?prop ?influence .
-                          VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
-                          UNION {?group foaf:member ?maintainer . }
-                      }
-                    }}
+                    GRAPH ?kgGraph {
+                      # Find the KG
+                      ?kg a void:Dataset .
+                      # Find maintainer
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
+                      {?maintainer ?prop ?influence .
+                      VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
+                      UNION {?group foaf:member ?maintainer . }
+                  }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)
@@ -584,22 +560,20 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?kg ?maintainer WHERE {
-                        GRAPH ?kgGraph {
-                          # Find the KG
-                          ?kg a void:Dataset .
-                          # Find maintainer
-                          { ?kg dcterms:contributor ?maintainer . }
-                          UNION { ?kg schema:maintainer ?maintainer . }
+                    GRAPH ?kgGraph {
+                      # Find the KG
+                      ?kg a void:Dataset .
+                      # Find maintainer
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
+                  }
+                  FILTER NOT EXISTS {
+                      GRAPH ?kgGraph {
+                          {?maintainer ?prop ?influence .
+                          VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
+                          UNION {?group foaf:member ?maintainer . }
                       }
-                      FILTER NOT EXISTS {
-                          GRAPH ?kgGraph {
-                              {?maintainer ?prop ?influence .
-                              VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
-                              UNION {?group foaf:member ?maintainer . }
-                          }
-                      }
-                    }}
+                  }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/contributor/maintenance_contributorInfluences.ttl", str(?maintainer))), "Measure")) AS ?qualityMeasurement)

@@ -143,28 +143,26 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg ?kgGraph WHERE {
-                        GRAPH ?kgGraph {
-                            ?kg a void:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
 
-                            # Find a creatior or editor or curator
-                            { ?kg dcterms:creator ?contributor . }
-                            UNION { ?kg dcterms:contributor ?contributor . }
-                            UNION { ?kg pav:curatedBy ?contributor . }
+                        # Find a creatior or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
 
-                            # name
-                            {?contributor rdfs:label ?name .}
-                            UNION {?contributor schema:name ?name .}
-                            UNION {?contributor schema:legalName ?name}
-                            UNION {?contributor foaf:name ?name .}
-                            UNION {?contributor schema:givenName ?fname ; schema:familyName ?name .}
-                            UNION {?contributor foaf:givenName ?fname ; foaf:familyName ?name .}
-                            UNION {?contributor foaf:firstName ?fname ; foaf:lastName ?name .}
-                            # contact
-                            ?contributor ?contactProp ?contact .
-                        }
+                        # name
+                        {?contributor rdfs:label ?name .}
+                        UNION {?contributor schema:name ?name .}
+                        UNION {?contributor schema:legalName ?name}
+                        UNION {?contributor foaf:name ?name .}
+                        UNION {?contributor schema:givenName ?fname ; schema:familyName ?name .}
+                        UNION {?contributor foaf:givenName ?fname ; foaf:familyName ?name .}
+                        UNION {?contributor foaf:firstName ?fname ; foaf:lastName ?name .}
+                        # contact
+                        ?contributor ?contactProp ?contact .
                         VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
-                    }}
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorID)
@@ -203,31 +201,29 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg ?kgGraph WHERE {
-                        GRAPH ?kgGraph {
-                            ?kg a void:Dataset .
-                            # Find a creatior or editor or curator
-                            { ?kg dcterms:creator ?contributor . }
-                            UNION { ?kg dcterms:contributor ?contributor . }
-                            UNION { ?kg pav:curatedBy ?contributor . }
-                          }
-
-                        FILTER NOT EXISTS {
-                            GRAPH ?kgGraph {
-                                  # name
-                                  {?contributor rdfs:label ?name .}
-                                  UNION {?contributor schema:name ?name .}
-                                  UNION {?contributor schema:legalName ?name}
-                                  UNION {?contributor foaf:name ?name .}
-                                  UNION {?contributor schema:givenName ?fname ; schema:familyName ?name .}
-                                  UNION {?contributor foaf:givenName ?fname ; foaf:familyName ?name .}
-                                  UNION {?contributor foaf:firstName ?fname ; foaf:lastName ?name .}
-                                  # contact
-                                  ?contributor ?contactProp ?contact .
-                            }
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        # Find a creatior or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
                       }
-                      VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
-                    }}
+
+                    FILTER NOT EXISTS {
+                        GRAPH ?kgGraph {
+                              # name
+                              {?contributor rdfs:label ?name .}
+                              UNION {?contributor schema:name ?name .}
+                              UNION {?contributor schema:legalName ?name}
+                              UNION {?contributor foaf:name ?name .}
+                              UNION {?contributor schema:givenName ?fname ; schema:familyName ?name .}
+                              UNION {?contributor foaf:givenName ?fname ; foaf:familyName ?name .}
+                              UNION {?contributor foaf:firstName ?fname ; foaf:lastName ?name .}
+                              # contact
+                              ?contributor ?contactProp ?contact .
+                              VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
+                        }
+                  }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorID)
@@ -270,24 +266,22 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kgGraph ?kg WHERE {
-                        GRAPH ?kgGraph {
-                            ?kg a void:Dataset .
-                            # Find a creatior or editor or curator
-                            { ?kg dcterms:creator ?contributor . }
-                            UNION { ?kg dcterms:contributor ?contributor . }
-                            UNION { ?kg pav:curatedBy ?contributor . }
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        # Find a creatior or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
 
-                            # Is it a person ?
-                            {?contributor a foaf:Person .}
-                            UNION {?contributor a schema:Person .}
-                            UNION {?contributor a prov:Person .}
-                            # Or, is it an organization ?
-                            UNION {?contributor a foaf:Organization .}
-                            UNION {?contributor a schema:Organization .}
-                            UNION {?contributor a prov:Organization .}
-                        }
-                    }}
+                        # Is it a person ?
+                        {?contributor a foaf:Person .}
+                        UNION {?contributor a schema:Person .}
+                        UNION {?contributor a prov:Person .}
+                        # Or, is it an organization ?
+                        UNION {?contributor a foaf:Organization .}
+                        UNION {?contributor a schema:Organization .}
+                        UNION {?contributor a prov:Organization .}
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorType)
@@ -326,28 +320,26 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg WHERE {
-                        GRAPH ?kgGraph {
-                            ?kg a void:Dataset .
-                            # Find a creatior or editor or curator
-                            { ?kg dcterms:creator ?contributor . }
-                            UNION { ?kg dcterms:contributor ?contributor . }
-                            UNION { ?kg pav:curatedBy ?contributor . }
-                        }
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        # Find a creatior or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
+                    }
 
-                        FILTER NOT EXISTS {
-                            GRAPH ?kgGraph {
-                                  # Is it a person ?
-                                  {?contributor a foaf:Person .}
-                                  UNION {?contributor a schema:Person .}
-                                  UNION {?contributor a prov:Person .}
-                                  # Or, is it an organization ?
-                                  UNION {?contributor a foaf:Organization .}
-                                  UNION {?contributor a schema:Organization .}
-                                  UNION {?contributor a prov:Organization .}
-                          }
-                        }
-                    }}
+                    FILTER NOT EXISTS {
+                        GRAPH ?kgGraph {
+                              # Is it a person ?
+                              {?contributor a foaf:Person .}
+                              UNION {?contributor a schema:Person .}
+                              UNION {?contributor a prov:Person .}
+                              # Or, is it an organization ?
+                              UNION {?contributor a foaf:Organization .}
+                              UNION {?contributor a schema:Organization .}
+                              UNION {?contributor a prov:Organization .}
+                      }
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementContributorType)
@@ -390,31 +382,29 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg WHERE {
-                        GRAPH ?kgGraph {
-                            ?kg a void:Dataset .
-                            # Find a creatior or editor or curator
-                            { ?kg dcterms:creator ?contributor . }
-                            UNION { ?kg dcterms:contributor ?contributor . }
-                            UNION { ?kg pav:curatedBy ?contributor . }
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        # Find a creatior or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
 
-                            # Work
-                            {?contributor foaf:workInfoHomepage ?work .}
-                            UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
-                            UNION {?contributor schema:jobTitle ?work .}
-                            # Skills
-                            UNION {?contributor schema:award ?award .}
-                            UNION {?contributor schema:hasCredential ?credential .
-                                   ?credential schema:competencyRequired ?skills .}
-                            UNION {?contributor schema:knowsAbout ?topic .}
-                            # Optional
-                            # Publication
-                            UNION {?contributor foaf:publiations ?publi . }
-                            # School
-                            UNION {?contributor foaf:schoolHomepage ?school . }
-                            UNION {?contributor schema:alumniOf ?school .}
-                        }
-                    }}
+                        # Work
+                        {?contributor foaf:workInfoHomepage ?work .}
+                        UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
+                        UNION {?contributor schema:jobTitle ?work .}
+                        # Skills
+                        UNION {?contributor schema:award ?award .}
+                        UNION {?contributor schema:hasCredential ?credential .
+                               ?credential schema:competencyRequired ?skills .}
+                        UNION {?contributor schema:knowsAbout ?topic .}
+                        # Optional
+                        # Publication
+                        UNION {?contributor foaf:publications ?publi . }
+                        # School
+                        UNION {?contributor foaf:schoolHomepage ?school . }
+                        UNION {?contributor schema:alumniOf ?school .}
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -454,35 +444,33 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg WHERE {
-                        GRAPH ?kgGraph {
-                            ?kg a void:Dataset .
-                            # Find a creatior or editor or curator
-                            { ?kg dcterms:creator ?contributor . }
-                            UNION { ?kg dcterms:contributor ?contributor . }
-                            UNION { ?kg pav:curatedBy ?contributor . }
-                        }
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        # Find a creator or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
+                    }
 
-                        FILTER NOT EXISTS {
-                            GRAPH ?kgGraph {
-                                  # Work
-                                  {?contributor foaf:workInfoHomepage ?work .}
-                                  UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
-                                  UNION {?contributor schema:jobTitle ?work .}
-                                  # Skills
-                                  UNION {?contributor schema:award ?award .}
-                                  UNION {?contributor schema:hasCredential ?credential .
-                                         ?credential schema:competencyRequired ?skills .}
-                                  UNION {?contributor schema:knowsAbout ?topic .}
-                                  # Optional
-                                  # Publication
-                                  UNION {?contributor foaf:publiations ?publi . }
-                                  # School
-                                  UNION {?contributor foaf:schoolHomepage ?school . }
-                                  UNION {?contributor schema:alumniOf ?school .}
-                            }
+                    FILTER NOT EXISTS {
+                        GRAPH ?kgGraph {
+                              # Work
+                              {?contributor foaf:workInfoHomepage ?work .}
+                              UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
+                              UNION {?contributor schema:jobTitle ?work .}
+                              # Skills
+                              UNION {?contributor schema:award ?award .}
+                              UNION {?contributor schema:hasCredential ?credential .
+                                     ?credential schema:competencyRequired ?skills .}
+                              UNION {?contributor schema:knowsAbout ?topic .}
+                              # Optional
+                              # Publication
+                              UNION {?contributor foaf:publications ?publi . }
+                              # School
+                              UNION {?contributor foaf:schoolHomepage ?school . }
+                              UNION {?contributor schema:alumniOf ?school .}
                         }
-                    }}
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementQualification)
@@ -525,19 +513,17 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg WHERE {
-                        GRAPH ?kgGraph {
-                            ?kg a void:Dataset .
-                            # Find a creatior or editor or curator
-                            { ?kg dcterms:creator ?contributor . }
-                            UNION { ?kg dcterms:contributor ?contributor . }
-                            UNION { ?kg pav:curatedBy ?contributor . }
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        # Find a creatior or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
 
-                            {?contributor ?prop ?influence .
-                            VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
-                            UNION {?group foaf:member ?contributor . }
-                        }
-                    }}
+                        {?contributor ?prop ?influence .
+                        VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
+                        UNION {?group foaf:member ?contributor . }
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementInfluences)
@@ -576,24 +562,21 @@
                             prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                     }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg WHERE {
-                        GRAPH ?kgGraph {
-                            ?kg a void:Dataset .
-                            # Find a creatior or editor or curator
-                            { ?kg dcterms:creator ?contributor . }
-                            UNION { ?kg dcterms:contributor ?contributor . }
-                            UNION { ?kg pav:curatedBy ?contributor . }
-                        }
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        # Find a creatior or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
+                    }
 
-                        FILTER NOT EXISTS {
-                            GRAPH ?kgGraph {
-                                {
-                                    ?contributor ?prop ?influence .
-                                    VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }
-                                }
-                                UNION {?group foaf:member ?contributor . }
-                                }
+                    FILTER NOT EXISTS {
+                        GRAPH ?kgGraph {
+                            {
+                                ?contributor ?prop ?influence .
+                                VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }
                             }
+                            UNION {?group foaf:member ?contributor . }
                         }
                     }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)

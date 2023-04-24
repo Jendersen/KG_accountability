@@ -116,15 +116,17 @@
             # Here we assume there is only one need defined. Else, each Tag, Question and Labeling should be linked with the InformationNeed.
 
             INSERT {
-            	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/final_step/measure_parent_tags.ttl#activity> ;
-            		dqv:hasQualityMeasurement [
-            			a dqv:QualityMeasurement ;
-            			rdfs:label ?label ;
-            			dqv:isMeasurementOf ?parent_tag ;
-            			dqv:value ?agg_parent_tag
-            		] .
-            	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/final_step/measure_parent_tags.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/final_step/measure_parent_tags.ttl#activity> ;
-            		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                GRAPH ?kgGraph {
+                	?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/final_step/measure_parent_tags.ttl#activity> ;
+                		dqv:hasQualityMeasurement [
+                			a dqv:QualityMeasurement ;
+                			rdfs:label ?label ;
+                			dqv:isMeasurementOf ?parent_tag ;
+                			dqv:value ?agg_parent_tag
+                		] .
+                	<https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/final_step/measure_parent_tags.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/final_step/measure_parent_tags.ttl#activity> ;
+                		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                }
             } WHERE {
             	{ SELECT ?kg ?parent_tag ?taglab (SUM(?agg_leaf_tag * ?w_tag)  / SUM(?w_tag)  AS ?agg_parent_tag) WHERE  {
             		?leaf_tag sin:isChildOf ?parent_tag ;

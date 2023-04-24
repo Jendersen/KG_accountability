@@ -706,7 +706,7 @@
 
                     # Properties: qualifications
                     ?contributor ?prop ?qualifications .
-                    VALUES ?prop { foaf:workInfoHomepage schema:hasOccupation schema:jobTitle schema:award schema:knowsAbout foaf:publiations foaf:schoolHomepage schema:alumniOf }
+                    VALUES ?prop { foaf:workInfoHomepage schema:hasOccupation schema:jobTitle schema:award schema:knowsAbout foaf:publications foaf:schoolHomepage schema:alumniOf }
                 }
                 BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Graph")) AS ?kgGraph)
 
