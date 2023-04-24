@@ -132,19 +132,11 @@
                 } WHERE {
                     {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
+                      ?kg a void:Dataset .
                       # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
+                      
                       # Is it a person ?
                       {?maintainer a foaf:Person .}
                       UNION {?maintainer a schema:Person .}
@@ -192,19 +184,10 @@
                 } WHERE {
                     {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
+                      ?kg a void:Dataset .
                       # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
                       FILTER NOT EXISTS {
                           # Is it a person ?
                           {?maintainer a foaf:Person .}
@@ -259,19 +242,10 @@
                 } WHERE {
                     {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
+                      ?kg a void:Dataset .
                       # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
                       # name
                       {?maintainer rdfs:label ?name .}
                       UNION {?maintainer schema:name ?name .}
@@ -325,19 +299,11 @@
                 } WHERE {
                     {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
+                      # Find the KG
+                      ?kg a void:Dataset .
                       # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
                       FILTER NOT EXISTS {
                           # name
                           {?maintainer rdfs:label ?name .}
@@ -397,19 +363,10 @@
                 } WHERE {
                     {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
+                      ?kg a void:Dataset .
                       # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
                       # Work
                       {?maintainer foaf:workInfoHomepage ?work .}
                       UNION {?maintainer schema:hasOccupation ?work .}
@@ -464,19 +421,10 @@
                 } WHERE {
                     {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
+                      ?kg a void:Dataset .
                       # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
                       FILTER NOT EXISTS {
                           # Work
                           {?maintainer foaf:workInfoHomepage ?work .}
@@ -536,19 +484,10 @@
                 } WHERE {
                     {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
+                      ?kg a void:Dataset .
                       # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
                       {?maintainer ?prop ?influence .
                       VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
                       UNION {?group foaf:member ?maintainer . }
@@ -591,19 +530,10 @@
                 } WHERE {
                     {SELECT DISTINCT ?kg ?maintainer WHERE {
                       # Find the KG
-                      { ?kg a dcat:Dataset }
-                      UNION {?kg a void:Dataset }
+                      ?kg a void:Dataset .
                       # Find maintainer
-                      {?kg dcterms:contributor ?maintainer . }
-                      UNION {?kg dce:contributor ?maintainer . }
-                      UNION {?kg schema:contributor ?maintainer .}
-                      UNION {?kg schema:maintainer ?maintainer . }
-                      UNION {?kg pav:contributedBy ?maintainer .}
-                      UNION {?kg prov:wasGeneratedBy ?act .
-                          {?act a prov:Contribute . }
-                          UNION {?act a prov:Modify . }
-                          UNION {?act a prov:Replace . }
-                          ?act prov:wasAssociatedWith ?maintainer .}
+                      { ?kg dcterms:contributor ?maintainer . }
+                      UNION { ?kg schema:maintainer ?maintainer . }
                       FILTER NOT EXISTS {
                           {?maintainer ?prop ?influence .
                           VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
