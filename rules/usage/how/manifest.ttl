@@ -247,7 +247,7 @@
                PREFIX sto: <https://w3id.org/i40/sto#>
                PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-               CONSTRUCT {
+               INSERT {
                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_endpoint.ttl#activity> ;
                        dqv:hasQualityMeasurement ?qualityMeasurement .
                    ?qualityMeasurement a dqv:QualityMeasurement ;
@@ -298,7 +298,7 @@
                PREFIX sto: <https://w3id.org/i40/sto#>
                PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
-               CONSTRUCT {
+               INSERT {
                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_endpoint.ttl#activity> ;
                        dqv:hasQualityMeasurement ?qualityMeasurement .
                    ?qualityMeasurement a dqv:QualityMeasurement ;
