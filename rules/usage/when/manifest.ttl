@@ -34,27 +34,31 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage start availability measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
-                        rdfs:comment "Since when was the dataset available?" ;
-                        rdfs:label "Usage start availability" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage start availability measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
+                            rdfs:comment "Since when was the dataset available?" ;
+                            rdfs:label "Usage start availability" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    ?kg prov:wasGeneratedBy ?act .
-                    ?act a prov:Publish .
-                    {?act prov:startedAtTime ?pubStartDate .}
-                    UNION {?act prov:endedAtTime ?pubEndDate .}
+                        ?kg prov:wasGeneratedBy ?act .
+                        ?act a prov:Publish .
+                        {?act prov:startedAtTime ?pubStartDate .}
+                        UNION {?act prov:endedAtTime ?pubEndDate .}
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -86,28 +90,34 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage start availability measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
-                        rdfs:comment "Since when was the dataset available?" ;
-                        rdfs:label "Usage start availability" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage start availability measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
+                            rdfs:comment "Since when was the dataset available?" ;
+                            rdfs:label "Usage start availability" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            ?kg prov:wasGeneratedBy ?act .
-                            ?act a prov:Publish .
-                            {?act prov:startedAtTime ?pubStartDate .}
-                            UNION {?act prov:endedAtTime ?pubEndDate .}
+                            GRAPH ?kgGraph {
+                                ?kg prov:wasGeneratedBy ?act .
+                                ?act a prov:Publish .
+                                {?act prov:startedAtTime ?pubStartDate .}
+                                UNION {?act prov:endedAtTime ?pubEndDate .}
+                            }
                         })
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -144,24 +154,28 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage End availability measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
-                        rdfs:comment "Until when is the dataset available?" ;
-                        rdfs:label "Usage End availability" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage End availability measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
+                            rdfs:comment "Until when is the dataset available?" ;
+                            rdfs:label "Usage End availability" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    ?kg prov:invalidatedAtTime ?date .
+                        ?kg prov:invalidatedAtTime ?date .
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -193,25 +207,31 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage End availability measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
-                        rdfs:comment "Until when is the dataset available?" ;
-                        rdfs:label "Usage End availability" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage End availability measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
+                            rdfs:comment "Until when is the dataset available?" ;
+                            rdfs:label "Usage End availability" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            ?kg prov:invalidatedAtTime ?date .
+                            GRAPH ?kgGraph {
+                                ?kg prov:invalidatedAtTime ?date .
+                            }
                         })
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -248,24 +268,28 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage End validity measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
-                        rdfs:comment "Until when is the dataset valid?" ;
-                        rdfs:label "Usage End validity" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage End validity measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
+                            rdfs:comment "Until when is the dataset valid?" ;
+                            rdfs:label "Usage End validity" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    ?kg dcterms:valid ?date .
+                        ?kg dcterms:valid ?date .
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl")), "Measure")) AS ?qualityMeasurement)
@@ -296,25 +320,31 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage End validity measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
-                        rdfs:comment "Until when is the dataset valid?" ;
-                        rdfs:label "Usage End validity" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage End validity measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
+                            rdfs:comment "Until when is the dataset valid?" ;
+                            rdfs:label "Usage End validity" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            ?kg dcterms:valid ?date .
+                            GRAPH ?kgGraph {
+                                ?kg dcterms:valid ?date .
+                            }
                         })
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)

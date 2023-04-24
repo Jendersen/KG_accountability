@@ -23,17 +23,20 @@
                 PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
                 PREFIX kgi: <http://ns.inria.fr/kg/index#>
                 INSERT {
-                    # Creation of the description
-                    ?endpointDescription sd:endpoint ?endpointUrl ;
-                        dcat:servesDataset ?kg ;
-                        dcat:endpointURL ?endpointUrl ;
-                        a sd:Service, dcat:DataService , prov:Entity , earl:TestSubject .
-                    ?metadataDescription a prov:Entity , earl:TestSubject ;
-                        prov:wasDerivedFrom ?kg .
-
+                    GRAPH ?kgGraph {
+                        # Creation of the description
+                        ?endpointDescription sd:endpoint ?endpointUrl ;
+                            dcat:servesDataset ?kg ;
+                            dcat:endpointURL ?endpointUrl ;
+                            a sd:Service, dcat:DataService , prov:Entity , earl:TestSubject .
+                        ?metadataDescription a prov:Entity , earl:TestSubject ;
+                            prov:wasDerivedFrom ?kg .
+                    }
                 } WHERE {
-                    ?kg a void:Dataset ;
-                        void:sparqlEndpoint ?endpointUrl .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset ;
+                            void:sparqlEndpoint ?endpointUrl .
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                 }

@@ -572,8 +572,8 @@
                         ?kg pav:createdAt ?location .
                         # With PROV
                         ?kg prov:wasGeneratedBy [
-                                a prov:Create .
-                                prov:atLocation ?location .
+                                a prov:Create ;
+                                prov:atLocation ?location
                             ]
                     }
                 } WHERE {
@@ -1560,8 +1560,8 @@
                     GRAPH ?kgGraph {
                         ?kg a dcat:Dataset .
                         # Find a date of end of availability
-                        {?kg schema:expires ?date .
-                        UNION {?kg prov:invalidatedAtTime ?date .}
+                        { ?kg schema:expires ?date . }
+                        UNION { ?kg prov:invalidatedAtTime ?date . }
                     }
                 }
             """

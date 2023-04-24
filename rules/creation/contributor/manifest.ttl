@@ -24,26 +24,30 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementContributor .
-                    ?qualityMeasurementContributor a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
-                        rdfs:comment "Who are the creators and contributors of the dataset? What is her/his/its role in the data creation process?" ;
-                        rdfs:label "Creation contributor" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementContributor .
+                        ?qualityMeasurementContributor a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
+                            rdfs:comment "Who are the creators and contributors of the dataset? What is her/his/its role in the data creation process?" ;
+                            rdfs:label "Creation contributor" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    ?kg a void:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
 
-                    # Find a creator or editor or curator
-                    { ?kg dcterms:creator ?contributor . }
-                    UNION { ?kg dcterms:contributor ?contributor . }
-                    UNION { ?kg pav:curatedBy ?contributor . }
+                        # Find a creator or editor or curator
+                        { ?kg dcterms:creator ?contributor . }
+                        UNION { ?kg dcterms:contributor ?contributor . }
+                        UNION { ?kg pav:curatedBy ?contributor . }
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -67,21 +71,25 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementContributor .
-                    ?qualityMeasurementContributor a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
-                        rdfs:comment "Who are the creators and contributors of the dataset? What is her/his/its role in the data creation process?" ;
-                        rdfs:label "Creation contributor" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementContributor .
+                        ?qualityMeasurementContributor a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> a dqv:Metric ;
+                            rdfs:comment "Who are the creators and contributors of the dataset? What is her/his/its role in the data creation process?" ;
+                            rdfs:label "Creation contributor" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    ?kg a void:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
                         { ?kg dcterms:creator ?contributor . }
@@ -119,38 +127,42 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementContributorID .
-                    ?qualityMeasurementContributorID a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor identification measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
-                        rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
-                        rdfs:label "Creation contributor identification" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementContributorID .
+                        ?qualityMeasurementContributorID a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor identification measurement" ;
+                            dqv:computedOn ?endpointDescription, ?contributor ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
+                            rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
+                            rdfs:label "Creation contributor identification" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg WHERE {
-                        ?kg a void:Dataset .
+                    {SELECT DISTINCT ?contributor ?kg ?kgGraph WHERE {
+                        GRAPH ?kgGraph {
+                            ?kg a void:Dataset .
 
-                        # Find a creatior or editor or curator
-                        { ?kg dcterms:creator ?contributor . }
-                        UNION { ?kg dcterms:contributor ?contributor . }
-                        UNION { ?kg pav:curatedBy ?contributor . }
+                            # Find a creatior or editor or curator
+                            { ?kg dcterms:creator ?contributor . }
+                            UNION { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg pav:curatedBy ?contributor . }
 
-                        # name
-                        {?contributor rdfs:label ?name .}
-                        UNION {?contributor schema:name ?name .}
-                        UNION {?contributor schema:legalName ?name}
-                        UNION {?contributor foaf:name ?name .}
-                        UNION {?contributor schema:givenName ?fname ; schema:familyName ?name .}
-                        UNION {?contributor foaf:givenName ?fname ; foaf:familyName ?name .}
-                        UNION {?contributor foaf:firstName ?fname ; foaf:lastName ?name .}
-                        # contact
-                        ?contributor ?contactProp ?contact .
+                            # name
+                            {?contributor rdfs:label ?name .}
+                            UNION {?contributor schema:name ?name .}
+                            UNION {?contributor schema:legalName ?name}
+                            UNION {?contributor foaf:name ?name .}
+                            UNION {?contributor schema:givenName ?fname ; schema:familyName ?name .}
+                            UNION {?contributor foaf:givenName ?fname ; foaf:familyName ?name .}
+                            UNION {?contributor foaf:firstName ?fname ; foaf:lastName ?name .}
+                            # contact
+                            ?contributor ?contactProp ?contact .
+                        }
                         VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -175,40 +187,46 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementContributorID .
-                    ?qualityMeasurementContributorID a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor identification measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
-                        rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
-                        rdfs:label "Creation contributor identification" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementContributorID .
+                        ?qualityMeasurementContributorID a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor identification measurement" ;
+                            dqv:computedOn ?endpointDescription, ?contributor ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
+                            rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
+                            rdfs:label "Creation contributor identification" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg WHERE {
-                        ?kg a void:Dataset .
-                        # Find a creatior or editor or curator
-                        { ?kg dcterms:creator ?contributor . }
-                        UNION { ?kg dcterms:contributor ?contributor . }
-                        UNION { ?kg pav:curatedBy ?contributor . }
+                    {SELECT DISTINCT ?contributor ?kg ?kgGraph WHERE {
+                        GRAPH ?kgGraph {
+                            ?kg a void:Dataset .
+                            # Find a creatior or editor or curator
+                            { ?kg dcterms:creator ?contributor . }
+                            UNION { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg pav:curatedBy ?contributor . }
+                          }
 
                         FILTER NOT EXISTS {
-                          # name
-                          {?contributor rdfs:label ?name .}
-                          UNION {?contributor schema:name ?name .}
-                          UNION {?contributor schema:legalName ?name}
-                          UNION {?contributor foaf:name ?name .}
-                          UNION {?contributor schema:givenName ?fname ; schema:familyName ?name .}
-                          UNION {?contributor foaf:givenName ?fname ; foaf:familyName ?name .}
-                          UNION {?contributor foaf:firstName ?fname ; foaf:lastName ?name .}
-                          # contact
-                          ?contributor ?contactProp ?contact .
-                          VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
-                        }
+                            GRAPH ?kgGraph {
+                                  # name
+                                  {?contributor rdfs:label ?name .}
+                                  UNION {?contributor schema:name ?name .}
+                                  UNION {?contributor schema:legalName ?name}
+                                  UNION {?contributor foaf:name ?name .}
+                                  UNION {?contributor schema:givenName ?fname ; schema:familyName ?name .}
+                                  UNION {?contributor foaf:givenName ?fname ; foaf:familyName ?name .}
+                                  UNION {?contributor foaf:firstName ?fname ; foaf:lastName ?name .}
+                                  # contact
+                                  ?contributor ?contactProp ?contact .
+                            }
+                      }
+                      VALUES ?contactProp {foaf:mbox foaf:phone schema:contactPoint schema:email schema:telephone schema:address foaf:homepage}
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -236,35 +254,39 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementContributorType .
-                    ?qualityMeasurementContributorType a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor type measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                   <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
-                        rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
-                        rdfs:label "Creation contributor type" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementContributorType .
+                        ?qualityMeasurementContributorType a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor type measurement" ;
+                            dqv:computedOn ?endpointDescription, ?contributor ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                       <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
+                            rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
+                            rdfs:label "Creation contributor type" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    {SELECT DISTINCT ?contributor ?kg WHERE {
-                        ?kg a void:Dataset .
-                        # Find a creatior or editor or curator
-                        { ?kg dcterms:creator ?contributor . }
-                        UNION { ?kg dcterms:contributor ?contributor . }
-                        UNION { ?kg pav:curatedBy ?contributor . }
+                    {SELECT DISTINCT ?contributor ?kgGraph ?kg WHERE {
+                        GRAPH ?kgGraph {
+                            ?kg a void:Dataset .
+                            # Find a creatior or editor or curator
+                            { ?kg dcterms:creator ?contributor . }
+                            UNION { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg pav:curatedBy ?contributor . }
 
-                        # Is it a person ?
-                        {?contributor a foaf:Person .}
-                        UNION {?contributor a schema:Person .}
-                        UNION {?contributor a prov:Person .}
-                        # Or, is it an organization ?
-                        UNION {?contributor a foaf:Organization .}
-                        UNION {?contributor a schema:Organization .}
-                        UNION {?contributor a prov:Organization .}
+                            # Is it a person ?
+                            {?contributor a foaf:Person .}
+                            UNION {?contributor a schema:Person .}
+                            UNION {?contributor a prov:Person .}
+                            # Or, is it an organization ?
+                            UNION {?contributor a foaf:Organization .}
+                            UNION {?contributor a schema:Organization .}
+                            UNION {?contributor a prov:Organization .}
+                        }
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -288,36 +310,42 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementContributorType .
-                    ?qualityMeasurementContributorType a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor type measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                   <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
-                        rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
-                        rdfs:label "Creation contributor type" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementContributorType .
+                        ?qualityMeasurementContributorType a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor type measurement" ;
+                            dqv:computedOn ?endpointDescription, ?contributor ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                       <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
+                            rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
+                            rdfs:label "Creation contributor type" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
                     {SELECT DISTINCT ?contributor ?kg WHERE {
-                        ?kg a void:Dataset .
-                        # Find a creatior or editor or curator
-                        { ?kg dcterms:creator ?contributor . }
-                        UNION { ?kg dcterms:contributor ?contributor . }
-                        UNION { ?kg pav:curatedBy ?contributor . }
+                        GRAPH ?kgGraph {
+                            ?kg a void:Dataset .
+                            # Find a creatior or editor or curator
+                            { ?kg dcterms:creator ?contributor . }
+                            UNION { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg pav:curatedBy ?contributor . }
+                        }
 
                         FILTER NOT EXISTS {
-                          # Is it a person ?
-                          {?contributor a foaf:Person .}
-                          UNION {?contributor a schema:Person .}
-                          UNION {?contributor a prov:Person .}
-                          # Or, is it an organization ?
-                          UNION {?contributor a foaf:Organization .}
-                          UNION {?contributor a schema:Organization .}
-                          UNION {?contributor a prov:Organization .}
+                            GRAPH ?kgGraph {
+                                  # Is it a person ?
+                                  {?contributor a foaf:Person .}
+                                  UNION {?contributor a schema:Person .}
+                                  UNION {?contributor a prov:Person .}
+                                  # Or, is it an organization ?
+                                  UNION {?contributor a foaf:Organization .}
+                                  UNION {?contributor a schema:Organization .}
+                                  UNION {?contributor a prov:Organization .}
+                          }
                         }
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -346,42 +374,46 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementQualification .
-                    ?qualityMeasurementQualification a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor qualification measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
-                        rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
-                        rdfs:label "Creation contributor qualification" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementQualification .
+                        ?qualityMeasurementQualification a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor qualification measurement" ;
+                            dqv:computedOn ?endpointDescription, ?contributor ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
+                            rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
+                            rdfs:label "Creation contributor qualification" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
                     {SELECT DISTINCT ?contributor ?kg WHERE {
-                        ?kg a void:Dataset .
-                        # Find a creatior or editor or curator
-                        { ?kg dcterms:creator ?contributor . }
-                        UNION { ?kg dcterms:contributor ?contributor . }
-                        UNION { ?kg pav:curatedBy ?contributor . }
+                        GRAPH ?kgGraph {
+                            ?kg a void:Dataset .
+                            # Find a creatior or editor or curator
+                            { ?kg dcterms:creator ?contributor . }
+                            UNION { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg pav:curatedBy ?contributor . }
 
-                        # Work
-                        {?contributor foaf:workInfoHomepage ?work .}
-                        UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
-                        UNION {?contributor schema:jobTitle ?work .}
-                        # Skills
-                        UNION {?contributor schema:award ?award .}
-                        UNION {?contributor schema:hasCredential ?credential .
-                               ?credential schema:competencyRequired ?skills .}
-                        UNION {?contributor schema:knowsAbout ?topic .}
-                        # Optional
-                        # Publication
-                        UNION {?contributor foaf:publiations ?publi . }
-                        # School
-                        UNION {?contributor foaf:schoolHomepage ?school . }
-                        UNION {?contributor schema:alumniOf ?school .}
+                            # Work
+                            {?contributor foaf:workInfoHomepage ?work .}
+                            UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
+                            UNION {?contributor schema:jobTitle ?work .}
+                            # Skills
+                            UNION {?contributor schema:award ?award .}
+                            UNION {?contributor schema:hasCredential ?credential .
+                                   ?credential schema:competencyRequired ?skills .}
+                            UNION {?contributor schema:knowsAbout ?topic .}
+                            # Optional
+                            # Publication
+                            UNION {?contributor foaf:publiations ?publi . }
+                            # School
+                            UNION {?contributor foaf:schoolHomepage ?school . }
+                            UNION {?contributor schema:alumniOf ?school .}
+                        }
                     }}
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -406,43 +438,49 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementQualification .
-                    ?qualityMeasurementQualification a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor qualification measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
-                        rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
-                        rdfs:label "Creation contributor qualification" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementQualification .
+                        ?qualityMeasurementQualification a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor qualification measurement" ;
+                            dqv:computedOn ?endpointDescription, ?contributor ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
+                            rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
+                            rdfs:label "Creation contributor qualification" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
                     {SELECT DISTINCT ?contributor ?kg WHERE {
-                        ?kg a void:Dataset .
-                        # Find a creatior or editor or curator
-                        { ?kg dcterms:creator ?contributor . }
-                        UNION { ?kg dcterms:contributor ?contributor . }
-                        UNION { ?kg pav:curatedBy ?contributor . }
+                        GRAPH ?kgGraph {
+                            ?kg a void:Dataset .
+                            # Find a creatior or editor or curator
+                            { ?kg dcterms:creator ?contributor . }
+                            UNION { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg pav:curatedBy ?contributor . }
+                        }
 
                         FILTER NOT EXISTS {
-                          # Work
-                          {?contributor foaf:workInfoHomepage ?work .}
-                          UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
-                          UNION {?contributor schema:jobTitle ?work .}
-                          # Skills
-                          UNION {?contributor schema:award ?award .}
-                          UNION {?contributor schema:hasCredential ?credential .
-                                 ?credential schema:competencyRequired ?skills .}
-                          UNION {?contributor schema:knowsAbout ?topic .}
-                          # Optional
-                          # Publication
-                          UNION {?contributor foaf:publiations ?publi . }
-                          # School
-                          UNION {?contributor foaf:schoolHomepage ?school . }
-                          UNION {?contributor schema:alumniOf ?school .}
+                            GRAPH ?kgGraph {
+                                  # Work
+                                  {?contributor foaf:workInfoHomepage ?work .}
+                                  UNION {?contributor schema:hasOccupation ?work .} ### Here we can ask more
+                                  UNION {?contributor schema:jobTitle ?work .}
+                                  # Skills
+                                  UNION {?contributor schema:award ?award .}
+                                  UNION {?contributor schema:hasCredential ?credential .
+                                         ?credential schema:competencyRequired ?skills .}
+                                  UNION {?contributor schema:knowsAbout ?topic .}
+                                  # Optional
+                                  # Publication
+                                  UNION {?contributor foaf:publiations ?publi . }
+                                  # School
+                                  UNION {?contributor foaf:schoolHomepage ?school . }
+                                  UNION {?contributor schema:alumniOf ?school .}
+                            }
                         }
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -471,30 +509,34 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementInfluences .
-                    ?qualityMeasurementInfluences a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor influences measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
-                        rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
-                        rdfs:label "Creation contributor influences" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementInfluences .
+                        ?qualityMeasurementInfluences a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor influences measurement" ;
+                            dqv:computedOn ?endpointDescription, ?contributor ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
+                            rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
+                            rdfs:label "Creation contributor influences" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
                     {SELECT DISTINCT ?contributor ?kg WHERE {
-                        ?kg a void:Dataset .
-                        # Find a creatior or editor or curator
-                        { ?kg dcterms:creator ?contributor . }
-                        UNION { ?kg dcterms:contributor ?contributor . }
-                        UNION { ?kg pav:curatedBy ?contributor . }
+                        GRAPH ?kgGraph {
+                            ?kg a void:Dataset .
+                            # Find a creatior or editor or curator
+                            { ?kg dcterms:creator ?contributor . }
+                            UNION { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg pav:curatedBy ?contributor . }
 
-                        {?contributor ?prop ?influence .
-                        VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
-                        UNION {?group foaf:member ?contributor . }
+                            {?contributor ?prop ?influence .
+                            VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
+                            UNION {?group foaf:member ?contributor . }
+                        }
                     }}
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -518,33 +560,42 @@
                 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementInfluences .
-                    ?qualityMeasurementInfluences a dqv:QualityMeasurement ;
-                        rdfs:label "Creation contributor influences measurement" ;
-                        dqv:computedOn ?endpointDescription, ?contributor ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
-                        rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
-                        rdfs:label "Creation contributor influences" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementInfluences .
+                        ?qualityMeasurementInfluences a dqv:QualityMeasurement ;
+                            rdfs:label "Creation contributor influences measurement" ;
+                            dqv:computedOn ?endpointDescription, ?contributor ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
+                            rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;
+                            rdfs:label "Creation contributor influences" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
                     {SELECT DISTINCT ?contributor ?kg WHERE {
-                        ?kg a void:Dataset .
-                        # Find a creatior or editor or curator
-                        { ?kg dcterms:creator ?contributor . }
-                        UNION { ?kg dcterms:contributor ?contributor . }
-                        UNION { ?kg pav:curatedBy ?contributor . }
+                        GRAPH ?kgGraph {
+                            ?kg a void:Dataset .
+                            # Find a creatior or editor or curator
+                            { ?kg dcterms:creator ?contributor . }
+                            UNION { ?kg dcterms:contributor ?contributor . }
+                            UNION { ?kg pav:curatedBy ?contributor . }
+                        }
 
                         FILTER NOT EXISTS {
-                            {?contributor ?prop ?influence .
-                                VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }}
+                            GRAPH ?kgGraph {
+                                {
+                                    ?contributor ?prop ?influence .
+                                    VALUES ?prop { schema:worksFor foaf:workplaceHomepage schema:sponsor schema:funder foaf:fundedBy schema:funding schema:nonprofitStatus schema:ownershipFundingInfo schema:parentOrganization schema:founder schema:ethicsPolicy schema:publishingPrinciples schema:correctionsPolicy schema:areaServed schema:memberOf schema:affiliation }
+                                }
                                 UNION {?group foaf:member ?contributor . }
+                                }
                             }
-                        }}
+                        }
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl", str(?contributor))), "Measure")) AS ?qualityMeasurementInfluences)

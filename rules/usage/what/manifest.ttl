@@ -38,23 +38,27 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage examples measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> a dqv:Metric ;
-                        rdfs:comment "Provides some examples of the published data." ;
-                        rdfs:label "Usage examples" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage examples measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> a dqv:Metric ;
+                            rdfs:comment "Provides some examples of the published data." ;
+                            rdfs:label "Usage examples" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a dcat:Dataset .
 
-                    ?kg void:exampleResource ?ex .
+                        ?kg void:exampleResource ?ex .
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl")), "Measure")) AS ?qualityMeasurement)
@@ -99,10 +103,14 @@
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
                         prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 } WHERE {
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            ?kg void:exampleResource ?ex .
+                            GRAPH ?kgGraph {
+                                ?kg void:exampleResource ?ex .
+                            }
                         })
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -138,25 +146,29 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage concepts covered measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> a dqv:Metric ;
-                        rdfs:comment "What concepts, topics or subjects does the dataset cover?" ;
-                        rdfs:label "Usage concepts covered" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage concepts covered measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> a dqv:Metric ;
+                            rdfs:comment "What concepts, topics or subjects does the dataset cover?" ;
+                            rdfs:label "Usage concepts covered" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    { ?kg dcterms:subject ?subject . }
-                    UNION { ?kg dcat:keyword ?keyword . }
+                        { ?kg dcterms:subject ?subject . }
+                        UNION { ?kg dcat:keyword ?keyword . }
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -188,26 +200,32 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage concepts covered measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> a dqv:Metric ;
-                        rdfs:comment "What concepts, topics or subjects does the dataset cover?" ;
-                        rdfs:label "Usage concepts covered" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage concepts covered measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> a dqv:Metric ;
+                            rdfs:comment "What concepts, topics or subjects does the dataset cover?" ;
+                            rdfs:label "Usage concepts covered" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            { ?kg dcterms:subject ?subject . }
-                            UNION { ?kg dcat:keyword ?keyword . }
+                            GRAPH ?kgGraph {
+                                { ?kg dcterms:subject ?subject . }
+                                UNION { ?kg dcat:keyword ?keyword . }
+                            }
                         })
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -244,24 +262,28 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage dataset description measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> a dqv:Metric ;
-                        rdfs:comment "What is a general description of the dataset?" ;
-                        rdfs:label "Usage dataset description" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage dataset description measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> a dqv:Metric ;
+                            rdfs:comment "What is a general description of the dataset?" ;
+                            rdfs:label "Usage dataset description" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    ?kg dcterms:description ?desc .
+                        ?kg dcterms:description ?desc .
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl")), "Measure")) AS ?qualityMeasurement)
@@ -292,25 +314,31 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage dataset description measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> a dqv:Metric ;
-                        rdfs:comment "What is a general description of the dataset?" ;
-                        rdfs:label "Usage dataset description" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage dataset description measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> a dqv:Metric ;
+                            rdfs:comment "What is a general description of the dataset?" ;
+                            rdfs:label "Usage dataset description" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            ?kg dcterms:description ?desc .
+                            GRAPH ?kgGraph {
+                                ?kg dcterms:description ?desc .
+                            }
                         })
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -346,24 +374,28 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage dataset triples measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> a dqv:Metric ;
-                        rdfs:comment "How many triples are there in the dataset?" ;
-                        rdfs:label "Usage dataset triples" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage dataset triples measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> a dqv:Metric ;
+                            rdfs:comment "How many triples are there in the dataset?" ;
+                            rdfs:label "Usage dataset triples" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    ?kg void:triples ?nbTriples .
+                        ?kg void:triples ?nbTriples .
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -395,25 +427,31 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage dataset triples measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> a dqv:Metric ;
-                        rdfs:comment "How many triples are there in the dataset?" ;
-                        rdfs:label "Usage dataset triples" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage dataset triples measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> a dqv:Metric ;
+                            rdfs:comment "How many triples are there in the dataset?" ;
+                            rdfs:label "Usage dataset triples" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            ?kg void:triples ?nbTriples .
+                            GRAPH ?kgGraph {
+                                ?kg void:triples ?nbTriples .
+                            }
                         })
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -450,26 +488,30 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage dataset entities measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> a dqv:Metric ;
-                        rdfs:comment "How many entities, properties and classes are there in the dataset?" ;
-                        rdfs:label "Usage dataset entities" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage dataset entities measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> a dqv:Metric ;
+                            rdfs:comment "How many entities, properties and classes are there in the dataset?" ;
+                            rdfs:label "Usage dataset entities" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    { ?kg void:entities ?nbEntities . }
-                    UNION { ?kg void:properties ?nbProp .}
-                    UNION { ?kg void:classes ?nbClasses .}
+                        { ?kg void:entities ?nbEntities . }
+                        UNION { ?kg void:properties ?nbProp .}
+                        UNION { ?kg void:classes ?nbClasses .}
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl")), "Measure")) AS ?qualityMeasurement)
@@ -500,27 +542,33 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage dataset entities measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> a dqv:Metric ;
-                        rdfs:comment "How many entities, properties and classes are there in the dataset?" ;
-                        rdfs:label "Usage dataset entities" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage dataset entities measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> a dqv:Metric ;
+                            rdfs:comment "How many entities, properties and classes are there in the dataset?" ;
+                            rdfs:label "Usage dataset entities" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            { ?kg void:entities ?nbEntities . }
-                            UNION { ?kg void:properties ?nbProp .}
-                            UNION { ?kg void:classes ?nbClasses .}
+                            GRAPH ?kgGraph {
+                                { ?kg void:entities ?nbEntities . }
+                                UNION { ?kg void:properties ?nbProp .}
+                                UNION { ?kg void:classes ?nbClasses .}
+                            }
                         })
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -556,24 +604,28 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage RDF serialization measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> a dqv:Metric ;
-                        rdfs:comment "What RDF serialization formats does the dataset support?" ;
-                        rdfs:label "Usage RDF serialization" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage RDF serialization measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> a dqv:Metric ;
+                            rdfs:comment "What RDF serialization formats does the dataset support?" ;
+                            rdfs:label "Usage RDF serialization" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    ?kg dcterms:format ?format .
+                        ?kg dcterms:format ?format .
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl")), "Measure")) AS ?qualityMeasurement)
@@ -604,25 +656,31 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage RDF serialization measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> a dqv:Metric ;
-                        rdfs:comment "What RDF serialization formats does the dataset support?" ;
-                        rdfs:label "Usage RDF serialization" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage RDF serialization measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> a dqv:Metric ;
+                            rdfs:comment "What RDF serialization formats does the dataset support?" ;
+                            rdfs:label "Usage RDF serialization" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER (NOT EXISTS {
-                            ?kg dcterms:format ?format .
+                            GRAPH ?kgGraph {
+                                ?kg dcterms:format ?format .
+                            }
                         })
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -658,26 +716,30 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage dataset quality measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> a dqv:Metric ;
-                        rdfs:comment "Provide information about the quality of the dataset." ;
-                        rdfs:label "Usage dataset quality" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage dataset quality measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> a dqv:Metric ;
+                            rdfs:comment "Provide information about the quality of the dataset." ;
+                            rdfs:label "Usage dataset quality" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
 
-                    { ?kg dqv:hasQualityAnnotation ?qualityAnnotation . }
-                    UNION { ?kg dqv:hasQualityMeasurement ?qualityMeasure . }
-                    UNION { ?kg schema:award ?award . }
+                        { ?kg dqv:hasQualityAnnotation ?qualityAnnotation . }
+                        UNION { ?kg dqv:hasQualityMeasurement ?qualityMeasure . }
+                        UNION { ?kg schema:award ?award . }
+                    }
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl")), "Measure")) AS ?qualityMeasurement)
@@ -708,27 +770,33 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage dataset quality measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> a dqv:Metric ;
-                        rdfs:comment "Provide information about the quality of the dataset." ;
-                        rdfs:label "Usage dataset quality" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage dataset quality measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> a dqv:Metric ;
+                            rdfs:comment "Provide information about the quality of the dataset." ;
+                            rdfs:label "Usage dataset quality" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    # Find the KG
-                    ?kg a dcat:Dataset .
+                    GRAPH ?kgGraph {
+                        # Find the KG
+                        ?kg a dcat:Dataset .
+                    }
 
                     FILTER( NOT EXISTS {
-                            { ?kg dqv:hasQualityAnnotation ?qualityAnnotation . }
-                            UNION { ?kg dqv:hasQualityMeasurement ?qualityMeasure . }
-                            UNION { ?kg schema:award ?award . }
+                            GRAPH ?kgGraph {
+                                { ?kg dqv:hasQualityAnnotation ?qualityAnnotation . }
+                                UNION { ?kg dqv:hasQualityMeasurement ?qualityMeasure . }
+                                UNION { ?kg schema:award ?award . }
+                            }
                         })
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)

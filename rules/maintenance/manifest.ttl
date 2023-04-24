@@ -6,36 +6,6 @@
         <contributor/manifest.ttl>
     ) ;
     mf:entries (
-        <initialization.ttl>
-    ) .
-
-<initialization.ttl>  a mf:ManifestEntry ;
-    kgi:onSuccess (
-        [
-            mf:action """
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX dqv: <http://www.w3.org/ns/dqv#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX dcat: <http://www.w3.org/ns/dcat#>
-                PREFIX void: <http://rdfs.org/ns/void#>
-                PREFIX dcterms: <http://purl.org/dc/terms/>
-                PREFIX dce: <http://purl.org/dc/elements/1.1/>
-                PREFIX pav: <http://purl.org/pav/>
-                PREFIX prov: <http://www.w3.org/ns/prov#>
-                PREFIX schema: <http://schema.org/>
-                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-                INSERT {
-
-
-
-
-                } WHERE {
-                    ?kg a void:Dataset .
-                    BIND(NOW() AS ?time)
-                }
-            """
-        ]
         <modification_date.ttl>
         <maintenance_frequency.ttl>
         <maintenance_location.ttl>
@@ -58,23 +28,26 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX pav: <http://purl.org/pav/>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementDate .
-                    ?qualityMeasurementDate a dqv:QualityMeasurement ;
-                        rdfs:label "Modification date measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> a dqv:Metric ;
-                        rdfs:comment "When was the dataset last maintained/modified?" ;
-                        rdfs:label "Modification date" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementDate .
+                        ?qualityMeasurementDate a dqv:QualityMeasurement ;
+                            rdfs:label "Modification date measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> a dqv:Metric ;
+                            rdfs:comment "When was the dataset last maintained/modified?" ;
+                            rdfs:label "Modification date" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-
-                    ?kg a void:Dataset .
-                    ?kg dcterms:modified ?date .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        ?kg dcterms:modified ?date .
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -96,24 +69,29 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX pav: <http://purl.org/pav/>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementDate .
-                    ?qualityMeasurementDate a dqv:QualityMeasurement ;
-                        rdfs:label "Modification date measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> a dqv:Metric ;
-                        rdfs:comment "When was the dataset last maintained/modified?" ;
-                        rdfs:label "Modification date" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementDate .
+                        ?qualityMeasurementDate a dqv:QualityMeasurement ;
+                            rdfs:label "Modification date measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> a dqv:Metric ;
+                            rdfs:comment "When was the dataset last maintained/modified?" ;
+                            rdfs:label "Modification date" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-
-                    ?kg a void:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                    }
                     FILTER ( NOT EXISTS {
-                            ?kg dcterms:modified ?date .
+                            GRAPH ?kgGraph {
+                                ?kg dcterms:modified ?date .
+                            }
                         } )
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -140,23 +118,26 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX pav: <http://purl.org/pav/>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementFrequency .
-                    ?qualityMeasurementFrequency a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance frequency measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> a dqv:Metric ;
-                        rdfs:comment "With which frequency is the dataset maintained?" ;
-                        rdfs:label "Maintenance frequency" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementFrequency .
+                        ?qualityMeasurementFrequency a dqv:QualityMeasurement ;
+                            rdfs:label "Maintenance frequency measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> a dqv:Metric ;
+                            rdfs:comment "With which frequency is the dataset maintained?" ;
+                            rdfs:label "Maintenance frequency" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-
-                    ?kg a void:Dataset .
-                    ?kg dcterms:accrualPeriodicity ?frequency
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                        ?kg dcterms:accrualPeriodicity ?frequency
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -178,24 +159,29 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX pav: <http://purl.org/pav/>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementFrequency .
-                    ?qualityMeasurementFrequency a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance frequency measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> a dqv:Metric ;
-                        rdfs:comment "With which frequency is the dataset maintained?" ;
-                        rdfs:label "Maintenance frequency" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementFrequency .
+                        ?qualityMeasurementFrequency a dqv:QualityMeasurement ;
+                            rdfs:label "Maintenance frequency measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> a dqv:Metric ;
+                            rdfs:comment "With which frequency is the dataset maintained?" ;
+                            rdfs:label "Maintenance frequency" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-
-                    ?kg a void:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                    }
                     FILTER ( NOT EXISTS {
-                            ?kg dcterms:accrualPeriodicity ?frequency
+                            GRAPH ?kgGraph {
+                                ?kg dcterms:accrualPeriodicity ?frequency
+                            }
                         } )
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -222,26 +208,29 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX pav: <http://purl.org/pav/>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementLocation .
-                    ?qualityMeasurementLocation a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance location measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> a dqv:Metric ;
-                        rdfs:comment "From what physical location (state, country, continent, ...) is or will the dataset be maintained?" ;
-                        rdfs:label "Maintenance location" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementLocation .
+                        ?qualityMeasurementLocation a dqv:QualityMeasurement ;
+                            rdfs:label "Maintenance location measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> a dqv:Metric ;
+                            rdfs:comment "From what physical location (state, country, continent, ...) is or will the dataset be maintained?" ;
+                            rdfs:label "Maintenance location" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
 
-                    ?kg a void:Dataset .
-
-                    ?kg prov:wasGeneratedBy ?act .
-                    # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
-                    ?act prov:atLocation ?location .
+                        ?kg prov:wasGeneratedBy ?act .
+                        # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
+                        ?act prov:atLocation ?location .
+                    }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Metadata")) AS ?metadataDescription)
@@ -263,26 +252,32 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX pav: <http://purl.org/pav/>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementLocation .
-                    ?qualityMeasurementLocation a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance location measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> a dqv:Metric ;
-                        rdfs:comment "From what physical location (state, country, continent, ...) is or will the dataset be maintained?" ;
-                        rdfs:label "Maintenance location" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementLocation .
+                        ?qualityMeasurementLocation a dqv:QualityMeasurement ;
+                            rdfs:label "Maintenance location measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> a dqv:Metric ;
+                            rdfs:comment "From what physical location (state, country, continent, ...) is or will the dataset be maintained?" ;
+                            rdfs:label "Maintenance location" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-                    ?kg a void:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                    }
 
                     FILTER ( NOT EXISTS {
-                            ?kg prov:wasGeneratedBy ?act .
-                            # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
-                            ?act prov:atLocation ?location .
+                            GRAPH ?kgGraph {
+                                ?kg prov:wasGeneratedBy ?act .
+                                # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
+                                ?act prov:atLocation ?location .
+                            }
                         } )
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -309,31 +304,34 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX pav: <http://purl.org/pav/>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementMethodology .
-                    ?qualityMeasurementMethodology a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance methodology measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
-                        dqv:value "true"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> a dqv:Metric ;
-                        rdfs:comment "What will be the methodology/ procedure for data maintenance?" ;
-                        rdfs:label "Maintenance methodology" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementMethodology .
+                        ?qualityMeasurementMethodology a dqv:QualityMeasurement ;
+                            rdfs:label "Maintenance methodology measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
+                            dqv:value "true"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> a dqv:Metric ;
+                            rdfs:comment "What will be the methodology/ procedure for data maintenance?" ;
+                            rdfs:label "Maintenance methodology" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
 
-                    ?kg a void:Dataset .
-
-                    # method
-                    {?kg dcterms:accrualMethod ?method .}
-                    # activity
-                    UNION {
-                        ?kg prov:wasGeneratedBy ?activity .
-                        # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
-                        # {?activity dcterms:description ?desc .} UNION {?activity dce:description ?desc . } UNION {?activity schema:description ?desc .}
-                        ?agent a prov:SoftwareAgent .
+                        # method
+                        {?kg dcterms:accrualMethod ?method .}
+                        # activity
+                        UNION {
+                            ?kg prov:wasGeneratedBy ?activity .
+                            # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
+                            # {?activity dcterms:description ?desc .} UNION {?activity dce:description ?desc . } UNION {?activity schema:description ?desc .}
+                            ?agent a prov:SoftwareAgent .
+                        }
                     }
 
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Endpoint")) AS ?endpointDescription)
@@ -356,32 +354,37 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 PREFIX pav: <http://purl.org/pav/>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurementMethodology .
-                    ?qualityMeasurementMethodology a dqv:QualityMeasurement ;
-                        rdfs:label "Maintenance methodology measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> a dqv:Metric ;
-                        rdfs:comment "What will be the methodology/ procedure for data maintenance?" ;
-                        rdfs:label "Maintenance methodology" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurementMethodology .
+                        ?qualityMeasurementMethodology a dqv:QualityMeasurement ;
+                            rdfs:label "Maintenance methodology measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> a dqv:Metric ;
+                            rdfs:comment "What will be the methodology/ procedure for data maintenance?" ;
+                            rdfs:label "Maintenance methodology" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
-
-                    ?kg a void:Dataset .
+                    GRAPH ?kgGraph {
+                        ?kg a void:Dataset .
+                    }
 
                     FILTER ( NOT EXISTS {
-                            # method
-                            {?kg dcterms:accrualMethod ?method .}
-                            # activity
-                            UNION {
-                                ?kg prov:wasGeneratedBy ?activity .
-                                # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
-                                # {?activity dcterms:description ?desc .} UNION {?activity dce:description ?desc . } UNION {?activity schema:description ?desc .}
-                                ?agent a prov:SoftwareAgent .
+                            GRAPH ?kgGraph {
+                                # method
+                                {?kg dcterms:accrualMethod ?method .}
+                                # activity
+                                UNION {
+                                    ?kg prov:wasGeneratedBy ?activity .
+                                    # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
+                                    # {?activity dcterms:description ?desc .} UNION {?activity dce:description ?desc . } UNION {?activity schema:description ?desc .}
+                                    ?agent a prov:SoftwareAgent .
+                                }
                             }
                         })
 
