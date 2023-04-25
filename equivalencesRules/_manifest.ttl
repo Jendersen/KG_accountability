@@ -9,6 +9,7 @@
         <creationDate.ttl>
         <creationLocation.ttl>
         <creationMethod.ttl>
+        <modificationMethod.ttl>
         <creator.ttl>
         <description.ttl>
         <distribution.ttl>
@@ -667,6 +668,41 @@
                         # With PROV
                         ?kg prov:wasGeneratedBy  [
                                 a prov:Create ;
+                                prov:wasAssociatedWith [ a prov:SoftwareAgent ]
+                            ] .
+                    }
+                } WHERE {
+                    GRAPH ?kgGraph {
+                        ?kg a dcat:Dataset .
+                        # Find a method or software
+                        {?kg pav:createdWith ?agent .}
+                        UNION {?kg pav:retrievedBy ?agent .}
+                        UNION {?kg pav:importedBy ?agent .}
+                        FILTER(isLiteral(?agent))
+                    }
+                }
+            """
+        ]
+        [
+            mf:action """
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+                PREFIX schema: <http://schema.org/>
+                PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX pav: <http://purl.org/pav/>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                PREFIX dce: <http://purl.org/dc/elements/1.1/>
+                PREFIX dcterms: <http://purl.org/dc/terms/>
+                INSERT {
+                    GRAPH ?kgGraph {
+                        ?kg pav:createdWith ?agent .
+                        ?kg pav:retrievedBy ?agent .
+                        ?kg pav:importedBy ?agent .
+                        # With PROV
+                        ?kg prov:wasGeneratedBy  [
+                                a prov:Create ;
                                 prov:wasAssociatedWith ?agent
                             ] .
                         ?agent a prov:SoftwareAgent .
@@ -678,13 +714,93 @@
                         {?kg pav:createdWith ?agent .}
                         UNION {?kg pav:retrievedBy ?agent .}
                         UNION {?kg pav:importedBy ?agent .}
+                        FILTER(! isLiteral(?agent))
+                    }
+                }
+            """
+        ]
+        [
+            mf:action """
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+                PREFIX schema: <http://schema.org/>
+                PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX pav: <http://purl.org/pav/>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                PREFIX dce: <http://purl.org/dc/elements/1.1/>
+                PREFIX dcterms: <http://purl.org/dc/terms/>
+                INSERT {
+                    GRAPH ?kgGraph {
+                        ?kg pav:createdWith ?agent .
+                        ?kg pav:retrievedBy ?agent .
+                        ?kg pav:importedBy ?agent .
                         # With PROV
+                        ?kg prov:wasGeneratedBy  [
+                                a prov:Create ;
+                                prov:wasAssociatedWith ?agent
+                            ] .
+                        ?agent a prov:SoftwareAgent .
+                    }
+                } WHERE {
+                    GRAPH ?kgGraph {
+                        ?kg a dcat:Dataset .
+                        # Find a method or software
+                        ?kg prov:wasGeneratedBy ?act .
+                        # ?act a prov:Create .
+                        ?act prov:wasAssociatedWith ?agent .
+                        ?agent a prov:SoftwareAgent .
+                        FILTER ( NOT EXISTS {
+                            { ?act a prov:Contribute . }
+                            UNION { ?act a prov:Accept . }
+                            UNION { ?act a prov:Copyright . }
+                            UNION { ?act a prov:Modify . }
+                            UNION { ?act a prov:Publish . }
+                            UNION { ?act a prov:Replace . }
+                            UNION { ?act a prov:RightsAssignment . }
+                            UNION { ?act a prov:Submit . }
+                        })
+                    }
+                }
+            """
+        ]
+    ) .
+
+<modificationMethod.ttl>
+    kgi:onSuccess (
+        [
+            mf:action """
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+                PREFIX schema: <http://schema.org/>
+                PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX pav: <http://purl.org/pav/>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                PREFIX dce: <http://purl.org/dc/elements/1.1/>
+                PREFIX dcterms: <http://purl.org/dc/terms/>
+                INSERT {
+                    GRAPH ?kgGraph {
+                        ?kg prov:wasGeneratedBy ?act .
+                        ?act a prov:Contribute , prov:Modify ;
+                            prov:wasAssociatedWith ?agent .
+                        ?agent a prov:SoftwareAgent .
+                    }
+                } WHERE {
+                    GRAPH ?kgGraph {
+                        ?kg a dcat:Dataset .
+                        # Find a method or software With PROV
                         UNION {
                             ?kg prov:wasGeneratedBy ?act .
-                            # ?act a prov:Create .
+                            # ?act a prov:Contribute / Modify / Replace .
                             ?act prov:wasAssociatedWith ?agent .
                             ?agent a prov:SoftwareAgent .
-                            FILTER(! isLiteral(?agent))
+                            FILTER ( NOT EXISTS {
+                                { ?act a prov:Create . }
+                                UNION { ?act a prov:Publish . }
+                            })
                         }
                     }
                 }
