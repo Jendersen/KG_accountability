@@ -791,7 +791,7 @@
                     }
                 } WHERE {
                     GRAPH ?kgGraph {
-                        ?kg a dcat:Dataset .
+                        { ?kg a dcat:Dataset . }
                         # Find a method or software With PROV
                         UNION {
                             ?kg prov:wasGeneratedBy ?act .

@@ -211,23 +211,26 @@
                 		prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
                 }
             } WHERE {
-            	# Main
-            	?kg prov:wasDerivedFrom ?kge ;
-            		dqv:hasQualityMeasurement ?measurement .
-            	?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_access.ttl> ;
-            		dqv:computedOn  ?endpointDescription ;
-            		dqv:value ?v .
+                GRAPH ?kgGraph {
+					# Main
+					?kg prov:wasDerivedFrom ?kge ;
+						dqv:hasQualityMeasurement ?measurement .
+					?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_access.ttl> ;
+						dqv:computedOn  ?endpointDescription ;
+						dqv:value ?v .
+				}
             	OPTIONAL {
             		# Endpoint
             		{ SELECT DISTINCT ?kg (AVG(xsd:decimal(?v)) AS ?valend ) WHERE {
-            			?kg prov:wasDerivedFrom ?kge ;
-            				dqv:hasQualityMeasurement ?measurement .
-            			?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_endpoint.ttl> ;
-            				dqv:value ?v .
+                        GRAPH ?kgGraph {
+							?kg prov:wasDerivedFrom ?kge ;
+								dqv:hasQualityMeasurement ?measurement .
+							?measurement dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_endpoint.ttl> ;
+								dqv:value ?v .
+						}
             		} GROUP BY ?kg }
             	}
             	BIND( IF (BOUND(?valend), ( xsd:decimal(?v) + ?valend )/2 , xsd:decimal(?v) ) AS ?val_access)
-                BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Graph")) AS ?kgGraph)
                 BIND(NOW() AS ?time)
             }
             """
