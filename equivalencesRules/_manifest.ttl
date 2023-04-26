@@ -607,14 +607,14 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 INSERT {
                     GRAPH ?kgGraph {
-                        ?res schema:inLanguage ?id .
-                        ?res dcterms:language ?id .
+                        ?kg schema:inLanguage ?id .
+                        ?kg dcterms:language ?id .
                     }
                 } WHERE {
                     GRAPH ?kgGraph {
                         ?kg a dcat:Dataset .
-                        { ?res schema:inLanguage ?id }
-                        UNION { ?res dcterms:language ?id }
+                        { ?kg schema:inLanguage ?id }
+                        UNION { ?kg dcterms:language ?id }
                     }
                 }
             """
@@ -633,13 +633,14 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 INSERT {
                     GRAPH ?kgGraph {
-                        ?res schema:spatialCoverage ?id .
-                        ?res dcterms:spatial ?id .
+                        ?kg schema:spatialCoverage ?id .
+                        ?kg dcterms:spatial ?id .
                     }
                 } WHERE {
                     GRAPH ?kgGraph {
-                        { ?res schema:spatialCoverage ?id }
-                        UNION { ?res dcterms:spatial ?id }
+                        ?kg a dcat:Dataset .
+                        { ?kg schema:spatialCoverage ?id }
+                        UNION { ?kg dcterms:spatial ?id }
                     }
                 }
             """
@@ -830,27 +831,27 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 INSERT {
                     GRAPH ?kgGraph {
-                        ?res dcterms:license ?license .
-                        ?res schema:license ?license .
-                        ?res schema:sdLicense ?license .
-                        ?res doap:license ?license .
-                        ?res cc:license ?license .
-                        ?res xhv:license ?license .
-                        ?res sto:license ?license .
-                        ?res nie:license ?license .
+                        ?kg dcterms:license ?license .
+                        ?kg schema:license ?license .
+                        ?kg schema:sdLicense ?license .
+                        ?kg doap:license ?license .
+                        ?kg cc:license ?license .
+                        ?kg xhv:license ?license .
+                        ?kg sto:license ?license .
+                        ?kg nie:license ?license .
                     }
                 } WHERE {
                     GRAPH ?kgGraph {
                         ?kg a dcat:Dataset .
                         # Find a license
-                        { ?res dcterms:license ?license }
-                        UNION { ?res schema:license ?license }
-                        UNION { ?res schema:sdLicense ?license }
-                        UNION { ?res doap:license ?license }
-                        UNION { ?res cc:license ?license }
-                        UNION { ?res xhv:license ?license }
-                        UNION { ?res sto:license ?license }
-                        UNION { ?res nie:license ?license }
+                        { ?kg dcterms:license ?license }
+                        UNION { ?kg schema:license ?license }
+                        UNION { ?kg schema:sdLicense ?license }
+                        UNION { ?kg doap:license ?license }
+                        UNION { ?kg cc:license ?license }
+                        UNION { ?kg xhv:license ?license }
+                        UNION { ?kg sto:license ?license }
+                        UNION { ?kg nie:license ?license }
                     }
                 }
             """
@@ -869,14 +870,14 @@
                 PREFIX dcterms: <http://purl.org/dc/terms/>
                 INSERT {
                     GRAPH ?kgGraph {
-                        ?res schema:temporalCoverage ?id .
-                        ?res dcterms:temporal ?id .
+                        ?kg schema:temporalCoverage ?id .
+                        ?kg dcterms:temporal ?id .
                     }
                 } WHERE {
                     GRAPH ?kgGraph {
                         ?kg a dcat:Dataset .
-                        { ?res schema:temporalCoverage ?id }
-                        UNION { ?res dcterms:temporal ?id }
+                        { ?kg schema:temporalCoverage ?id }
+                        UNION { ?kg dcterms:temporal ?id }
                     }
                 }
             """
