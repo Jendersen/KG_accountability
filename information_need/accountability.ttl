@@ -410,58 +410,58 @@
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q20 ;
     sin:tagWith :usage_how ;
-    sin:weight "0.333333"^^xsd:decimal .
+    sin:weight "1"^^xsd:decimal .
 :t21 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q21 ;
     sin:tagWith :usage_how ;
-    sin:weight "0.333333"^^xsd:decimal .
+    sin:weight "1"^^xsd:decimal .
 :t22 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q22 ;
     sin:tagWith :usage_how ;
-    sin:weight "0.333333"^^xsd:decimal .
+    sin:weight "3"^^xsd:decimal .
 :t23 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q23 ;
     sin:tagWith :usage_how ;
-    sin:weight "1"^^xsd:decimal .
+    sin:weight "3"^^xsd:decimal .
 #What
 :t24 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q24 ;
     sin:tagWith :usage_what ;
-    sin:weight "1"^^xsd:decimal .
+    sin:weight "3"^^xsd:decimal .
 :t25 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q25 ;
     sin:tagWith :usage_what ;
-    sin:weight "1"^^xsd:decimal .
+    sin:weight "3"^^xsd:decimal .
 :t26 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q26 ;
     sin:tagWith :usage_what ;
-    sin:weight "1"^^xsd:decimal .
+    sin:weight "3"^^xsd:decimal .
 :t27 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q27 ;
     sin:tagWith :usage_what ;
-    sin:weight "0.333333"^^xsd:decimal .
+    sin:weight "1"^^xsd:decimal .
 :t28 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q28 ;
     sin:tagWith :usage_what ;
-    sin:weight "0.333333"^^xsd:decimal .
+    sin:weight "1"^^xsd:decimal .
 :t29 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q29 ;
     sin:tagWith :usage_what ;
-    sin:weight "0.333333"^^xsd:decimal .
+    sin:weight "1"^^xsd:decimal .
 :t30 a sin:Labeling ;
     sin:structures :accountabilityNeed ;
     sin:questionTagged :q30 ;
     sin:tagWith :usage_what ;
-    sin:weight "1"^^xsd:decimal .
+    sin:weight "3"^^xsd:decimal .
 
 #################################
 #            Queries            #
