@@ -89,19 +89,21 @@
                 PREFIX nie: <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#>
                 PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
                 INSERT {
-                    ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> ;
-                        dqv:hasQualityMeasurement ?qualityMeasurement .
-                    ?qualityMeasurement a dqv:QualityMeasurement ;
-                        rdfs:label "Usage examples measurement" ;
-                        dqv:computedOn ?endpointDescription ;
-                        dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
-                        dqv:value "false"^^xsd:boolean ;
-                        prov:generatedAtTime ?time .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> a dqv:Metric ;
-                        rdfs:comment "Provides some examples of the published data." ;
-                        rdfs:label "Usage examples" .
-                    <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
-                        prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    GRAPH ?kgGraph {
+                        ?metadataDescription prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> ;
+                            dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
+                            rdfs:label "Usage examples measurement" ;
+                            dqv:computedOn ?endpointDescription ;
+                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
+                            dqv:value "false"^^xsd:boolean ;
+                            prov:generatedAtTime ?time .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> a dqv:Metric ;
+                            rdfs:comment "Provides some examples of the published data." ;
+                            rdfs:label "Usage examples" .
+                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl#activity> prov:used <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
+                            prov:wasAssociatedWith <https://orcid.org/0000-0001-6907-0136> .
+                    }
                 } WHERE {
                     GRAPH ?kgGraph {
                         ?kg a dcat:Dataset .
