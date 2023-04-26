@@ -77,6 +77,37 @@
             }
             """
         ]
+    ) ;
+    kgi:onFailure (
+        [
+            mf:action """
+                PREFIX prov: <http://www.w3.org/ns/prov#>
+                PREFIX dqv: <http://www.w3.org/ns/dqv#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                PREFIX earl: <http://www.w3.org/ns/earl#>
+                PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+                PREFIX kgi: <http://ns.inria.fr/kg/index#>
+                INSERT {
+                    GRAPH ?kgGraph {
+                        # Creation of the description
+                        ?endpointDescription sd:endpoint $rawEndpointUrl ;
+                            a sd:Service, dcat:DataService , prov:Entity , earl:TestSubject ;
+                            dcat:endpointURL $rawEndpointUrl ;
+                            rdfs:comment "No Dataset related with the IRI of the endpoint url was found." ;
+                            prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/nonTrivialExtractionRules/simpleExtraction.ttl#activity> ;
+                            prov:generatedAtTime ?time .
+
+                    }
+                } WHERE {
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Graph")) AS ?kgGraph)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
+                    BIND(NOW() AS ?time)
+                }
+            """
+        ]
     ) .
 
 <provCreationDateExtraction.ttl> a mf:ManifestEntry ;

@@ -9,6 +9,7 @@
     #     <../score_computing_rules/_manifest.ttl>
     ) .
 
+# For endpoint URL without associated Dataset, see nonTrivialExtractionRules/simpleExtraction.ttl
 <initialization.ttl> a mf:ManifestEntry ;
     kgi:onSuccess (
         [
