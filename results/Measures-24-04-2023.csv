@@ -174,6 +174,6 @@ https://linked.opendata.cz/sparql,http://vocabulary.curriculum.edu.au/scot,0,0,0
 https://linked.opendata.cz/sparql,http://webisa.webdatacommons.org,1,0,1,0,0.2,0,1,0,0,0.2,0.5,0,0,0,0,1,0,1,0,0,1,0,0,0,1,0,1,0,1,0
 https://linked.opendata.cz/sparql,http://www.openphacts.org/aef380b9-8ad6-4d07-8f0e-212f20555d1c,0,0,0,0,0.4,1,0,0,0,0,0.5,1,0,0,0,1,0,1,0,0,1,0,0,1,1,1,1,0,1,1
 https://ruian.linked.opendata.cz/sparql,https://linked.opendata.cz/zdroj/datovÃ¡-sada/datovÃ©-schrÃ¡nky/distribution,0,0,0,0,0,0,1,0,0,0,0.5,1,0,0,0,0,1,1,0,1,1,0,0,1,1,1,0,0,0,1
-,https://linked.opendata.cz/zdroj/datovÃ¡-sada/ovm/distribution,0,0,0,0,0,0,1,0,0,0,0.5,1,0,0,0,0,1,1,0,1,1,0,0,1,1,1,0,0,0,1
-,https://linked.opendata.cz/zdroj/datovÃ¡-sada/souhrnnÃ©-typy-ovm/distribuce,0,0,0,0,0,0,1,0,0,0,0.5,1,0,0,0,0,1,1,0,1,1,0,0,1,1,1,0,0,0,1
-,https://ruian.linked.opendata.cz/zdroj/datovÃ¡-sada/rÃºian/distribuce/rdf,0,0,0,0,0,0,1,0,0,0,0.5,1,0,0,0,0,0,1,0,1,1,0,0,1,1,1,0,0,0,1
+http://linked.opendata.cz/sparql,https://linked.opendata.cz/zdroj/datovÃ¡-sada/ovm/distribution,0,0,0,0,0,0,1,0,0,0,0.5,1,0,0,0,0,1,1,0,1,1,0,0,1,1,1,0,0,0,1
+http://linked.opendata.cz/sparql,https://linked.opendata.cz/zdroj/datovÃ¡-sada/souhrnnÃ©-typy-ovm/distribuce,0,0,0,0,0,0,1,0,0,0,0.5,1,0,0,0,0,1,1,0,1,1,0,0,1,1,1,0,0,0,1
+http://linked.opendata.cz/sparql,https://ruian.linked.opendata.cz/zdroj/datovÃ¡-sada/rÃºian/distribuce/rdf,0,0,0,0,0,0,1,0,0,0,0.5,1,0,0,0,0,0,1,0,1,1,0,0,1,1,1,0,0,0,1
