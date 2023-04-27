@@ -547,7 +547,7 @@
                             }
                         )
                     }
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Service")) AS ?serviceDescription)
+                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str(?kg)), "Service")) AS ?serviceDescription)
                 }
             """
         ]
