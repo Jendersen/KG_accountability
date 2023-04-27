@@ -77,6 +77,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A modification date of the Dataset must be provided (e.g. dct:modified, pav:contributedOn)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/ModificationDate.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/modification_date.ttl> a dqv:Metric ;
                             rdfs:comment "When was the dataset last maintained/modified?" ;
@@ -167,6 +169,7 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A frequency of maintenance of the Dataset must be provided (e.g. dct:accrualPeriodicity)"@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_frequency.ttl> a dqv:Metric ;
                             rdfs:comment "With which frequency is the dataset maintained?" ;
@@ -260,6 +263,7 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A location of modification of the Dataset must be provided (e.g. prov:wasGeneratedBy/prov:atLocation)."@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_location.ttl> a dqv:Metric ;
                             rdfs:comment "From what physical location (state, country, continent, ...) is or will the dataset be maintained?" ;
@@ -362,6 +366,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The methodology or software of maintenance/modification of the Dataset must be provided (e.g. dct:accrualMethod, or use prov)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/modificationMethod.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/maintenance/maintenance_methodology.ttl> a dqv:Metric ;
                             rdfs:comment "What will be the methodology/ procedure for data maintenance?" ;

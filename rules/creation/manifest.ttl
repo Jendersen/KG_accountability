@@ -78,6 +78,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_date.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A creation date of the Dataset must be provided (e.g. dct:created)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/creationDate.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_date.ttl> a dqv:Metric ;
                             rdfs:comment "What is/are the creation date(s) of the dataset?" ;
@@ -166,6 +168,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_location.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A location of creation of the Dataset must be provided (e.g. pav:createdAt, schema:locationCreated)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/creationLocation.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_location.ttl> a dqv:Metric ;
                             rdfs:comment "From what physical location (state, country, continent, ...) was the dataset created?" ;
@@ -249,6 +253,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_source.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The source from which the data was collected or derived must be provided (e.g. dct:source, schema:isBasedOn, pav:derivedFrom)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/source.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_source.ttl> a dqv:Metric ;
                             rdfs:comment "From what original source(s) were the data collected or derived?" ;
@@ -334,6 +340,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_methodology.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The methodology or software of creation of the Dataset must be provided (e.g. dct:accrualMethod, pav:createdWith)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/creationMethod.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/creation_methodology.ttl> a dqv:Metric ;
                             rdfs:comment "Which methods or tools were used for data creation?" ;

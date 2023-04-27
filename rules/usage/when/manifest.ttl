@@ -98,6 +98,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The publication date of the Dataset (or its first date of availability) must be provided (e.g. dct:issued, dct:available)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/publicationDate.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateStartAvailability.ttl> a dqv:Metric ;
                             rdfs:comment "Since when was the dataset available?" ;
@@ -215,6 +217,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The date when the Dataset stops to be available must be provided (e.g. prov:invalidatedAtTime, schema:expires)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/endAvailability.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndAvailability.ttl> a dqv:Metric ;
                             rdfs:comment "Until when is the dataset available?" ;
@@ -328,6 +332,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The date when the Dataset stops to be valid must be provided (e.g. dcterms:valid, schema:expires)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/endValidity.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/when/usage_dateEndValidity.ttl> a dqv:Metric ;
                             rdfs:comment "Until when is the dataset valid?" ;

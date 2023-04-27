@@ -94,6 +94,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/who/usage_publisher.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The publisher of the Dataset must be provided (e.g. dct:publisher, pav:providedBy)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/publisher.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/who/usage_publisher.ttl> a dqv:Metric ;
                             rdfs:comment "Who publishes this dataset?" ;
@@ -207,6 +209,8 @@
                             rdfs:label "Usage rights measurement" ;
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/who/usage_rights.ttl> ;
+                            rdfs:comment "Information about who may use the Dataset must be provided, mainly by a license or some rights information (e.g. dct:license, dct:rights, dataid:openness)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/license.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/who/usage_rights.ttl> a dqv:Metric ;
@@ -322,6 +326,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/who/usage_audience.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Information about who is intended to use the Dataset, i.e. its audience, must be provided (e.g. dct:audience, dataid:usefulness)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/audience.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/who/usage_audience.ttl> a dqv:Metric ;
                             rdfs:comment "Who is intended to use the published dataset?" ;

@@ -76,6 +76,8 @@
                             dqv:hasQualityMeasurement ?qualityMeasurementContributor .
                         ?qualityMeasurementContributor a dqv:QualityMeasurement ;
                             rdfs:label "Creation contributor measurement" ;
+                            rdfs:comment "A creator, an author or a contributor of the Dataset must be provided (e.g. dct:creator or dct:contributor)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/creator.ttl> , <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/editor.ttl> ;
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributor.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
@@ -193,6 +195,7 @@
                             dqv:computedOn ?endpointDescription, ?contributor ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "For each creator/contributor of the Dataset, the identity (e.g. foaf:name or schema:name) and contact information must be provided (e.g. foaf:mbox, schema:contactPoint)"@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorID.ttl> a dqv:Metric ;
                             rdfs:comment "What are all information relevant to the identification of the contributor: what is the name of the contributor and a point of contact (email, or phone number, homepage, or address) ?" ;
@@ -312,6 +315,7 @@
                             dqv:computedOn ?endpointDescription, ?contributor ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Each creator/contributor of the Dataset must either be a Person or an Organization (from foaf, schema or prov)."@en ;
                             prov:generatedAtTime ?time .
                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorType.ttl> a dqv:Metric ;
                             rdfs:comment "Is the contributor (of the data creation process) a person or an organization?" ;
@@ -436,6 +440,7 @@
                             dqv:computedOn ?endpointDescription, ?contributor ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Each creator/contributor of the Dataset must be related with qualifications information (e.g. schema:knowsAbout, schema:jobTitle or foaf:publications)."@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorQualification.ttl> a dqv:Metric ;
                             rdfs:comment "What are the qualifications of the contributor (of the data creation process)?" ;
@@ -554,6 +559,7 @@
                             dqv:computedOn ?endpointDescription, ?contributor ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Each creator/contributor of the Dataset must have information about her/his influences (e.g. schema:worksFor, foaf:fundedBy or schema:sponsor)."@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/creation/contributor/creation_contributorInfluences.ttl> a dqv:Metric ;
                             rdfs:comment "Concerning the contributor (of the data creation process), provide all characteristics which could have an influence on the data set." ;

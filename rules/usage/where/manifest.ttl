@@ -94,6 +94,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/where/usage_webpage.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A link to the web page of the Dataset must be provided (e.g. foaf:homepage, dcat:landingPage)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/webpage.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/where/usage_webpage.ttl> a dqv:Metric ;
                             rdfs:comment "What is the webpage presenting the dataset and/or allowing to gain access to it?" ;
@@ -207,6 +209,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/where/usage_address.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A link to the endpoint or a dump of the Dataset must be provided (e.g. void:sparqlEndpoint, void:dataDump)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/dump.ttl> , <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/sparqlEndpoint.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/where/usage_address.ttl> a dqv:Metric ;
                             rdfs:comment "Where to access the dataset (either through a dump or a sparql endpoint)?" ;
@@ -322,6 +326,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/where/usage_location.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The location where the Dataset may be used must be provided, mainly by a license or some rights information (e.g. dct:license, dct:rights, dataid:openness)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/license.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/where/usage_location.ttl> a dqv:Metric ;
                             rdfs:comment "In what physical location can the dataset be used?" ;

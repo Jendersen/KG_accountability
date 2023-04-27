@@ -96,6 +96,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_license.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A license of the Dataset must be provided (e.g. dct:license, schema:license)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/license.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_license.ttl> a dqv:Metric ;
                             rdfs:comment "What is the license of the dataset?" ;
@@ -212,6 +214,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_access.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A link to the endpoint or a dump of the Dataset must be provided (e.g. void:sparqlEndpoint, void:dataDump)"@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/dump.ttl> , <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/sparqlEndpoint.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_access.ttl> a dqv:Metric ;
                             rdfs:comment "How to access the dataset? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access." ;
@@ -331,6 +335,7 @@
                            dqv:computedOn ?endpointDescription, ?endpoint ;
                            dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_endpoint.ttl> ;
                            dqv:value "false"^^xsd:boolean ;
+                           rdfs:comment "Information about the endpoint must be provided, either the SPARQL query language (sd:supportedLanguage) or the result format (sd:resultFormat)."@en ;
                            prov:generatedAtTime ?time .
                        <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_endpoint.ttl> a dqv:Metric ;
                            rdfs:comment "If an endpoint is provided, what are its characteristics?" ;
@@ -446,6 +451,7 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_reuse.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Information about how to use or reuse the Dataset must be provided (dataid:reuseAndIntegration)"@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_reuse.ttl> a dqv:Metric ;
                             rdfs:comment "How to use, reuse or integrate the dataset?" ;
@@ -559,6 +565,7 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_requirements.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Information about the requirements to use the Dataset must be provided (dcat:distribution/dataid:softwareRequirement)."@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/how/usage_requirements.ttl> a dqv:Metric ;
                             rdfs:comment "What are the requirements to use the dataset?" ;

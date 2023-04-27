@@ -97,6 +97,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Examples of resources of the Dataset must be provided (e.g. void:exampleResource, skos:example)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/examples.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_examples.ttl> a dqv:Metric ;
                             rdfs:comment "Provides some examples of the published data." ;
@@ -210,6 +212,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Some concepts and topics covered by the Dataset must be provided (e.g. dct:subject, dcat:keyword)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/topic.ttl> , <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/keyword.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_concepts.ttl> a dqv:Metric ;
                             rdfs:comment "What concepts, topics or subjects does the dataset cover?" ;
@@ -324,6 +328,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "A description of the Dataset must be provided (e.g. dct:description, schema:description)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/description.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_description.ttl> a dqv:Metric ;
                             rdfs:comment "What is a general description of the dataset?" ;
@@ -437,6 +443,7 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The number of triples in the Dataset must be provided (void:triples)."@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_triples.ttl> a dqv:Metric ;
                             rdfs:comment "How many triples are there in the dataset?" ;
@@ -552,6 +559,7 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The number of entities, of properties, and of classes in the Dataset must be provided (e.g. void:entities and void:properties and void:classes)."@en ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_entitiesPropertiesClasses.ttl> a dqv:Metric ;
                             rdfs:comment "How many entities, properties and classes are there in the dataset?" ;
@@ -666,6 +674,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "The serialization format of the Dataset must be provided (e.g. dct:format, void:feature)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/serialization.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_serialization.ttl> a dqv:Metric ;
                             rdfs:comment "What RDF serialization formats does the dataset support?" ;
@@ -780,6 +790,8 @@
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> ;
                             dqv:value "false"^^xsd:boolean ;
+                            rdfs:comment "Some quality information concerning the Dataset must be provided (e.g. dqv:hasQualityAnnotation, schema:award)."@en ;
+                            rdfs:seeAlso <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/equivalencesRules/qualityAnnotation.ttl> ;
                             prov:generatedAtTime ?time .
                         <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/rules/usage/what/usage_quality.ttl> a dqv:Metric ;
                             rdfs:comment "Provide information about the quality of the dataset." ;
