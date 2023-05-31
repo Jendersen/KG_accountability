@@ -9,6 +9,9 @@
     ) .
 
 <measure_completeness.ttl> a mf:ManifestEntry ;
+	kgi:requiredAssets (
+		<../_manifest.ttl>
+	) ;
     kgi:onSuccess (
         [
             mf:action """
@@ -61,6 +64,9 @@
     ) .
 
 <measure_leaf_tags.ttl> a mf:ManifestEntry ;
+	kgi:requiredAssets (
+		<https://raw.githubusercontent.com/Jendersen/KG_accountability/towardsIndeGx/score_computing_rules/>
+	) ;
     kgi:onSuccess (
         [
             mf:action """
@@ -106,6 +112,9 @@
     ) .
 
 <measure_parent_tags.ttl> a mf:ManifestEntry ;
+	kgi:requiredAssets (
+		<https://raw.githubusercontent.com/Jendersen/KG_accountability/towardsIndeGx/score_computing_rules/>
+	) ;
     kgi:onSuccess (
         [
             mf:action """

@@ -19,9 +19,9 @@
         <endpointPropertiesExtraction.ttl>
         <dcatWebpageExtraction.ttl>
         <dcatRequirements.ttl>
-    # ) ;
-    # mf:include (
-    #     <../equivalencesRules/_manifest.ttl>
+    ) ;
+    mf:include (
+        <../equivalencesRules/_manifest.ttl>
     ) .
 
 <simpleExtraction.ttl> a mf:ManifestEntry ;

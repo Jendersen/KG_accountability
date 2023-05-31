@@ -3,6 +3,14 @@
 
 <> a mf:Manifest ;
     mf:entries (
+        <_init.ttl>
+    ) .
+
+<_init.ttl> a mf:ManifestEntry ;
+    kgi:requiredAssets (
+        <../nonTrivialExtractionRules/_manifest.ttl>
+    ) ;
+    kgi:onSuccess (
         <accessStatement.ttl>
         <alternativeTitle.ttl>
         <audience.ttl>
@@ -41,7 +49,6 @@
         <vocabularies.ttl>
         <webpage.ttl>
     ) .
-
 
 <accessStatement.ttl> a mf:ManifestEntry ;
     kgi:onSuccess (
