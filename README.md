@@ -11,6 +11,9 @@ This code is made to be used along with [IndeGx](https://github.com/Wimmics/deka
 
 The queries *q_measure_creator_who.rq*, *q_measure_maintenance_who.rq*, and *q_measure_usage_how.rq* have to be executed first and their results be used for the execution of the other queries. All queries have to be executed on the output files in *results* with manual import of the two rdf files *accountability.ttl* and *sin.ttl*.
 
+## To cite this work
+- J. Andersen, S. Cazalens, P. Lamarre, Assessing Knowledge Graphs Accountability. ESWC 2023, Poster and demonstration. https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Andersen_2023_Assessing.pdf
+
 ## Description of SIN-O: Structured Information Need Ontology
 
 We define the ontology SIN-O as illustrated by the following figure. Hence, an *InformationNeed* is composed of a set of questions, pictured on the right, of an analysis dimension which is a set of structured tags, pictured on the left, and of links between these two sets represented by labelings, i.e. a tagging, pictured in the middle.
