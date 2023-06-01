@@ -3,6 +3,5 @@
 
 <> a mf:Manifest ;
     mf:include (
-        <./rules/manifest.ttl>
         <./score_computing_rules/_manifest.ttl>
     ) .

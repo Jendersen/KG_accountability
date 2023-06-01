@@ -5,4 +5,5 @@
     mf:include (
         <./nonTrivialExtractionRules/_manifest.ttl>
         <./equivalencesRules/_manifest.ttl>
+        <./rules/manifest.ttl>
     ) .
