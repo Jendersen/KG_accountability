@@ -10,6 +10,9 @@
     ) .
 
 <measure_init.ttl> a mf:ManifestEntry ;
+	kgi:requiredAssets (
+		<../rules/manifest.ttl>
+	) ;
     kgi:onSuccess (
         [
             mf:action """
