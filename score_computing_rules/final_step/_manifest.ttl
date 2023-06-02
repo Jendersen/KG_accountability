@@ -2,6 +2,9 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 
 <> a mf:Manifest ;
+	kgi:requiredAssets (
+		<../_manifest.ttl>
+	) ;
     mf:entries (
         <measure_completeness.ttl>
         <measure_leaf_tags.ttl>
@@ -9,9 +12,6 @@
     ) .
 
 <measure_completeness.ttl> a mf:ManifestEntry ;
-	kgi:requiredAssets (
-		<../_manifest.ttl>
-	) ;
     kgi:onSuccess (
         [
             mf:action """
@@ -64,9 +64,6 @@
     ) .
 
 <measure_leaf_tags.ttl> a mf:ManifestEntry ;
-	kgi:requiredAssets (
-		<../_manifest.ttl>
-	) ;
     kgi:onSuccess (
         [
             mf:action """
@@ -112,9 +109,6 @@
     ) .
 
 <measure_parent_tags.ttl> a mf:ManifestEntry ;
-	kgi:requiredAssets (
-		<../_manifest.ttl>
-	) ;
     kgi:onSuccess (
         [
             mf:action """

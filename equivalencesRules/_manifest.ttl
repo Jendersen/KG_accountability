@@ -2,15 +2,10 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 
 <> a mf:Manifest ;
-    mf:entries (
-        <_init.ttl>
-    ) .
-
-<_init.ttl> a mf:ManifestEntry ;
     kgi:requiredAssets (
         <../nonTrivialExtractionRules/_manifest.ttl>
     ) ;
-    kgi:onSuccess (
+    mf:entries (
         <accessStatement.ttl>
         <alternativeTitle.ttl>
         <audience.ttl>
