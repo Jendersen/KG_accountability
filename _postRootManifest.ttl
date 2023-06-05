@@ -5,4 +5,5 @@
     mf:include (
         <rules/manifest.ttl>
         <score_computing_rules/_manifest.ttl>
+        <score_computing_rules/final_step/_manifest.ttl>
     ) .

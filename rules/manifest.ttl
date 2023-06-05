@@ -4,9 +4,6 @@
 <> a mf:Manifest ;
     mf:entries (
         <initialization.ttl>
-    ) ;
-    mf:include (
-        <../score_computing_rules/_manifest.ttl>
     ) .
 
 # For endpoint URL without associated Dataset, see nonTrivialExtractionRules/simpleExtraction.ttl
