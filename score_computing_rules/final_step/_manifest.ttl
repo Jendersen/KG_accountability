@@ -2,9 +2,6 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 
 <> a mf:Manifest ;
-    kgi:requiredAssets (
-        <../_manifest.ttl>
-    ) ;
     mf:entries (
         <measure_completeness.ttl>
         <measure_leaf_tags.ttl>

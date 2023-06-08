@@ -2,9 +2,6 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 
 <> a mf:Manifest ;
-    kgi:requiredAssets (
-        <../nonTrivialExtractionRules/_manifest.ttl>
-    ) ;
     mf:entries (
         <accessStatement.ttl>
         <alternativeTitle.ttl>
@@ -43,6 +40,9 @@
         <version.ttl>
         <vocabularies.ttl>
         <webpage.ttl>
+    ) ;
+    mf:include (
+        <../rules/manifest.ttl>
     ) .
 
 <accessStatement.ttl> a mf:ManifestEntry ;

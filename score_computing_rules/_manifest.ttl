@@ -2,14 +2,14 @@
 @prefix kgi: <http://ns.inria.fr/kg/index#> .
 
 <> a mf:Manifest ;
-    kgi:requiredAssets (
-        <../rules/manifest.ttl>
-    ) ;
     mf:entries (
         <measure_init.ttl>
         <measure_creator_who.ttl>
         <measure_maintenance_who.ttl>
         <measure_usage_how.ttl>
+    ) ;
+    mf:include (
+        <final_step/_manifest.ttl>
     ) .
 
 <measure_init.ttl> a mf:ManifestEntry ;
