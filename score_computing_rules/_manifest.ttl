@@ -37,14 +37,13 @@
             INSERT {
                 GRAPH ?kgGraph {
                     ?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl#activity> ;
-                        dqv:hasQualityMeasurement [
-                            a dqv:QualityMeasurement ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
                             rdfs:label "Creator contributor measurement" ;
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl>;
                             dqv:value ?val_contr ;
-                            prov:generatedAtTime ?time
-                        ] .
+                            prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl> a dqv:Metric ;
                         rdfs:comment "Who are the creators of the KG and their role in this process? For all creators, indicates whether they are a person or an organization, provide information to identify them (name and point of contact such as email, or phone number, or address, or homepage), provide their qualifications, provide all characteristics which could have an influence on the KG." ;
                     rdfs:label "Aggregated creator contributor" .
@@ -90,6 +89,7 @@
                             dqv:value ?v .
                     } GROUP BY ?kg }
                 }
+                BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_creator_who.ttl")), "Measure")) AS ?qualityMeasurement)
                 BIND( IF (BOUND(?valid) , ?valid, 0) AS ?vvalid)
                 BIND( IF (BOUND(?valtype) , ?valtype, 0) AS ?vvaltype)
                 BIND( IF (BOUND(?valqual) , ?valqual, 0) AS ?vvalqual)
@@ -117,14 +117,13 @@
             INSERT {
                 GRAPH ?kgGraph {
                     ?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_maintenance_who.ttl#activity> ;
-                        dqv:hasQualityMeasurement [
-                            a dqv:QualityMeasurement ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
                             rdfs:label "Maintenance contributor measurement" ;
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_maintenance_who.ttl>;
                             dqv:value ?val_contr ;
-                            prov:generatedAtTime ?time
-                        ] .
+                            prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_maintenance_who.ttl> a dqv:Metric ;
                         rdfs:comment "Who are the maintainers of the KG and their role in this process? For all maintainers, indicates whether they are a person or an organization, provide information to identify them (name and point of contact such as email, or phone number, or address, or homepage), provide their qualifications, provide all characteristics which could have an influence on the KG." ;
                     rdfs:label "Aggregated Maintenance contributor" .
@@ -178,6 +177,7 @@
                         }
                     } GROUP BY ?kg }
                 }
+                BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_maintenance_who.ttl")), "Measure")) AS ?qualityMeasurement)
                 BIND( IF (BOUND(?valid) , ?valid, 0) AS ?vvalid)
                 BIND( IF (BOUND(?valtype) , ?valtype, 0) AS ?vvaltype)
                 BIND( IF (BOUND(?valqual) , ?valqual, 0) AS ?vvalqual)
@@ -205,14 +205,13 @@
             INSERT {
                 GRAPH ?kgGraph {
                     ?kg prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_usage_how.ttl#activity> ;
-                        dqv:hasQualityMeasurement [
-                            a dqv:QualityMeasurement ;
+                        dqv:hasQualityMeasurement ?qualityMeasurement .
+                        ?qualityMeasurement a dqv:QualityMeasurement ;
                             rdfs:label "Usage access measurement" ;
                             dqv:computedOn ?endpointDescription ;
                             dqv:isMeasurementOf <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_usage_how.ttl>;
                             dqv:value ?val_access ;
-                            prov:generatedAtTime ?time
-                        ] .
+                            prov:generatedAtTime ?time .
                     <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_usage_how.ttl> a dqv:Metric ;
                         rdfs:comment "How to access the KG? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access, and the characteristics of the endpoint if provided." ;
                     rdfs:label "Aggregated Usage access" .
@@ -241,6 +240,7 @@
                 }
                 BIND( IF (BOUND(?valend), ( xsd:decimal(?v) + ?valend )/2 , xsd:decimal(?v) ) AS ?val_access)
                 BIND(NOW() AS ?time)
+                BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(CONCAT( str(?kg), "https://raw.githubusercontent.com/Jendersen/KG_accountability/main/score_computing_rules/measure_usage_how.ttl")), "Measure")) AS ?qualityMeasurement)
             }
             """
         ]

@@ -88,7 +88,6 @@
                 PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
                 PREFIX kgi: <http://ns.inria.fr/kg/index#>
                 INSERT {
-                    GRAPH ?kgGraph {
                         # Creation of the description
                         ?endpointDescription sd:endpoint $rawEndpointUrl ;
                             a sd:Service, dcat:DataService , prov:Entity , earl:TestSubject ;
@@ -96,10 +95,7 @@
                             rdfs:comment "No Dataset related with the IRI of the endpoint url was found." ;
                             prov:wasGeneratedBy <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/nonTrivialExtractionRules/simpleExtraction.ttl#activity> ;
                             prov:generatedAtTime ?time .
-
-                    }
                 } WHERE {
-                    BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Graph")) AS ?kgGraph)
                     BIND(Iri(CONCAT("http://ns.inria.fr/kg/index#", MD5(str($rawEndpointUrl)), "Endpoint")) AS ?endpointDescription)
                     BIND(NOW() AS ?time)
                 }
