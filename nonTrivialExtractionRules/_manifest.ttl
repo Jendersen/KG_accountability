@@ -4,21 +4,6 @@
 <> a mf:Manifest ;
     mf:entries (
         <simpleExtraction.ttl>
-        <provCreationDateExtraction.ttl>
-        <provCreationLocationExtraction.ttl>
-        <provCreationMethodExtraction.ttl>
-        <provCreatorExtraction.ttl>
-        <creatorPropertiesExtraction.ttl>
-        <dcatDumpExtraction.ttl>
-        <provEditorExtraction.ttl>
-        <provModificationDateExtraction.ttl>
-        <provModificationLocationExtraction.ttl>
-        <provPublicationDateExtraction.ttl>
-        <provPublisherExtraction.ttl>
-        <dcatEndpointExtraction.ttl>
-        <endpointPropertiesExtraction.ttl>
-        <dcatWebpageExtraction.ttl>
-        <dcatRequirements.ttl>
     ) .
 
 <simpleExtraction.ttl> a mf:ManifestEntry ;
@@ -74,6 +59,21 @@
             }
             """
         ]
+        <provCreationDateExtraction.ttl>
+        <provCreationLocationExtraction.ttl>
+        <provCreationMethodExtraction.ttl>
+        <provCreatorExtraction.ttl>
+        <creatorPropertiesExtraction.ttl>
+        <dcatDumpExtraction.ttl>
+        <provEditorExtraction.ttl>
+        <provModificationDateExtraction.ttl>
+        <provModificationLocationExtraction.ttl>
+        <provPublicationDateExtraction.ttl>
+        <provPublisherExtraction.ttl>
+        <dcatEndpointExtraction.ttl>
+        <endpointPropertiesExtraction.ttl>
+        <dcatWebpageExtraction.ttl>
+        <dcatRequirements.ttl>
     ) ;
     kgi:onFailure (
         [
