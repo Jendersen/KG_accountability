@@ -9,6 +9,8 @@
 <simpleExtraction.ttl> a mf:ManifestEntry ;
     kgi:onSuccess (
         [
+            kgi:timeout "PT120S"^^xsd:duration ;
+            kgi:recommendedPagination 500 ;
             mf:action """
             PREFIX void: <http://rdfs.org/ns/void#>
             PREFIX dcat: <http://www.w3.org/ns/dcat#>
