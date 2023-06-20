@@ -1,31 +1,26 @@
 # KG accountability
-
+The objective of this work is to measure the accountability of RDF graphs. To do so, we define accountability requirements as SPARQL queries. Then, we evaluate many Knowledge Graphs (KG) by querying public SPARQL endpoints using the [IndeGx framework](https://github.com/Wimmics/dekalog). To use IndeGx, we provide a new set of rules dedicated to accountability.
 This work is part of the [DeKalog project](https://dekalog.univ-nantes.fr).
-This code is made to be used along with [IndeGx](https://github.com/Wimmics/dekalog), version v2.6.2 was used for these experiments.
 
-- It provides a new set of rules to measure accountability of knowledge graphs in [rules/](rules/). **This folder contains the queries to assess accountability.**
-- [information_need/](information_need/) provides the ontology SIN-O to describe information needs, and a first information need focused on accountability.
-- [score_computing_queries/](score_computing_queries/) contains queries to execute after running all rules on a given set of endpoints in order (i) to compute the score for the successions of queries and (ii) to obtain the different scores of accountability on each tag, and the global score.
-- [catalogs/](catalogs/) was taken from IndeGx. It is the catalog of endpoints used for our experiments.
-- [results/](results/) are the results of our experiments on the 27 preselected endpoints. Each result is divided into four files: *output-part1* and *output-part2* are the result of IndeGx with our rules ; *measures_workflow* are the result of the execution of the queries *q_measure_creator_who.rq*, *q_measure_maintenance_who.rq* and *q_measure_usage_how.rq* ; *measures_tags* are the result of the execution of the other queries. *results_summary.csv* provides the completeness score of KGs on each tag.
+## Experiments
+This code is made to be used along with [IndeGx](https://github.com/Wimmics/dekalog), version v2.6.2(!) was used for these experiments.
+The catalog of SPARQL endpoints used for our experiments is [catalogs/](catalogs/). It is taken from IndeGx.
 
-The queries *q_measure_creator_who.rq*, *q_measure_maintenance_who.rq*, and *q_measure_usage_how.rq* have to be executed first and their results be used for the execution of the other queries. All queries have to be executed on the output files in *results* with manual import of the two rdf files *accountability.ttl* and *sin.ttl*.
+To evaluate KGs, we proceed in several steps.
+1. First, triples corresponding to the metadata of the evaluated KG are extracted using queries in folder [nonTrivialExtractionRules/](nonTrivialExtractionRules/)
+2. Then, this extracted triples are saturated by adding equivalent classes and properties, as defined in [equivalencesRules/](equivalencesRules/)
+3. The KG is evaluated according to this saturated metadata: [rules/](rules/)
+4. Finally, queries in [score_computing_rules/](score_computing_rules/) enable to compute the score of a questions made of a the successions of queries.
+
+A summary of the results is available here: [results/](results/)
 
 ## To cite this work
 - J. Andersen, S. Cazalens, P. Lamarre, Assessing Knowledge Graphs Accountability. ESWC 2023, Poster and demonstration. https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Andersen_2023_Assessing.pdf
 
-## Description of SIN-O: Structured Information Need Ontology
+*This work relies on a previous experiment. All catalogs, rules and results of this paper are available in this version of the repository: [v1.0](https://github.com/Jendersen/KG_accountability/tree/v1.0)*
 
-We define the ontology SIN-O as illustrated by the following figure. Hence, an *InformationNeed* is composed of a set of questions, pictured on the right, of an analysis dimension which is a set of structured tags, pictured on the left, and of links between these two sets represented by labelings, i.e. a tagging, pictured in the middle.
+## Description of the Hierarchy and Requirements about Accountability
 
-[![Schema of the ontology SIN-O](information_need/sino.png)](information_need/sino.png)
+The accountability requirements has been adapted from the [LiQuID metadata model](https://ceur-ws.org/Vol-2716/paper5.pdf), both its hierarchical structure and the questions illustrating each field of this structure. The organized requirements we defined is illustrated in the following Figure. The correspondance between the LiQuID questions and our adaptation in the context of Knowledge Graphs is available [here](docs/README.md). For a summary of the required properties for each question, see [this file](docs/questions_and_properties.md).
 
-In addition, SHACL constraints have been added to the ontology in order to verify if the need is well-formed. Currently, these constraints are expressed considering only one need. In the figure, they are represented with the cardinalities in red (for unicity of weights, andl and unique tagging). Some other constraints check if a *Tag* either has a child or is used in a *Labeling* (leaf tagging and no orphan tag) and if each tag is a descendant of the *root* (the analysis dimension is a tree rooted at *root*).
-
-Finally, to avoid defining inconsistent or unexpected analysis dimensions, we only allow a single *InformationNeed* to be associated with a *Tag*. Indeed there is only one structuring possible with this representation because the property *isChildOf* is only related with the tag and does not depend on the information need. As *Labeling* is associated with a tag, it can only belong to one analysis dimension. As a result, tags and questions cannot be used in several information needs, they must be copied in order to be reused. 
-
-## Description of the Information Need about Accountability
-
-The information need about accountability has been adapted from the [LiQuID metadata model](https://ceur-ws.org/Vol-2716/paper5.pdf), both its hierarchical structure and the questions illustrating each field of this structure. The information need we defined is illustrated in the following Figure. The correspondance between the LiQuID questions and our adaptation in the context of Knowledge Graphs is available [here](docs/README.md). For a summary of the required properties for each question, see [this file](docs/questions_and_properties.md).
-
-[![Information need on accountability](docs/tag_quest_query.png)](docs/tag_question_query.pdf)
+[![Accountability requirements](docs/tag_quest_query.png)](docs/tag_question_query.pdf)
