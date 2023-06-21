@@ -1,5 +1,5 @@
-# KG accountability
-The objective of this work is to measure the accountability of RDF graphs. To do so, we define accountability requirements as SPARQL queries. Then, we evaluate many Knowledge Graphs (KG) by querying public SPARQL endpoints using the [IndeGx framework](https://github.com/Wimmics/dekalog). To use IndeGx, we provide a new set of rules dedicated to accountability.
+# KG Accountability
+This work aims to measure the accountability of RDF graphs. To do so, we define accountability requirements as SPARQL queries. Then, we evaluate many Knowledge Graphs (KG) by querying public SPARQL endpoints using the [IndeGx framework](https://github.com/Wimmics/dekalog). To use IndeGx, we provide a new set of rules dedicated to accountability.
 This work is part of the [DeKalog project](https://dekalog.univ-nantes.fr).
 
 ## Experiments
@@ -7,17 +7,17 @@ This code is made to be used along with [IndeGx](https://github.com/Wimmics/deka
 The catalog of SPARQL endpoints used for our experiments is [catalogs/](catalogs/). It is taken from IndeGx.
 
 To evaluate KGs, we proceed in several steps.
-1. First, triples corresponding to the metadata of the evaluated KG are extracted using queries in folder [nonTrivialExtractionRules/](nonTrivialExtractionRules/)
-2. Then, this extracted triples are saturated by adding equivalent classes and properties, as defined in [equivalencesRules/](equivalencesRules/)
-3. The KG is evaluated according to this saturated metadata: [rules/](rules/)
+1. First, triples corresponding to the metadata of the evaluated KG are extracted using queries in folder [nonTrivialExtractionRules/](nonTrivialExtractionRules/).
+2. Then, this extracted triples are saturated by adding equivalent classes and properties, as defined in [equivalencesRules/](equivalencesRules/).
+3. The KG is evaluated according to this saturated metadata: [rules/](rules/).
 4. Finally, queries in [score_computing_rules/](score_computing_rules/) enable to compute the score of a questions made of a the successions of queries.
 
-A summary of the results is available here: [results/](results/)
+A summary of the results is available here: [results/](results/).
 
-## To cite this work
+## To Cite this Work
 - J. Andersen, S. Cazalens, P. Lamarre, Assessing Knowledge Graphs Accountability. ESWC 2023, Poster and demonstration. https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Andersen_2023_Assessing.pdf
 
-*This work relies on a previous experiment. All catalogs, rules and results of this paper are available in this version of the repository: [v1.0](https://github.com/Jendersen/KG_accountability/tree/v1.0)*
+*This work relies on a previous experiment. All catalogs, rules and results of this paper are available in this version of the repository: [v1.0](https://github.com/Jendersen/KG_accountability/tree/v1.0).*
 
 ## Description of the Hierarchy and Requirements about Accountability
 
