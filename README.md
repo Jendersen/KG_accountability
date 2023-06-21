@@ -10,7 +10,7 @@ To evaluate KGs, we proceed in several steps.
 1. First, triples corresponding to the metadata of the evaluated KG are extracted using queries in folder [nonTrivialExtractionRules/](nonTrivialExtractionRules/).
 2. Then, this extracted triples are saturated by adding equivalent classes and properties, as defined in [equivalencesRules/](equivalencesRules/).
 3. The KG is evaluated according to this saturated metadata: [rules/](rules/).
-4. Finally, queries in [score_computing_rules/](score_computing_rules/) enable to compute the score of a questions made of a the successions of queries.
+4. Finally, queries in [score_computing_rules/](score_computing_rules/) enable to compute the score of a questions made of a the successions of queries, and then to obtain the different scores of accountability on each aspect of the hierarchy, and the global score of accountability.
 
 A summary of the results is available here: [results/](results/).
 
@@ -24,3 +24,5 @@ A summary of the results is available here: [results/](results/).
 The accountability requirements has been adapted from the [LiQuID metadata model](https://ceur-ws.org/Vol-2716/paper5.pdf), both its hierarchical structure and the questions illustrating each field of this structure. The organized requirements we defined is illustrated in the following Figure. The correspondance between the LiQuID questions and our adaptation in the context of Knowledge Graphs is available [here](docs/README.md). For a summary of the required properties for each question, see [this file](docs/questions_and_properties.md).
 
 [![Accountability requirements](docs/tag_quest_query.png)](docs/tag_question_query.pdf)
+
+The folder [information_need/](information_need/) contains an RDF representation of these requirements and hierarchy. To do so, the ontology SIN-O is defined and used.
