@@ -1,7 +1,7 @@
 # Results
 
 Our experiments are run three times.
-The file [results_june-2023.csv](results/results_june-2023.csv) details the results obtained for each Dataset of each SPARQL endpoints on each questions. It also provides the accountability score on each aspect of the adapted LiQuID hierarchy.
+The file [results_june-2023.csv](/results/results_june-2023.csv) details the results obtained for each Dataset of each SPARQL endpoints on each questions. It also provides the accountability score on each aspect of the adapted LiQuID hierarchy.
 As all these scores are available, a fine analysis is possible to compare knowledge graphs with respect to each aspect.
 For example, the following figure compares the accountability scores obtained by some knowledge graphs on the different steps of the lifecycle:
 
