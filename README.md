@@ -3,7 +3,7 @@ This work aims to measure the accountability of RDF graphs. To do so, we define 
 This work is part of the [DeKalog project](https://dekalog.univ-nantes.fr).
 
 ## Experiments
-This code is made to be used along with [IndeGx](https://github.com/Wimmics/dekalog), version v2.6.2(!) was used for these experiments.
+This code is made to be used along with [IndeGx](https://github.com/Wimmics/dekalog), was used for these experiments.
 The catalog of SPARQL endpoints used for our experiments is [catalogs/](catalogs/). It is taken from IndeGx.
 
 To evaluate KGs, we proceed in several steps.
