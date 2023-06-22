@@ -2,6 +2,20 @@
 
 This file presents the questions asked to KGs, sorted by their associated tag. The *preferred properties* column shows a list of properties that can be used to answer the question. The properties must be associated with the URI of the KG. Unless otherwise specified, it is sufficient to provide at least one of them. Other properties can also be accepted, see the files in [rules/](../rules/).
 
+The following namespace prefixes are used:
+| Prefix | Namespace |
+|---|---|
+| dataid | http://dataid.dbpedia.org/ns/core# |
+| dcat | http://www.w3.org/ns/dcat# |
+| dce | http://purl.org/dc/elements/1.1/ |
+| dct | http://purl.org/dc/terms/ |
+| dqv | http://www.w3.org/ns/dqv# |
+| foaf | http://xmlns.com/foaf/0.1/ |
+| pav | http://purl.org/pav/ |
+| prov | http://www.w3.org/ns/prov# |
+| schema | http://schema.org/ |
+| void | http://rdfs.org/ns/void# |
+
 ## Data Collection
 
 <table>
@@ -19,7 +33,7 @@ This file presents the questions asked to KGs, sorted by their associated tag. T
 <td>Collection. When</td>
 <td>Creation date</td>
 <td>What is/are the creation date(s) of the KG?</td>
-<td>dct:created <br> prov:wasGeneratedAtTime <br> schema:dateCreated <br> pav:createdOn <br> pav:curatedOn</td>
+<td>dct:created <br> prov:generatedAtTime <br> schema:dateCreated <br> pav:createdOn <br> pav:curatedOn</td>
 </tr>
 <tr>
 <td rowspan="2">Collection. Where</td>
@@ -36,7 +50,7 @@ This file presents the questions asked to KGs, sorted by their associated tag. T
 <td>Collection. How</td>
 <td>Creation methods</td>
 <td>Which methods or tools were used for data creation?</td>
-<td>dct:accrualMethod <br> pav:createdWith/ dct:description</td>
+<td>dct:accrualMethod <br> pav:createdWith</td>
 </tr>
 </tbody>
 </table>
@@ -70,7 +84,7 @@ This file presents the questions asked to KGs, sorted by their associated tag. T
 <td>Maintenance. Where</td>
 <td>Modification location</td>
 <td>From what physical location (state, country, continent, ...) is or will the KG be maintained?</td>
-<td><em>see query in <a href="../rules/maintenance/maintenance_location.ttl">rules/</a></em></td>
+<td>prov:wasGeneratedBy <br>/prov:atLocation</td>
 </tr>
 <tr>
 <td>Maintenance. How</td>
@@ -130,7 +144,7 @@ This file presents the questions asked to KGs, sorted by their associated tag. T
 <tr>
 <td>Endpoint or dump URL</td>
 <td>Where to access the KG (either through a dump or a SPARQL endpoint)?</td>
-<td>void:sparqlEndpoint <br> void:dataDump <br> schema:distribution</td>
+<td>void:sparqlEndpoint <br> void:dataDump <br> schema:contentURL</td>
 </tr>
 <tr>
 <td>Usage location</td>
@@ -146,12 +160,12 @@ This file presents the questions asked to KGs, sorted by their associated tag. T
 <tr>
 <td>Endpoint or dump URL</td>
 <td>How to access the KG? Provide a SPARQL endpoint or a dump if they are freely accessible, or the procedure of access, and the characteristics of the endpoint if provided.</td>
-<td>void:sparqlEndpoint <br> void:dataDump <br> schema:distribution</td>
+<td>void:sparqlEndpoint <br> void:dataDump <br> schema:contentURL <br> <em>+ more details expected on the SPARQL endpoint</em></td>
 </tr>
 <tr>
 <td>Usage information</td>
 <td>How to use, reuse or integrate the KG?</td>
-<td>dataid:reuseAndIntegration <br> schema:usageInfo</td>
+<td>dataid:reuseAndIntegration</td>
 </tr>
 <tr>
 <td>Usage requirements</td>
@@ -182,7 +196,7 @@ This file presents the questions asked to KGs, sorted by their associated tag. T
 <tr>
 <td>Entities, properties, classes</td>
 <td>How many entities, properties and classes are there in the KG?</td>
-<td>void:entities AND void:properties AND void:classes</td>
+<td>void:entities <br> void:properties <br> void:classes</td>
 </tr>
 <tr>
 <td>Serialization</td>
