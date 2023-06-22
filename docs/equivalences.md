@@ -3,6 +3,7 @@
 This file contains the equivalences used to saturate the datasets descriptions. In case of doubt about how to read some patterns, the actual equivalences can be read in [this file](/nonTrivialExtractionRules/_manifest.ttl).
 The equivalences presented here are dedicated to the evaluation of Dataset Accountability. Some properties may not be considered equivalent in other contexts. Also, the domain and range of the properties have not been taken into account here.
 
+The following namespace prefixes are used:
 | Prefix | Namespace | Prefix | Namespace |
 |---|---|---|---|
 | adms | http://www.w3.org/ns/adms# | nie | http://www.semanticdesktop.org/ontologies/2007/01/19/nie# |
@@ -17,6 +18,7 @@ The equivalences presented here are dedicated to the evaluation of Dataset Accou
 | foaf | http://xmlns.com/foaf/0.1/ |     void    | http://rdfs.org/ns/void# |
 | owl | http://www.w3.org/2002/07/owl# | xhv | http://www.w3.org/1999/xhtml/vocab# |
 
+The equivalences are detailed here:
 | Property identifier | Equivalent properties (or patterns) |
 |--|--|
 |Class Dataset |dcat:Dataset<br>void:Dataset<br>dcmitype:Dataset<br>schema:Dataset<br>sd:Dataset<br>dataid:Dataset |
