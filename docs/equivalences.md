@@ -1,5 +1,21 @@
+# List of equivalences between properties (and patterns)
+
 This file contains the equivalences used to saturate the datasets descriptions. In case of doubt about how to read some patterns, the actual equivalences can be read in [this file](/nonTrivialExtractionRules/_manifest.ttl).
 The equivalences presented here are dedicated to the evaluation of Dataset Accountability. Some properties may not be considered equivalent in other contexts. Also, the domain and range of the properties have not been taken into account here.
+
+| Prefix | Namespace | Prefix | Namespace |
+|---|---|---|---|
+| adms | http://www.w3.org/ns/adms# | nie | http://www.semanticdesktop.org/ontologies/2007/01/19/nie# |
+| cc | http://creativecommons.org/ns# | pav | http://purl.org/pav/ |
+|     dataid    | http://dataid.dbpedia.org/ns/core# | powder-s | http://www.w3.org/2007/05/powder-s# |
+|     dcat    | http://www.w3.org/ns/dcat# | prov | http://www.w3.org/ns/prov# |
+| dce | http://purl.org/dc/elements/1.1/ | rdfs | http://www.w3.org/2000/01/rdf-schema# |
+|     dcmitype    | http://purl.org/dc/dcmitype/ |     schema    | http://schema.org/ |
+| dcterms | http://purl.org/dc/terms/ |     sd    | http://www.w3.org/ns/sparql-service-description# |
+| doap | http://usefulinc.com/ns/doap# | skos | http://www.w3.org/2004/02/skos/core# |
+| dqv | http://www.w3.org/ns/dqv# | sto | https://w3id.org/i40/sto# |
+| foaf | http://xmlns.com/foaf/0.1/ |     void    | http://rdfs.org/ns/void# |
+| owl | http://www.w3.org/2002/07/owl# | xhv | http://www.w3.org/1999/xhtml/vocab# |
 
 | Property identifier | Equivalent properties (or patterns) |
 |--|--|
@@ -34,7 +50,7 @@ The equivalences presented here are dedicated to the evaluation of Dataset Accou
 |source |dce:source<br>dcterms:source<br>schema:isBasedOn<br>pav:derivedFrom<br>pav:importedFrom<br>pav:retrievedFrom<br>prov:wasDerivedFrom<br>prov:hadPrimarySource |
 |sparqlEndpoint |schema:contentURL<br>void:sparqlEndpoint<br>dcat:accessService/dcat:endpointURL<br>dcat:accessService/sd:endpoint<br>?s dcat:servesDataset ?kg . ?s dcat:endpointURL ?url .<br>?s dcat:servesDataset ?kg . ?s sd:endpoint ?url . |
 |spatialCoverage |schema:spatialCoverage<br>dcterms:spatial |
-|temporalCoverage |<br>schema:temporalCoverage<br>dcterms:temporal |
+|temporalCoverage |schema:temporalCoverage<br>dcterms:temporal |
 |title |schema:name<br>dce:title<br>dcterms:title<br>rdfs:label |
 |topic |dce:subject<br>dcterms:subject<br>foaf:topic<br>foaf:primaryTopic<br>schema:about<br>dcat:theme |
 |version |schema:version<br>dcterms:hasVersion<br>dcat:version<br>pav:version<br>pav:hasCurrentVersion |
