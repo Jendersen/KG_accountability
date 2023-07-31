@@ -16,7 +16,7 @@
     kgi:onSuccess (
         [
             mf:action """
-            LOAD <https://raw.githubusercontent.com/Jendersen/KG_accountability/towardsIndeGx/information_need/accountability.ttl>
+            LOAD <https://raw.githubusercontent.com/Jendersen/KG_accountability/main/information_need/accountability.ttl>
             """
         ]
     ) .
