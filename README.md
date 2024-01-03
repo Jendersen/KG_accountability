@@ -15,9 +15,10 @@ To evaluate KGs, we proceed in several steps. Only the first one queries distant
 A summary of the results is available here: [results/](results/).
 
 ## To Cite this Work
-- J. Andersen, S. Cazalens, P. Lamarre, Assessing Knowledge Graphs Accountability. ESWC 2023, Poster and demonstration. https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Andersen_2023_Assessing.pdf
-
-*This work relies on a previous experiment. All catalogs, rules and results of this paper are available in this version of the repository: [v1.0](https://github.com/Jendersen/KG_accountability/tree/v1.0).*
+- J. Andersen, S. Cazalens, P. Lamarre, and P. Maillot, "[A Framework to Assess Knowledge Graphs Accountability](https://ieeexplore.ieee.org/document/10350099)," in 2023 IEEE International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT), IEEE, 2023, pp. 213–220.
+- J. Andersen, S. Cazalens, and P. Lamarre, "[Assessing knowledge graphs accountability](https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Andersen_2023_Assessing.pdf)," in The Semantic Web: ESWC 2023 Satellite Events, Cham: Springer Nature Switzerland, 2023, pp. 37–42.*
+  
+**This last work relies on a previous experiment. All catalogs, rules and results of this paper are available in this version of the repository: [v1.0](https://github.com/Jendersen/KG_accountability/tree/v1.0).*
 
 ## Description of the Hierarchy and Requirements about Accountability
 
