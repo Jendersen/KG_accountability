@@ -331,7 +331,7 @@
                         {?kg dcterms:accrualMethod ?method .}
                         # activity
                         UNION {
-                            ?kg prov:wasGeneratedBy ?activity .
+                            ?kg prov:wasGeneratedBy ?agent .
                             # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
                             # {?activity dcterms:description ?desc .} UNION {?activity dce:description ?desc . } UNION {?activity schema:description ?desc .}
                             ?agent a prov:SoftwareAgent .
@@ -386,7 +386,7 @@
                                 {?kg dcterms:accrualMethod ?method .}
                                 # activity
                                 UNION {
-                                    ?kg prov:wasGeneratedBy ?act .
+                                    ?kg prov:wasGeneratedBy ?agent .
                                     ?act a prov:Contribute ;
                                         prov:wasAssociatedWith ?agent .
                                     ?agent a prov:SoftwareAgent .
