@@ -18,40 +18,44 @@
         PREFIX dcterms: <http://purl.org/dc/terms/>
         PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
         ASK {
-            # Find the KG : is a Dataset
-            { ?kg a dcat:Dataset }
-            UNION { ?kg a void:Dataset }
-            UNION { ?kg a dcmitype:Dataset }
-            UNION { ?kg a schema:Dataset }
-            UNION { ?kg a sd:Dataset }
-            UNION { ?kg a dataid:Dataset }
+            SERVICE $rawEndpointUrl {
+                SELECT * {
+                    # Find the KG : is a Dataset
+                    { ?kg a dcat:Dataset }
+                    UNION { ?kg a void:Dataset }
+                    UNION { ?kg a dcmitype:Dataset }
+                    UNION { ?kg a schema:Dataset }
+                    UNION { ?kg a sd:Dataset }
+                    UNION { ?kg a dataid:Dataset }
 
-            # is linked directly or not to the endpoint
-            {?kg schema:contentURL $rawEndpointUrl .}
-            UNION {?kg void:sparqlEndpoint $rawEndpointUrl .}
-            { ?kg ?endpointLink $rawEndpointUrl . }
-            UNION {?kg dcat:accessService ?service .
-                   ?service dcat:endpointURL $rawEndpointUrl .  }
-            UNION {?kg dcat:accessService ?service .
-                   ?service sd:endpoint $rawEndpointUrl . }
-            UNION {?service dcat:servesDataset ?kg .
-                   ?service dcat:endpointURL $rawEndpointUrl . }
-            UNION {?service dcat:servesDataset ?kg .
-                   ?service sd:endpoint $rawEndpointUrl . }
+                    # is linked directly or not to the endpoint
+                    {?kg schema:contentURL $rawEndpointUrl .}
+                    UNION {?kg void:sparqlEndpoint $rawEndpointUrl .}
+                    { ?kg ?endpointLink $rawEndpointUrl . }
+                    UNION {?kg dcat:accessService ?service .
+                        ?service dcat:endpointURL $rawEndpointUrl .  }
+                    UNION {?kg dcat:accessService ?service .
+                        ?service sd:endpoint $rawEndpointUrl . }
+                    UNION {?service dcat:servesDataset ?kg .
+                        ?service dcat:endpointURL $rawEndpointUrl . }
+                    UNION {?service dcat:servesDataset ?kg .
+                        ?service sd:endpoint $rawEndpointUrl . }
 
-             # Find a SPARQL endpoint
-             {?kg schema:contentURL ?endpoint .}
-             UNION {?kg void:sparqlEndpoint ?endpoint .}
-             UNION {?kg dcat:accessService ?service .
-                    ?service dcat:endpointURL ?endpoint .  }
-             UNION {?kg dcat:accessService ?service .
-                    ?service sd:endpoint ?endpoint . }
-             UNION {?service dcat:servesDataset ?kg .
-                    ?service dcat:endpointURL ?endpoint . }
-             UNION {?service dcat:servesDataset ?kg .
-                    ?service sd:endpoint ?endpoint . }
+                    # Find a SPARQL endpoint
+                    {?kg schema:contentURL ?endpoint .}
+                    UNION {?kg void:sparqlEndpoint ?endpoint .}
+                    UNION {?kg dcat:accessService ?service .
+                            ?service dcat:endpointURL ?endpoint .  }
+                    UNION {?kg dcat:accessService ?service .
+                            ?service sd:endpoint ?endpoint . }
+                    UNION {?service dcat:servesDataset ?kg .
+                            ?service dcat:endpointURL ?endpoint . }
+                    UNION {?service dcat:servesDataset ?kg .
+                            ?service sd:endpoint ?endpoint . }
 
-            { ?endpoint sd:supportedLanguage ?language . }
-            UNION { ?endpoint sd:resultFormat ?format . }
+                    { ?endpoint sd:supportedLanguage ?language . }
+                    UNION { ?endpoint sd:resultFormat ?format . }
+                } LIMIT 1
+            }
         }
 """ .
