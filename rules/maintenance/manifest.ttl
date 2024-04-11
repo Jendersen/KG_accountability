@@ -329,11 +329,14 @@
 
                         # method
                         {?kg dcterms:accrualMethod ?method .}
-                        # activity
+                        # Software Agent
                         UNION {
                             ?kg prov:wasGeneratedBy ?activity .
-                            # {?act a prov:Contribute . } UNION {?act a prov:Modify . } UNION {?act a prov:Replace . }
-                            # {?activity dcterms:description ?desc .} UNION {?activity dce:description ?desc . } UNION {?activity schema:description ?desc .}
+                            ?activity prov:wasAssociatedWith ?agent .
+                            ?agent a prov:SoftwareAgent .
+                            # {?activity a prov:Contribute . } UNION {?activity a prov:Modify . } UNION {?activity a prov:Replace . }
+                        } UNION {
+                            ?kg prov:wasAttributedTo ?agent .
                             ?agent a prov:SoftwareAgent .
                         }
                     }
@@ -384,13 +387,15 @@
                             GRAPH ?kgGraph {
                                 # method
                                 {?kg dcterms:accrualMethod ?method .}
-                                # activity
+                                # Software Agent
                                 UNION {
-                                    ?kg prov:wasGeneratedBy ?act .
-                                    ?act a prov:Contribute ;
-                                        prov:wasAssociatedWith ?agent .
+                                    ?kg prov:wasGeneratedBy ?activity .
+                                    ?activity prov:wasAssociatedWith ?agent .
                                     ?agent a prov:SoftwareAgent .
-                                    # {?act dcterms:description ?desc .} UNION {?activity dce:description ?desc . } UNION {?activity schema:description ?desc .}
+                                    # {?activity a prov:Contribute . } UNION {?activity a prov:Modify . } UNION {?activity a prov:Replace . }
+                                } UNION {
+                                    ?kg prov:wasAttributedTo ?agent .
+                                    ?agent a prov:SoftwareAgent .
                                 }
                             }
                         })
